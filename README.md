@@ -1,4 +1,4 @@
-# Tribes Full-Stack project
+# Foxticket Full-Stack project
 
 ## Folders
 

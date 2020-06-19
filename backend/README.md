@@ -1,4 +1,4 @@
-# Tribes Backend
+# Foxticket Backend
 
 ## Steps
 

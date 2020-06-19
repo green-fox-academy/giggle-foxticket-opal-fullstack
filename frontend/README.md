@@ -1,4 +1,4 @@
-# Tribes Frontend
+# Foxticket Frontend
 
 ## Available Scripts
 
