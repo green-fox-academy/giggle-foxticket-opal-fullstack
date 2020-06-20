@@ -1,5 +1,6 @@
 import React from 'react';
 import MainFeatures from '../components/MainFeatures/MainFeatures';
+import './LandingPage.styles.scss'
 
 const LandingPage = () => {
   return (

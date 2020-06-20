@@ -1,0 +1,40 @@
+.main-features {
+  display: flex;
+  justify-content: space-between;
+  margin: 5%
+}
+
+h1,
+h2 {
+  margin: 0;
+  text-align: left;
+}
+
+h2 {
+  font-style: italic;
+  font-size: 15px;
+  color: darkgray;
+}
+
+.card {
+  background: whitesmoke;
+  margin: 50px auto;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px #bdbdbd;
+}
+
+.card-image {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  max-height: 200px;
+  img {
+    width: 400px;
+    height: 285px;
+  }
+}
+
+.card-copy {
+  padding: 20px;
+}

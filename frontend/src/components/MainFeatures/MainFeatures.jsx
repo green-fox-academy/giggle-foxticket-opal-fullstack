@@ -1,43 +1,69 @@
 import React from 'react';
-import './MainFeatures.style.scss';
+import './MainFeatures.styles.scss';
 
 const MainFeatures = () => {
   return (
-    <>
-      <h1>3 things we do better</h1>
-      <div className="main-features">
-        <div>
-          <h3>Everything is handled online</h3>
-          <p>
-            You can use hooks to handle loading states for your fetching
-            operations. It is another state variable managed by a state hook.
-            This means that if you wanted to implement a loading state in the
-            last example, you’ll set the state variable and update the
-            useFetch() function accordingly.
-          </p>
+    <div className="main-features">
+      <div className="card">
+        <div className="card-image">
+          <img
+            src="https://cdn.vox-cdn.com/thumbor/m7yu15u1ImfzuROkTkv3OKt68fY=/1400x1050/filters:format(png)/cdn.vox-cdn.com/assets/3280553/doom-560.png"
+            alt=""
+          />
         </div>
-        <div>
-          <h3>Cheaper than our competitors</h3>
+        <div className="card-copy">
+          <h1>DOOM</h1>
+          <h2>Video game series</h2>
           <p>
-            The & in this case allows us to position .button directly next to
-            pseudo classes without repetition in the authored code. If we left
-            out the & from this example, basic nesting would put a space between
-            them like this…
-          </p>
-        </div>
-        <div>
-          <h3>Excellent customer service</h3>
-
-          <p>
-            The example with the & isn’t anything different than the example
-            without the &. Nesting without the & is shorthand for nesting with
-            it. We can think of the & as a mechanism that allows us to place the
-            parent selector wherever we need it in our child selector. It allows
-            us to nest with alterations. Let’s look at some more examples.
+            Doom is a video game series and media franchise created by John
+            Carmack, John Romero, Adrian Carmack, Kevin Cloud, and Tom Hall. The
+            series focuses on the exploits of an unnamed space marine operating
+            under the auspices of the Union Aerospace Corporation, who fights
+            hordes of demons and the undead.
           </p>
         </div>
       </div>
-    </>
+
+      <div className="card">
+        <div className="card-image">
+          <img
+            src="https://cdn.vox-cdn.com/thumbor/m7yu15u1ImfzuROkTkv3OKt68fY=/1400x1050/filters:format(png)/cdn.vox-cdn.com/assets/3280553/doom-560.png"
+            alt=""
+          />
+        </div>
+        <div className="card-copy">
+          <h1>DOOM</h1>
+          <h2>Video game series</h2>
+          <p>
+            Doom is a video game series and media franchise created by John
+            Carmack, John Romero, Adrian Carmack, Kevin Cloud, and Tom Hall. The
+            series focuses on the exploits of an unnamed space marine operating
+            under the auspices of the Union Aerospace Corporation, who fights
+            hordes of demons and the undead.
+          </p>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-image">
+          <img
+            src="https://cdn.vox-cdn.com/thumbor/m7yu15u1ImfzuROkTkv3OKt68fY=/1400x1050/filters:format(png)/cdn.vox-cdn.com/assets/3280553/doom-560.png"
+            alt=""
+          />
+        </div>
+        <div className="card-copy">
+          <h1>DOOM</h1>
+          <h2>Video game series</h2>
+          <p>
+            Doom is a video game series and media franchise created by John
+            Carmack, John Romero, Adrian Carmack, Kevin Cloud, and Tom Hall. The
+            series focuses on the exploits of an unnamed space marine operating
+            under the auspices of the Union Aerospace Corporation, who fights
+            hordes of demons and the undead.
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 
