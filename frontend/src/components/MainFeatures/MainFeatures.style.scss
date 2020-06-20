@@ -1,0 +1,27 @@
+.main-features {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 15% 5% 15%;
+  overflow: hidden;
+
+  div {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    background: gainsboro;
+    border-radius: 5px;
+    border: 1px solid rgb(197, 190, 190);
+    width: 300px;
+    height: 320px;
+    padding: 5px;
+    position: relative;
+
+    h3 {
+      position: absolute;
+    }
+
+    p {
+      margin-top: 20%;
+    }
+  }
+}
