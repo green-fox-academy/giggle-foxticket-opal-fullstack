@@ -1,5 +1,6 @@
 import React from 'react';
 import './MainFeatures.styles.scss';
+import cat from '../../assets/images/card-cat.jpeg'
 
 const MainFeatures = () => {
   return (
@@ -7,7 +8,7 @@ const MainFeatures = () => {
       <div className="card">
         <div className="card-image">
           <img
-            src="https://cdn.vox-cdn.com/thumbor/m7yu15u1ImfzuROkTkv3OKt68fY=/1400x1050/filters:format(png)/cdn.vox-cdn.com/assets/3280553/doom-560.png"
+            src={cat}
             alt=""
           />
         </div>
@@ -27,7 +28,7 @@ const MainFeatures = () => {
       <div className="card">
         <div className="card-image">
           <img
-            src="https://cdn.vox-cdn.com/thumbor/m7yu15u1ImfzuROkTkv3OKt68fY=/1400x1050/filters:format(png)/cdn.vox-cdn.com/assets/3280553/doom-560.png"
+            src={cat}
             alt=""
           />
         </div>
@@ -47,7 +48,7 @@ const MainFeatures = () => {
       <div className="card">
         <div className="card-image">
           <img
-            src="https://cdn.vox-cdn.com/thumbor/m7yu15u1ImfzuROkTkv3OKt68fY=/1400x1050/filters:format(png)/cdn.vox-cdn.com/assets/3280553/doom-560.png"
+            src={cat}
             alt=""
           />
         </div>
