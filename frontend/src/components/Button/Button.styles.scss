@@ -6,8 +6,64 @@ $--white: #fdfdfd;
 $--dark: #181717;
 
 .btn {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   font-weight: 400;
+  border: none;
   border-radius: 10px;
   cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+
+  &.btn--primary--solid {
+    background: $--primary;
+    color: $--white;
+  }
+
+  &.btn--warning--solid {
+    background: $--warning;
+    color: $--dark;
+  }
+
+  &.btn--danger--solid {
+    background: $--success;
+    color: $--white;
+  }
+
+  &.btn--primary--outline {
+    background: transparent;
+    border: 2px solid $--primary;
+    color: $--primary;
+  }
+
+  &.btn--warning--outline {
+    background: transparent;
+    border: 2px solid $--warning;
+    color: $--warning;
+  }
+
+  &.btn--danger--outline {
+    background: transparent;
+    border: 2px solid $--danger;
+    color: $--danger;
+  }
+
+  &.btn--success--outline {
+    background: transparent;
+    border: 2px solid $--success;
+    color: $--success;
+  }
+
+  &.btn--medium {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  &.btn--small {
+    padding: 15px 30px;
+    font-size: 20px;
+  }
 }
