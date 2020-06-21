@@ -12,7 +12,7 @@ const styles = [
   'btn--success--outline',
 ];
 
-const sizes = ['btn--medium', 'btn--small'];
+const sizes = ['btn--medium', 'btn--large'];
 
 const Button = ({ children, type, onClick, buttonStyle, buttonSize }) => {
   const checkButtonStyle = styles.includes(buttonStyle)
