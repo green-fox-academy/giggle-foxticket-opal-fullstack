@@ -1,9 +1,18 @@
 import React from 'react';
 import './Button.styles.sass';
 
-const styles = ['style1', 'style2'];
+const styles = [
+  'btn--primary--solid',
+  'btn--warning--solid',
+  'btn--danger--solid',
+  'btn--success--solid',
+  'btn--primary--outline',
+  'btn--warning--outline',
+  'btn--danger--outline',
+  'btn--success--outline',
+];
 
-const sizes = ['small', 'large'];
+const sizes = ['btn--medium', 'btn--small'];
 
 const Button = ({ children, type, onClick, buttonStyle, buttonSize }) => {
   const checkButtonStyle = styles.includes(buttonStyle)
