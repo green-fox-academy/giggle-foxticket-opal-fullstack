@@ -4,6 +4,6 @@ import LandingPage from './LandingPage';
 
 test('renders learn react link', () => {
   const { getByText } = render(<LandingPage />);
-  const linkElement = getByText(/I am the landing page!/i);
+  const linkElement = getByText('I am the landing page!');
   expect(linkElement).toBeInTheDocument();
 });

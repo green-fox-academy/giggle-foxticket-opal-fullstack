@@ -4,6 +4,7 @@ import MainFeatures from '../components/MainFeatures/MainFeatures';
 const LandingPage = () => {
   return (
     <>
+      I am the landing page!
       <MainFeatures />
     </>
   );
