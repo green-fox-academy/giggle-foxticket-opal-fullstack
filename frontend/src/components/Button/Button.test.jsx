@@ -11,15 +11,17 @@ describe('Test Button component', () => {
     expect(shallow(<Button />).length).toEqual(1);
   });
 
-  it('simulates click events', () => {
-    const mockCallBack = sinon.spy();
-    const mockChildren = 'Click me';
+  const mockCallBack = sinon.spy();
+  const mockChildren = 'Click me';
+  const mockSize = 'btn--large';
+  const mockStyle = 'btn--warning--outline';
 
+  it('simulates click events', () => {
     const button = shallow(
       <Button
         type="button"
-        buttonSize="btn--large"
-        buttonStyle="btn--warning--outline"
+        buttonSize={mockSize}
+        buttonStyle={mockStyle}
         onClick={mockCallBack}
       >
         {mockChildren}
@@ -27,6 +29,15 @@ describe('Test Button component', () => {
     );
 
     button.find('button').simulate('click');
+
     expect(mockCallBack).toHaveProperty('callCount', 1);
+  });
+
+  it('should contain provided className', () => {
+    const button = renderer.create(
+      <Button buttonSize={mockSize} buttonStyle={mockStyle} />
+    );
+
+    expect(JSON.stringify(button)).toContain(`btn ${mockStyle} ${mockSize}`);
   });
 });
