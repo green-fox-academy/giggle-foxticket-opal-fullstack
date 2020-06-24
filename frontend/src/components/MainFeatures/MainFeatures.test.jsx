@@ -1,7 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import MainFeatures from './MainFeatures';
+import renderer from 'react-test-renderer';
 
-it('expect to render Main Features component', () => {
-  expect(shallow(<MainFeatures />)).toMatchSnapshot();
+it('renders correctly', () => {
+  const tree = renderer.create(<MainFeatures />).toJSON();
+  expect(tree).toMatchSnapshot();
 });
