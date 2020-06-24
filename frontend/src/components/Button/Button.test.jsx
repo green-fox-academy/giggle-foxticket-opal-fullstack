@@ -11,11 +11,11 @@ describe('Test Button component', () => {
     expect(shallow(<Button />).length).toEqual(1);
   });
 
-  const mockCallBack = sinon.spy();
-  const mockChildren = 'Click me';
-  const mockSize = 'btn--large';
-  const mockStyle = 'btn--warning--outline';
-  const mockClassName = `btn ${mockStyle} ${mockSize}`;
+  const mockCallBack = sinon.spy(),
+    mockChildren = 'Click me',
+    mockSize = 'btn--large',
+    mockStyle = 'btn--warning--outline',
+    mockClassName = `btn ${mockStyle} ${mockSize}`;
 
   it('simulates click events', () => {
     const button = shallow(
