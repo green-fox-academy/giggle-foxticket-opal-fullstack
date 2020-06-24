@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 import Button from './Button';
 
@@ -15,6 +15,7 @@ describe('Test Button component', () => {
   const mockChildren = 'Click me';
   const mockSize = 'btn--large';
   const mockStyle = 'btn--warning--outline';
+  const mockClassName = `btn ${mockStyle} ${mockSize}`;
 
   it('simulates click events', () => {
     const button = shallow(
@@ -33,11 +34,10 @@ describe('Test Button component', () => {
     expect(mockCallBack).toHaveProperty('callCount', 1);
   });
 
-  it('should contain provided className', () => {
-    const button = renderer.create(
-      <Button buttonSize={mockSize} buttonStyle={mockStyle} />
-    );
-
-    expect(JSON.stringify(button)).toContain(`btn ${mockStyle} ${mockSize}`);
+  it('allows us to set className with props', () => {
+    const button = mount(<Button className={mockClassName} />);
+    expect(button.props().className).toEqual(mockClassName);
+    button.setProps({ className: mockClassName });
+    expect(button.props().className).toEqual(mockClassName);
   });
 });
