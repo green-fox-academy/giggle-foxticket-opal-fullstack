@@ -1,10 +1,11 @@
 import React from 'react';
 import MainFeatures from '../components/MainFeatures/MainFeatures';
+import ImageComposition from '../components/ImageComposition/ImageComposition';
 
 const LandingPage = () => {
   return (
     <>
-      I am the landing page!
+      <ImageComposition />
       <MainFeatures />
     </>
   );
