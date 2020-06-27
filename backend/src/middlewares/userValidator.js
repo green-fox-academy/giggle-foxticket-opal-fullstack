@@ -2,37 +2,33 @@ import { check, validationResult } from 'express-validator';
 
 export const validateUser = [
   check('username')
-    .not()
-    .exists()
-    .withMessage('username is required')
-    .isLength({ min: 3 })
-    .withMessage('wrong username length')
+    .notEmpty()
+    .withMessage('Username is required')
+    .bail()
     .matches(/^[a-zA-Z0-9]+$/)
-    .withMessage('username should not contain symbols/special characters')
-    .isString,
+    .withMessage('Username should not contain symbols or special characters')
+    .bail(),
 
   check('email')
-    .not()
-    .exists()
-    .withMessage('email is required')
+    .notEmpty()
+    .withMessage('E-mail is required.')
+    .bail()
     .isEmail()
-    .withMessage('email not valid')
+    .withMessage('Not a valid e-mail address.')
     .bail(),
 
   check('password')
-    .not()
-    .exists()
-    .withMessage('password is required')
+    .notEmpty()
+    .withMessage('Password is required')
+    .bail()
     .isLength({ min: 6 })
-    .withMessage('password must be longer than 6 characters')
+    .withMessage('Password must be longer than 6 characters')
     .bail(),
 
-  (req, res) => {
+  (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty())
       return res.status(422).json({ errors: errors.array() });
-    else {
-      res.send({});
-    }
+    next();
   },
 ];
