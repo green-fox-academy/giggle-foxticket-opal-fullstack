@@ -1,4 +1,5 @@
 import { registerService } from '../services/registerService';
+import { User } from '../models/User';
 
 export const registerController = {
   async register(req, res) {
@@ -6,11 +7,7 @@ export const registerController = {
     const email = req.body.email;
     const password = req.body.password;
 
-    await registerService.registerUser({
-      username: username,
-      email: email,
-      password: password,
-    });
+    await registerService.registerUser(new User(username, email, password));
 
     res.status(200).json({
       username,
