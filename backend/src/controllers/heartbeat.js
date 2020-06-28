@@ -1,5 +1,9 @@
-export const getSystemStatus = (req, res) => {
+import {getDbStatus} from '../services/heartbeatService'
+
+export const getSystemStatus = async (req, res) => {
+  let result = await getDbStatus()
   res.json({
-    db: true,
+    db: result === 0 ? false : true ,
   });
 };
+
