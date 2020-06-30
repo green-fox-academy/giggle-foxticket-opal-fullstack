@@ -5,12 +5,11 @@ export const registerController = {
   async register(req, res) {
     const user = new User(req.body.username, req.body.email, req.body.password);
 
-    await registerService.registerUser(user);
-
-    res.status(200).json({
-      username: user.username,
-      email: user.email,
-      password: user.password,
-    });
+    return await registerService
+      .registerUser(user)
+      .then(data => res.status(200).json(data))
+      .catch(err => {
+        res.status(400).json(err.message);
+      });
   },
 };
