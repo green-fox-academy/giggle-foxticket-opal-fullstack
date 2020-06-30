@@ -1,15 +1,15 @@
-import { User } from '../models/User';
-import bcrypt from 'bcrypt';
+import User from '../models/User';
+import { registerService } from '../services/registerService';
 
 export const registerController = {
   async register(req, res) {
-    const hash = await bcrypt.hash(req.body.password, 10);
-
     const user = new User({
       username: req.body.username,
       email: req.body.email,
-      password: hash,
+      password: req.body.password,
     });
+
+    await registerService.registerUser(user);
 
     res.status(200).json({
       username: user.username,
