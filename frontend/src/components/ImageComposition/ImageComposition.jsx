@@ -1,6 +1,7 @@
 import React from 'react';
 import cat from '../../assets/images/card-cat.jpeg';
 import './ImageComposition.styles.sass';
+import Button from '../Button/Button';
 
 const ImageComposition = () => {
   return (
@@ -20,7 +21,7 @@ const ImageComposition = () => {
               and its contribution to America's obesity epidemic.
             </p>
           </article>
-          <button>Learn More</button>
+          <Button>Learn More</Button>
         </div>
         <div className="right-half">
           <article>
