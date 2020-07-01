@@ -1,5 +1,3 @@
-//Create a controller for managing the sessions that handles the /api/sessions requests.
-
 import { createToken } from '../services/sessionService';
 
 export const sessionsController = {
