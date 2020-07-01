@@ -1,25 +1,21 @@
 import bcrypt from 'bcrypt';
-import { db } from '../data/connection';
+import { registerRepository } from '../repository/registerRepository';
+import User from '../models/User';
 
 export const registerService = {
   async registerUser(user) {
     const hashedPassword = await bcrypt.hash(user.password, 10);
 
-    const temp = await db.query(
-      `SELECT name, email FROM foxticket.Users WHERE name = ? OR email = ?`,
-      [user.name, user.email]
-    );
+    let temp = [];
+    await registerRepository.getUserData(user.name, user.email).then(data => {
+      temp = data.results;
+    });
 
-    //select from users where username == user.username if true then throw new Error else await db.query
-
-    if (temp) {
-      console.log(temp);
-      throw new Error('hello');
+    if (temp.length !== 0) {
+      throw new Error('Username or e-mail already exists!');
     } else {
-      await db.query(
-        `INSERT INTO foxticket.Users (name, email, password)
-             VALUES (?, ?, ?)`,
-        [user.name, user.email, hashedPassword]
+      await registerRepository.saveUser(
+        new User(user.name, user.email, hashedPassword)
       );
     }
 
