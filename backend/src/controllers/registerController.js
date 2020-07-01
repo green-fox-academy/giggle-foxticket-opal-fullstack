@@ -3,7 +3,7 @@ import { registerService } from '../services/registerService';
 
 export const registerController = {
   async register(req, res) {
-    const user = new User(req.body.username, req.body.email, req.body.password);
+    const user = new User(req.body.name, req.body.email, req.body.password);
 
     return await registerService
       .registerUser(user)

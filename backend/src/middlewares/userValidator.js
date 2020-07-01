@@ -1,7 +1,7 @@
 import { check, validationResult } from 'express-validator';
 
 export const validateUser = [
-  check('username')
+  check('name')
     .notEmpty()
     .withMessage('Username is required')
     .bail()

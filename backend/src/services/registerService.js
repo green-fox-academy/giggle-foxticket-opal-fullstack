@@ -6,8 +6,8 @@ export const registerService = {
     const hashedPassword = await bcrypt.hash(user.password, 10);
 
     const temp = await db.query(
-      `SELECT username FROM foxticket.Users WHERE username = ?`,
-      [user.username]
+      `SELECT name, email FROM foxticket.Users WHERE name = ? OR email = ?`,
+      [user.name, user.email]
     );
 
     //select from users where username == user.username if true then throw new Error else await db.query
@@ -17,9 +17,9 @@ export const registerService = {
       throw new Error('hello');
     } else {
       await db.query(
-        `INSERT INTO foxticket.Users (username, email, password)
+        `INSERT INTO foxticket.Users (name, email, password)
              VALUES (?, ?, ?)`,
-        [user.username, user.email, hashedPassword]
+        [user.name, user.email, hashedPassword]
       );
     }
 
