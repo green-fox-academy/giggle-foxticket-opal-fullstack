@@ -9,7 +9,7 @@ export const registerController = {
       .registerUser(user)
       .then(data => res.status(201).json(data))
       .catch(err => {
-        res.status(418).json(err.message);
+        res.status(400).json(err.message);
       });
   },
 };
