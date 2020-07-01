@@ -8,5 +8,5 @@
     "port": { "ENV": "MYSQL_PORT" },
     "multipleStatements": true
   },
-  "sql-file": true
+  "sql-file": false
 }
