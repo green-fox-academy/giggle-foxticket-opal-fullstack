@@ -2,9 +2,9 @@ import request from 'supertest';
 import app from '../src/app';
 
 describe('testing /register endpoint', () => {
+  const mockApp = request(app).post('/register');
   it('fails if invalid user credentials are passed', async () => {
-    await request(app)
-      .post('/register')
+    await mockApp
       .send({
         name: '{invalid_user*3@',
         password: 'short',
@@ -13,6 +13,17 @@ describe('testing /register endpoint', () => {
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(422);
+  });
+  it('passes if valid user credentials are passed', async () => {
+    await mockApp
+      .send({
+        name: 'ValidUser',
+        password: 'correcthorsebatterystaple',
+        email: 'valid@email.com',
+      })
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(201);
   });
 });
 
