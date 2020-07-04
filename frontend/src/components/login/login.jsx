@@ -22,7 +22,11 @@ const Login = () => {
 
   const postHandler = e => {
     e.preventDefault();
+    if (name.length <= 3 || password.length <= 3  ) {
+      setisValid(false)
+    }
     const user = { name, password };
+  
     console.log(user);
     fetch('http://localhost:3000/api/session', {
       method: 'POST',
@@ -32,9 +36,7 @@ const Login = () => {
       body: JSON.stringify(user),
     });
   };
-  const userValidation=()=>{
-    setisValid(false)
-  }
+
 
   return (
     <BrowserRouter>
