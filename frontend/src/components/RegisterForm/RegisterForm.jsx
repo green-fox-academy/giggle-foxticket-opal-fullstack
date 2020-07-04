@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 
 const RegisterForm = () => {
+  const [username, setUserName] = useState('');
+  const handleSubmit = e => e.preventDefault();
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label>Foxticket</label>
-      <input type="text" required />
+      <input
+        type="text"
+        value={username}
+        required
+        onChange={e => setUserName(e.target.value)}
+      />
       <input type="submit" value="add user" />
     </form>
   );
