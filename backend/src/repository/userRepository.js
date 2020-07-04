@@ -1,7 +1,7 @@
 import { db } from '../data/connection';
 
-export const registerRepository = {
-  async saveUser(user) {
+export const userRepository = {
+  async save(user) {
     await db.query(
       `INSERT INTO foxticket.Users (name, email, password)
          VALUES (?, ?, ?)`,
