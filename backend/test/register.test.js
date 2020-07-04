@@ -26,8 +26,3 @@ describe('testing /register endpoint', () => {
       .expect(201);
   });
 });
-
-// TODO: find out why only an empty array is being sent
-// {"errors": [{"location": "body", "msg": "Username is required", "param": "name"}
-// {"location": "body", "msg": "E-mail is required.", "param": "email"}
-// {"location": "body", "msg": "Password is required", "param": "password"}]}
