@@ -10,7 +10,6 @@ const app = express();
 app.use(morgan('combined', { stream: logger.stream }));
 
 app.use('/api', api);
-app.use('/users', api);
 app.use('/system', system);
 
 app.use(errorHandler);
