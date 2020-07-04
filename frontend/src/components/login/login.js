@@ -5,24 +5,24 @@ import './login.css';
 import { FaExclamationTriangle } from 'react-icons/fa';
 
 const Login = () => {
-  const [Name, setName] = useState('');
-  const [Password, setPassword] = useState('');
-  const [IsValid, setIsValid] = useState(true);
+  const [name, setname] = useState('');
+  const [password, setpassword] = useState('');
+  const [isValid, setisValid] = useState(true);
 
   const handleNameChange = e => {
-    setName(  e.target.value );
+    setname(  e.target.value );
   };
   const handlePasswordChange = e => {
-    setPassword(e.target.value );
+    setpassword(e.target.value );
   };
 
   const warningMsg = {
-    color: IsValid ? 'green' : 'red',
+    color: isValid ? 'green' : 'red',
   }; 
 
-  const hh = e => {
+  const postHandler = e => {
     e.preventDefault();
-    const user = { Name, Password };
+    const user = { name, password };
     console.log(user);
     fetch('http://localhost:3000/api/session', {
       method: 'POST',
@@ -32,14 +32,13 @@ const Login = () => {
       body: JSON.stringify(user),
     });
   };
-  console.log(Name)
 
   return (
     <BrowserRouter>
       <Route>
         <h1>Foxticket</h1>
         <div className="container">
-          <form onSubmit={hh}>
+          <form onSubmit={postHandler}>
             <input
               className={"input-" + warningMsg.color}
               type="text"
@@ -58,7 +57,7 @@ const Login = () => {
               required
               onChange={handlePasswordChange}
             />
-            <p style={warningMsg} className={` ${IsValid ? 'isValid' : ''}`}>
+            <p style={warningMsg} className={` ${isValid ? 'isValid' : ''}`}>
               Username or Password is incorrect   
               <FaExclamationTriangle color="red" size="1.5em" />
             </p>
