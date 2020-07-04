@@ -1,8 +1,8 @@
 import request from 'supertest';
 import app from '../src/app';
 
-describe('testing /register endpoint', () => {
-  const mockApp = request(app).post('/register');
+describe('testing /users endpoint', () => {
+  const mockApp = request(app).post('/users');
   it('fails if invalid user credentials are passed', async () => {
     await mockApp
       .send({
