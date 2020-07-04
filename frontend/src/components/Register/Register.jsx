@@ -1,6 +1,6 @@
 import React from 'react';
 import useCustomForm from '../../hooks/useCustomForm';
-import './RegisterForm.styles.sass';
+import './Register.styles.sass';
 import Button from '../Button/Button';
 
 const initialValues = {
@@ -10,7 +10,7 @@ const initialValues = {
   confirm: '',
 };
 
-const RegisterForm = () => {
+const Register = () => {
   const { values, handleChange, handleSubmit } = useCustomForm({
     initialValues,
     onSubmit: values => console.log({ values }),
@@ -69,4 +69,4 @@ const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;
+export default Register;

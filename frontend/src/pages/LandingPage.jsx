@@ -1,12 +1,12 @@
 import React from 'react';
 import MainFeatures from '../components/MainFeatures/MainFeatures';
 import ImageComposition from '../components/ImageComposition/ImageComposition';
-import RegisterForm from '../components/RegisterForm/RegisterForm';
+import Register from '../components/Register/Register';
 
 const LandingPage = () => {
   return (
     <>
-      <RegisterForm />
+      <Register />
       <ImageComposition />
       <MainFeatures />
     </>
