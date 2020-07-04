@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 const cors = require('cors');
 import { helloController } from '../controllers';
 import { userController } from '../controllers/userController';
-import { validateUser } from '../middlewares/userValidator';
+import { validateUser } from '../middlewares/validators/userValidator';
 
 const router = express.Router();
 
