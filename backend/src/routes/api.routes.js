@@ -5,8 +5,6 @@ import { helloController } from '../controllers';
 import { sessionsController } from '../controllers';
 import { verifyToken } from '../middlewares/jwt-verification'
 
-console.log(sessionsController)
-
 const router = express.Router();
 
 router.use(cors());
