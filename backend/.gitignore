@@ -1,7 +1,6 @@
 node_modules/
 output/
 logs/
-database/.env
 yarn-error.log
 dist
 coverage
