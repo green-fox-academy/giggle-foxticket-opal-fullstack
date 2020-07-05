@@ -1,44 +1,53 @@
+jest.mock('../services/userService');
+
 import { userController } from './userController';
 import User from '../models/User';
-const userService = require('../services/userService');
+import { userService } from '../services/userService';
 
 describe('register controller test', () => {
-  const res = {
-    status: function (s) {
-      this.status = s;
-      return this;
-    },
-    json: function (s) {
-      this.json = s;
-      return this;
-    },
-  };
+  const user = new User();
+  const mockRequest = { body: user };
 
   it('should return 400 if service throws an error', async () => {
-    const user = new User('MarciDaKiNG', 'not_valid_email', '123123');
-    const req = { body: user };
+    const mockResponse = {
+      status: function (s) {
+        this.status = s;
+        return this;
+      },
+      json: function (s) {
+        this.json = s;
+        return this;
+      },
+    };
 
     const registerUser = jest.fn();
     registerUser.mockImplementation(() => {
       throw new Error('invalid register');
     });
 
+    userService.registerUser.mockResolvedValue({ user });
+
     await userController
-      .register(req, res)
+      .register(mockRequest, mockResponse)
       .catch(res => expect(res.status).toEqual(400));
   });
 
-  it('should return 201 with user credentials from session if session data is set', async () => {
-    const user = new User('McDog Doggerson', 'valid@valid.com', '12312das3');
-    const req = { body: user };
+  it('should return 201 if an user is passed', async () => {
+    const mockJson = jest.fn();
 
-    // const registerUser = jest.fn();
+    const mockResponse = {
+      status: jest.fn().mockReturnValue({ json: mockJson }),
+    };
 
-    const registerMock = jest.spyOn(userService.userService.registerUser, 'registerUser');
-    registerMock.mockReturnValue(user);
+    userService.registerUser.mockResolvedValue({
+      user,
+    });
 
-    await userController.register(req, res).catch(res => {
-      expect(res.status).toEqual(201);
+    await userController.register(mockRequest, mockResponse);
+
+    expect(mockResponse.status).toHaveBeenCalledWith(201);
+    expect(mockJson).toHaveBeenCalledWith({
+      user,
     });
   });
 });
