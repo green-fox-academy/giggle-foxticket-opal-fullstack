@@ -3,6 +3,7 @@ import app from '../src/app';
 
 describe('testing /api/users endpoint', () => {
   const mockApp = request(app).post('/api/users');
+
   it('fails if invalid user credentials are passed', async () => {
     await mockApp
       .send({
@@ -15,14 +16,17 @@ describe('testing /api/users endpoint', () => {
       .expect(422);
   });
   it('passes if valid user credentials are passed', async () => {
-    await mockApp
-      .send({
-        name: 'ValidUser',
-        password: 'correcthorsebatterystaple',
-        email: 'valid@email.com',
-      })
-      .set('Accept', 'application/json')
-      .expect('Content-Type', /json/)
-      .expect(201);
+    const res = await mockApp.send({
+      name: 'TikTfdsok',
+      password: '12341232',
+      email: 'valdid@email.com',
+    });
+
+    expect(res).toBe({
+      name: 'TikTfdsok',
+      password: '12341232',
+      email: 'valdid@emdail.com',
+    });
+    // expect(res.status).toEqual(201);
   });
 });
