@@ -6,12 +6,15 @@ exports[`renders correctly 1`] = `
     className="logos"
   >
     <img
+      alt="Facebook"
       src="facebook.svg"
     />
     <img
+      alt="Instagram"
       src="instagram.svg"
     />
     <img
+      alt="Twitter"
       src="twitter.svg"
     />
   </div>
