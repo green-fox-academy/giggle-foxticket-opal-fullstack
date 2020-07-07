@@ -113,5 +113,23 @@ Array [
       </div>
     </div>
   </div>,
+  <footer>
+    <div
+      className="logos"
+    >
+      <img
+        src="facebook.svg"
+      />
+      <img
+        src="instagram.svg"
+      />
+      <img
+        src="twitter.svg"
+      />
+    </div>
+    <h3>
+      I am the Footer
+    </h3>
+  </footer>,
 ]
 `;
