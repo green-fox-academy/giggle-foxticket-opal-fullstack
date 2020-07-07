@@ -12,9 +12,9 @@ export default function () {
     
       <div className="logos">
         
-        <img src={fb} />
-        <img src={ig} />
-        <img src={tw}/>
+        <img src={fb} alt="Facebook" />
+        <img src={ig} alt="Instagram"/>
+        <img src={tw} alt="Twitter"/>
         
       </div>
      
