@@ -10,7 +10,7 @@ const router = express.Router();
 router.use(cors());
 router.use(bodyParser.json());
 
-router.get('/hello', helloController.get),
-router.post('/session', sessionsController.post )
+router.get('/hello', helloController.get);
+router.post('/session', sessionsController.post)
 
 export default router;
