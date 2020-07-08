@@ -21,7 +21,6 @@ const Register = () => {
       <form onSubmit={handleSubmit} className="register-form">
         <fieldset>
           <h1>Foxticket</h1>
-          {/*<label>E-mail</label>*/}
           <input
             type="email"
             name="email"
@@ -31,7 +30,6 @@ const Register = () => {
             autoComplete="off"
           />
 
-          {/*<label>User Name</label>*/}
           <input
             type="text"
             name="username"
@@ -41,7 +39,6 @@ const Register = () => {
             autoComplete="off"
           />
 
-          {/*<label>Password</label>*/}
           <input
             type="password"
             name="password"
