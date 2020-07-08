@@ -2,6 +2,7 @@ import React from 'react';
 import useCustomForm from '../../hooks/useCustomForm';
 import './Register.styles.sass';
 import Button from '../Button/Button';
+import axios from 'axios';
 
 const initialValues = {
   email: '',
@@ -13,9 +14,23 @@ const initialValues = {
 const Register = () => {
   const { values, handleChange, handleSubmit } = useCustomForm({
     initialValues,
-    onSubmit: values => console.log({ values }),
+    onSubmit: values => {
+      values.values.password === values.values.confirm
+        ? axios({
+            method: 'post',
+            baseURL: 'http://localhost:3000/',
+            url: '/api/users',
+            data: {
+              name: values.values.username,
+              email: values.values.email,
+              password: values.values.password,
+            },
+          })
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+        : console.log(`Passwords don't match!`);
+    },
   });
-
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit} className="register-form">
@@ -28,6 +43,7 @@ const Register = () => {
             value={values.email}
             placeholder="E-mail..."
             autoComplete="off"
+            required={true}
           />
 
           <input
@@ -37,6 +53,7 @@ const Register = () => {
             value={values.username}
             placeholder="User Name..."
             autoComplete="off"
+            required={true}
           />
 
           <input
@@ -46,6 +63,7 @@ const Register = () => {
             value={values.password}
             placeholder="Password..."
             autoComplete="off"
+            required={true}
           />
 
           <input
@@ -55,6 +73,7 @@ const Register = () => {
             value={values.confirm}
             placeholder="Confirm password..."
             autoComplete="off"
+            required={true}
           />
 
           <Button type="submit" buttonSize="btn--medium">

@@ -17,6 +17,7 @@ exports[`test register component renders correctly 1`] = `
         name="email"
         onChange={[Function]}
         placeholder="E-mail..."
+        required={true}
         type="email"
         value=""
       />
@@ -25,6 +26,7 @@ exports[`test register component renders correctly 1`] = `
         name="username"
         onChange={[Function]}
         placeholder="User Name..."
+        required={true}
         type="text"
         value=""
       />
@@ -33,6 +35,7 @@ exports[`test register component renders correctly 1`] = `
         name="password"
         onChange={[Function]}
         placeholder="Password..."
+        required={true}
         type="password"
         value=""
       />
@@ -41,6 +44,7 @@ exports[`test register component renders correctly 1`] = `
         name="confirm"
         onChange={[Function]}
         placeholder="Confirm password..."
+        required={true}
         type="password"
         value=""
       />
