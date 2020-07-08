@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-//Create a controller for managing the sessions that handles the /api/sessions requests.
-=======
 import { createToken } from '../services/sessionService';
 
 export const sessionsController = {
@@ -10,4 +7,3 @@ export const sessionsController = {
     res.json({ token });
   },
 };
->>>>>>> 975a394f7a482fc57bbdc895127b33c91d029caa
