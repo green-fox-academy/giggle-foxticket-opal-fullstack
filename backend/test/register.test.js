@@ -7,42 +7,35 @@ jest.mock('../src/repository/UserRepository');
 jest.mock('../src/services/UserService');
 
 describe('testing /api/users endpoint', () => {
-  const mockApp = request(app).post('/api/users');
-
-  it('fails if invalid user credentials are passed', async () => {
-    const invalidUser = {
-      name: '{invalid_user*3@',
-      password: 'short',
-      email: 'not_an_email',
-    };
+  it('fails with 422 if invalid user credentials are passed', async () => {
+    const invalidUser = new User('{invalid_user*3@', 'short', 'not_an_email');
 
     UserService.prototype.registerUser.mockImplementation(() =>
       Promise.reject(invalidUser)
     );
-    await mockApp
+
+    await request(app)
+      .post('/api/users')
       .send(invalidUser)
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(422);
   });
 
-  it('passes if valid user credentials are passed', async () => {
-    const user = new User('marci', 'marci@marci.com', '123123123');
+  it('passes with 201 if valid user credentials are passed', async () => {
+    const validUser = new User('marci', 'marci@marci.com', '123123123');
 
     UserService.prototype.registerUser.mockImplementation(() =>
-      Promise.resolve(user)
+      Promise.resolve(validUser)
     );
+
     const mockRegister = await request(app)
       .post('/api/users')
-      .send(user)
+      .send(validUser)
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(201);
 
-    expect(mockRegister.body).toEqual(user);
-
-    // // expect(mockRegister.body).toHaveProperty('name');
-    // expect(mockRegister.body.name).toBe('marci');
-    // expect(mockRegister.statusCode).toBe(201);
+    expect(mockRegister.body).toEqual(validUser);
   });
 });
