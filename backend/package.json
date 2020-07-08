@@ -22,7 +22,11 @@
     "db-migrate-mysql": "^2.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
+<<<<<<< HEAD
     "express-validator": "^6.6.0",
+=======
+    "jsonwebtoken": "^8.5.1",
+>>>>>>> 975a394f7a482fc57bbdc895127b33c91d029caa
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "winston": "^3.2.1"
