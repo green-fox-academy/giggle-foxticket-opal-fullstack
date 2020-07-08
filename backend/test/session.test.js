@@ -13,7 +13,7 @@ describe('sessions', () => {
         if (err) {
           return done(err);
         }
-        expect(res.hasOwnProperty('token'))
+        expect(res.toHaveProperty('token'))
         return done();
       });
     });
