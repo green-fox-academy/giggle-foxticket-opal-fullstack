@@ -11,11 +11,11 @@ describe('sessions', () => {
       .expect(200)
       .end((err, res) => {
         if (err) {
-          return done(err);
+          return done(err)
         }
-        expect(res).toHaveProperty('text');
-        return done();
-      });
-    });
+        expect(res.body).toHaveProperty('token')
+        return done()
+      })
+    })
 });
 
