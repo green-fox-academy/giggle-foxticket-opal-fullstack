@@ -6,14 +6,14 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <div className="App">
+    <div className="App">
+      <BrowserRouter>
+        <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/shop" component={TicketStore} />
-        </div>
-      </Switch>
-    </BrowserRouter>
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 }
 
