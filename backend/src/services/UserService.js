@@ -11,9 +11,8 @@ export class UserService {
     const hashedPassword = await bcrypt.hash(user.password, 10);
 
     let temp = [];
-    await this.userRepository.getUserData(user.name, user.email).then(data => {
-      temp = data.results;
-    });
+    let data = await this.userRepository.getUserData(user.name, user.email);
+    temp = data.results;
 
     if (temp.length !== 0) {
       throw new Error('Username or e-mail already exists!');
