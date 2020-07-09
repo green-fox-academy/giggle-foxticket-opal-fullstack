@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="video"
+>
+  <div
+    style={
+      Object {
+        "height": "360px",
+        "width": "640px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": undefined,
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
