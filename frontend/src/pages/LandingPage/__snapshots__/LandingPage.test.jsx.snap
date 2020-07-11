@@ -113,30 +113,6 @@ Array [
       </div>
     </div>
   </div>,
-  <div
-    className="video"
-  >
-    <div
-      style={
-        Object {
-          "height": "360px",
-          "width": "640px",
-        }
-      }
-    >
-      <div
-        style={
-          Object {
-            "display": undefined,
-            "height": "100%",
-            "width": "100%",
-          }
-        }
-      >
-        <div />
-      </div>
-    </div>
-  </div>,
   <footer>
     <div
       className="logos"
