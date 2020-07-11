@@ -1,7 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 
-import { api, system, register } from './routes';
+import { api, system } from './routes';
 import logger from './logger';
 import errorHandler from './middlewares/error-handler';
 
