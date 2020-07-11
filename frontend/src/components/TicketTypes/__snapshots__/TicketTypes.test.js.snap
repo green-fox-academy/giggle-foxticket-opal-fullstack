@@ -2,165 +2,218 @@
 
 exports[`renders correctly 1`] = `
 <div>
+  <h1
+    style={
+      Object {
+        "fontSize": "5em",
+      }
+    }
+  >
+    Ticket Types
+  </h1>
   <div
     className="container"
   >
-    <svg
-      fill="currentColor"
-      height="1em"
-      stroke="currentColor"
-      strokeWidth="0"
-      style={
-        Object {
-          "color": "lightgreen",
-          "fontSize": "3em",
+    <div
+      className="icon"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": "lightgreen",
+            "fontSize": "3em",
+          }
         }
-      }
-      viewBox="0 0 512 512"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+        />
+      </svg>
+    </div>
+    <div
+      className="content"
     >
-      <path
-        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-      />
-    </svg>
-    <h1>
-      Ticket-Types A
-    </h1>
-     
-    <p>
-      asdf,ffff,f,f,f,f,f,fffffdrdbdb kjbk 
-    </p>
-    <button
-      className="edit"
+      <h1>
+        Ticket-Types A
+      </h1>
+      <p>
+        asdf,ffff,f,f,f,f,f,fffffdrdbdb kjbk 
+      </p>
+    </div>
+    <div
+      className="btns"
     >
-       EDIT 
-    </button>
-    <button
-      className="delete"
-    >
-       DELETE 
-    </button>
+      <button
+        className="btn btn--danger--solid btn--medium"
+      >
+        Edit
+      </button>
+      <button
+        className="btn btn--danger--solid--btn btn--medium"
+      >
+        Delete
+      </button>
+    </div>
   </div>
   <div
     className="container"
   >
-    <svg
-      fill="currentColor"
-      height="1em"
-      stroke="currentColor"
-      strokeWidth="0"
-      style={
-        Object {
-          "color": "lightgreen",
-          "fontSize": "3em",
+    <div
+      className="icon"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": "lightgreen",
+            "fontSize": "3em",
+          }
         }
-      }
-      viewBox="0 0 512 512"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+        />
+      </svg>
+    </div>
+    <div
+      className="content"
     >
-      <path
-        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-      />
-    </svg>
-    <h1>
-      Ticket-Types B
-    </h1>
-     
-    <p>
-      asdf,ffff,f,f,f,f,f,fffffdrdbdbsefwa 
-    </p>
-    <button
-      className="edit"
+      <h1>
+        Ticket-Types B
+      </h1>
+      <p>
+        asdf,ffff,f,f,f,f,f,fffffdrdbdbsefwa 
+      </p>
+    </div>
+    <div
+      className="btns"
     >
-       EDIT 
-    </button>
-    <button
-      className="delete"
-    >
-       DELETE 
-    </button>
+      <button
+        className="btn btn--danger--solid btn--medium"
+      >
+        Edit
+      </button>
+      <button
+        className="btn btn--danger--solid--btn btn--medium"
+      >
+        Delete
+      </button>
+    </div>
   </div>
   <div
     className="container"
   >
-    <svg
-      fill="currentColor"
-      height="1em"
-      stroke="currentColor"
-      strokeWidth="0"
-      style={
-        Object {
-          "color": "lightgreen",
-          "fontSize": "3em",
+    <div
+      className="icon"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": "lightgreen",
+            "fontSize": "3em",
+          }
         }
-      }
-      viewBox="0 0 512 512"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+        />
+      </svg>
+    </div>
+    <div
+      className="content"
     >
-      <path
-        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-      />
-    </svg>
-    <h1>
-      Ticket-Types C
-    </h1>
-     
-    <p>
-      asdf,ffff,f,f,f,f,f,fffffdrdbdbfdsf 
-    </p>
-    <button
-      className="edit"
+      <h1>
+        Ticket-Types C
+      </h1>
+      <p>
+        asdf,ffff,f,f,f,f,f,fffffdrdbdbfdsf 
+      </p>
+    </div>
+    <div
+      className="btns"
     >
-       EDIT 
-    </button>
-    <button
-      className="delete"
-    >
-       DELETE 
-    </button>
+      <button
+        className="btn btn--danger--solid btn--medium"
+      >
+        Edit
+      </button>
+      <button
+        className="btn btn--danger--solid--btn btn--medium"
+      >
+        Delete
+      </button>
+    </div>
   </div>
   <div
     className="container"
   >
-    <svg
-      fill="currentColor"
-      height="1em"
-      stroke="currentColor"
-      strokeWidth="0"
-      style={
-        Object {
-          "color": "lightgreen",
-          "fontSize": "3em",
+    <div
+      className="icon"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": "lightgreen",
+            "fontSize": "3em",
+          }
         }
-      }
-      viewBox="0 0 512 512"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+        />
+      </svg>
+    </div>
+    <div
+      className="content"
     >
-      <path
-        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-      />
-    </svg>
-    <h1>
-      Ticket-Types D
-    </h1>
-     
-    <p>
-      asdf,ffff,f,f,f,f,f,fffffdrdbdbwtg 
-    </p>
-    <button
-      className="edit"
+      <h1>
+        Ticket-Types D
+      </h1>
+      <p>
+        asdf,ffff,f,f,f,f,f,fffffdrdbdbwtg 
+      </p>
+    </div>
+    <div
+      className="btns"
     >
-       EDIT 
-    </button>
-    <button
-      className="delete"
-    >
-       DELETE 
-    </button>
+      <button
+        className="btn btn--danger--solid btn--medium"
+      >
+        Edit
+      </button>
+      <button
+        className="btn btn--danger--solid--btn btn--medium"
+      >
+        Delete
+      </button>
+    </div>
   </div>
 </div>
 `;
