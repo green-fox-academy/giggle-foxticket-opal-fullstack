@@ -11,7 +11,6 @@ app.use(morgan('combined', { stream: logger.stream }));
 
 app.use('/api', api);
 app.use('/system', system);
-app.use('/register', register);
 
 app.use(errorHandler);
 
