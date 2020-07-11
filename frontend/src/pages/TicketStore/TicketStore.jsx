@@ -1,12 +1,11 @@
 import React from 'react';
 import TicketList from '../../components/TicketTypes/TicketList';
-import './TicketStore.styles.sass';
 
 const TicketStore = () => {
   return (
-    <>
+    <div className="ticket-store">
       <TicketList />
-    </>
+    </div>
   );
 };
 
