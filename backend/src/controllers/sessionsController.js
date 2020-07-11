@@ -4,6 +4,6 @@ export const sessionsController = {
   post(req, res) {
     const user = req.body;
     const token = createToken(user);
-    res.json({ token });
+    res.json({ ...user, token });
   },
 };

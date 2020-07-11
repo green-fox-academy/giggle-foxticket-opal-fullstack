@@ -8,7 +8,6 @@ const pool = mysql.createPool({
   database: config.mysql.database,
 });
 
-
 export const db = {
   query(query, values) {
     return new Promise((resolve, reject) => {
@@ -25,4 +24,3 @@ export const db = {
     });
   },
 };
-

@@ -1,10 +1,10 @@
-import {db} from '../data/connection'
+import { db } from '../data/connection';
 
-export const getDbStatus = async ()=> {
+export const getDbStatus = async () => {
   try {
-    let result = await db.query('SELECT 1')
-     return true
+    let result = await db.query('SELECT 1');
+    return true;
   } catch {
-  return false
+    return false;
   }
-}
+};
