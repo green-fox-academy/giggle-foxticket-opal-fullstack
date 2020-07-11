@@ -72,7 +72,7 @@ h1 {
   cursor: pointer;
   border-bottom: 2px solid green;
   margin: 0.5em;
-} 
+}
  .input-green:focus {
   outline: none;
 }
