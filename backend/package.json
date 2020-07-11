@@ -23,8 +23,13 @@
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "express-validator": "^6.6.0",
 =======
+=======
+    "mariadb": "^2.4.1",
+    "express-validator": "^6.6.0",
+>>>>>>> f44fe68051f91423937edbb1c185b5707a206933
     "jsonwebtoken": "^8.5.1",
 >>>>>>> 975a394f7a482fc57bbdc895127b33c91d029caa
     "morgan": "^1.10.0",

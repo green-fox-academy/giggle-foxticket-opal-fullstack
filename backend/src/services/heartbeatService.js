@@ -7,4 +7,4 @@ export const getDbStatus = async () => {
   } catch {
     return false;
   }
-}
+};

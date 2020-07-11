@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test register component renders correctly 1`] = `
+<div
+  className="form-container"
+>
+  <form
+    className="register-form"
+    onSubmit={[Function]}
+  >
+    <fieldset>
+      <h1>
+        Foxticket
+      </h1>
+      <input
+        autoComplete="off"
+        name="email"
+        onChange={[Function]}
+        placeholder="E-mail..."
+        required={true}
+        type="email"
+        value=""
+      />
+      <input
+        autoComplete="off"
+        name="username"
+        onChange={[Function]}
+        placeholder="User Name..."
+        required={true}
+        type="text"
+        value=""
+      />
+      <input
+        autoComplete="off"
+        name="password"
+        onChange={[Function]}
+        placeholder="Password..."
+        required={true}
+        type="password"
+        value=""
+      />
+      <input
+        autoComplete="off"
+        name="confirm"
+        onChange={[Function]}
+        placeholder="Confirm password..."
+        required={true}
+        type="password"
+        value=""
+      />
+      <button
+        className="btn btn--primary--solid btn--medium"
+        type="submit"
+      >
+        Sign Up
+      </button>
+    </fieldset>
+  </form>
+</div>
+`;
