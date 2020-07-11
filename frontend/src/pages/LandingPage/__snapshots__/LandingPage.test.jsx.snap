@@ -51,10 +51,14 @@ Array [
       <div
         className="card-copy"
       >
-        <h1>
+        <h1
+          className="card-primary-header"
+        >
           DOOM
         </h1>
-        <h2>
+        <h2
+          className="card-secondary-header"
+        >
           Video game series
         </h2>
         <p>
@@ -76,10 +80,14 @@ Array [
       <div
         className="card-copy"
       >
-        <h1>
+        <h1
+          className="card-primary-header"
+        >
           Wolfenstein
         </h1>
-        <h2>
+        <h2
+          className="card-secondary-header"
+        >
           Video game series
         </h2>
         <p>
@@ -101,10 +109,14 @@ Array [
       <div
         className="card-copy"
       >
-        <h1>
+        <h1
+          className="card-primary-header"
+        >
           Quake
         </h1>
-        <h2>
+        <h2
+          className="card-secondary-header"
+        >
           Video game series
         </h2>
         <p>
