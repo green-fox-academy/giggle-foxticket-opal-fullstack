@@ -4,6 +4,7 @@ const cors = require('cors');
 import { helloController } from '../controllers';
 import { UserController } from '../controllers/UserController';
 import { sessionsController } from '../controllers';
+import { validateUser } from '../middlewares/validators/userValidator';
 
 const router = express.Router();
 const userController = new UserController();
@@ -13,7 +14,7 @@ router.use(bodyParser.json());
 
 router.get('/hello', helloController.get);
 
-router.post('/users', (req, res) => {
+router.post('/users', validateUser, (req, res) => {
   userController.register(req, res);
 });
 router.post('/session');
