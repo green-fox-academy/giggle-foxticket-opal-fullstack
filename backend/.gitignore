@@ -1,7 +1,10 @@
 node_modules/
 output/
 logs/
+<<<<<<< HEAD
 database/.env
+=======
+>>>>>>> f44fe68051f91423937edbb1c185b5707a206933
 yarn-error.log
 dist
 coverage
