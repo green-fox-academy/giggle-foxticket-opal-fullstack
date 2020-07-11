@@ -7,9 +7,9 @@ module.exports = {
 
   verifyToken: token => {
     try {
-      return jwt.verify(token, process.env.ACCESS_TOKEN_SECRET)
+      return jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
     } catch (err) {
       res.sendStatus(400).send('Invalid Token');
     }
-  }
+  },
 };

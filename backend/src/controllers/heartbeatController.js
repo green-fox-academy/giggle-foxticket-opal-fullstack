@@ -1,9 +1,8 @@
-import {getDbStatus} from '../services/heartbeatService'
+import { getDbStatus } from '../services';
 
 export const getSystemStatus = async (req, res) => {
-  let result = await getDbStatus()
+  let result = await getDbStatus();
   res.json({
-    db: result 
+    db: result,
   });
 };
-
