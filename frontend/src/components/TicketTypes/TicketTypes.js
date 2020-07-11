@@ -31,6 +31,7 @@ const toRender = fakeData.map(i => {
 function TicketTypes() {
   return (
     <div>
+      <h1 style={{fontSize:"5em"}}>Ticket Types</h1>
       {toRender}
     </div>
   );
