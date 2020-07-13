@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Route, NavLink } from 'react-router-dom';
-import './login.css';
+import './Login.css';
 
 import { FaExclamationTriangle } from 'react-icons/fa';
 
@@ -10,23 +10,23 @@ const Login = () => {
   const [isValid, setisValid] = useState(true);
 
   const handleNameChange = e => {
-    setname(  e.target.value );
+    setname(e.target.value);
   };
   const handlePasswordChange = e => {
-    setpassword(e.target.value );
+    setpassword(e.target.value);
   };
 
   const warningMsg = {
     color: isValid ? 'green' : 'red',
-  }; 
+  };
 
   const postHandler = e => {
     e.preventDefault();
-    if (name.length <= 3 || password.length <= 3  ) {
-      setisValid(false)
+    if (name.length <= 3 || password.length <= 3) {
+      setisValid(false);
     }
     const user = { name, password };
-  
+
     console.log(user);
     fetch('http://localhost:3000/api/session', {
       method: 'POST',
@@ -37,7 +37,6 @@ const Login = () => {
     });
   };
 
-
   return (
     <BrowserRouter>
       <Route>
@@ -45,7 +44,7 @@ const Login = () => {
         <div className="container">
           <form onSubmit={postHandler}>
             <input
-              className={"input-" + warningMsg.color}
+              className={'input-' + warningMsg.color}
               type="text"
               name="username"
               id="username"
@@ -54,7 +53,7 @@ const Login = () => {
               onChange={handleNameChange}
             />
             <input
-              className={"input-" + warningMsg.color}
+              className={'input-' + warningMsg.color}
               type="password"
               name="password"
               id="password"
@@ -63,7 +62,7 @@ const Login = () => {
               onChange={handlePasswordChange}
             />
             <p style={warningMsg} className={` ${isValid ? 'isValid' : ''}`}>
-              Username or Password is incorrect   
+              Username or Password is incorrect
               <FaExclamationTriangle color="red" size="1.5em" />
             </p>
 
