@@ -1,15 +1,15 @@
 import React from 'react';
-import './Ticket.style.sass';
-
-import { FaCircle } from 'react-icons/fa';
+import './AdminTicket.style.sass';
+import GiveIcon from '../DynamicIcon/DynamicIcon';
 import Button from '../Button/Button';
-console.log(FaCircle);
-function TicketType({ title, description }) {
+
+function AdminTicket({ title, description , iconName }) {
+  console.log(iconName)
   return (
     <div className="container">
       <div className="icon">
-        <FaCircle style={{ fontSize: '3em', color: 'lightgreen' }} />
-      </div>
+{/*        <GiveIcon icon='faAd' />
+ */}      </div>
       <div className="content">
         <h1>{title}</h1>
         <p>{description}</p>
@@ -21,4 +21,4 @@ function TicketType({ title, description }) {
     </div>
   );
 }
-export default TicketType;
+export default AdminTicket;

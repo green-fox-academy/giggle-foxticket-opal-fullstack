@@ -1,8 +1,8 @@
 import React from 'react';
-import TicketTypes from './TicketTypes';
+import AdminTicketTypes from './AdminTicketTypes';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
-  const tree = renderer.create(<TicketTypes />).toJSON();
+  const tree = renderer.create(<AdminTicketTypes />).toJSON();
   expect(tree).toMatchSnapshot();
 });
