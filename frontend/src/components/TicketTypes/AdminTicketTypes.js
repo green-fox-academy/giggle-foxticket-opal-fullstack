@@ -7,7 +7,8 @@ const fakeData = [
     id: 1,
     title: 'Ticket-Types A',
     description: 'asdf,ffff,f,f,f,f,f,fffffdrdbdb kjbk ',
-    iconName:'faAd'
+    iconName:'FaBeer'
+  
   },
   {
     id: 2,
