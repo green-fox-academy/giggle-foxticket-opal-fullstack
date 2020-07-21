@@ -125,6 +125,12 @@ Array [
       </div>
     </div>
   </div>,
+  <button
+    className="btn btn--danger--solid btn--medium"
+    onClick={[Function]}
+  >
+    Buy Tickets
+  </button>,
   <div
     className="video"
   >

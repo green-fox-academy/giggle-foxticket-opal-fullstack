@@ -21,7 +21,7 @@ const useCustomForm = ({ initialValues, onSubmit }) => {
   const handleSubmit = event => {
     if (event) event.preventDefault();
     onSubmit({ values });
-    setValues(initialValues)
+    setValues(initialValues);
   };
 
   return {
