@@ -16,7 +16,7 @@ const TicketList = () => {
             versions of Sass. It cannot handle the multi-line expression (issue
             here). Each grid row must be defined all in the same line: The above
           </div>
-          <Button buttonStyle="btn--danger--solid">BUY</Button>
+          <Button buttonStyle="btn--primary--solid">BUY</Button>
         </div>
 
         <div className="ticket">
@@ -27,7 +27,7 @@ const TicketList = () => {
             just not .sass after toying with it. Of course .scss is identical to
             CSS. Was hoping .sass would work to keep it cleaner.So CSS
           </div>
-          <Button buttonStyle="btn--danger--solid">BUY</Button>
+          <Button buttonStyle="btn--primary--solid">BUY</Button>
         </div>
 
         <div className="ticket">
@@ -38,7 +38,7 @@ const TicketList = () => {
             secret hacks to make .sass work with the ASCII portion of
             grid-template-areas), would love to check out... Thanks in a
           </div>
-          <Button buttonStyle="btn--danger--solid">BUY</Button>
+          <Button buttonStyle="btn--primary--solid">BUY</Button>
         </div>
       </div>
     </div>

@@ -10,8 +10,8 @@ const MainFeatures = () => {
           <img src={cat} alt="" />
         </div>
         <div className="card-copy">
-          <h1 className='card-primary-header'>DOOM</h1>
-          <h2 className='card-secondary-header'>Video game series</h2>
+          <h1 className="card-primary-header">DOOM</h1>
+          <h2 className="card-secondary-header">Video game series</h2>
           <p>
             Doom is a video game series and media franchise created by John
             Carmack, John Romero, Adrian Carmack, Kevin Cloud, and Tom Hall. The
@@ -27,8 +27,8 @@ const MainFeatures = () => {
           <img src={cat} alt="" />
         </div>
         <div className="card-copy">
-          <h1 className='card-primary-header'>Wolfenstein</h1>
-          <h2 className='card-secondary-header'>Video game series</h2>
+          <h1 className="card-primary-header">Wolfenstein</h1>
+          <h2 className="card-secondary-header">Video game series</h2>
           <p>
             Wolfenstein is a series of World War II video games. It was
             originally created by Muse Software, before being revived by id
@@ -44,8 +44,8 @@ const MainFeatures = () => {
           <img src={cat} alt="" />
         </div>
         <div className="card-copy">
-          <h1 className='card-primary-header'>Quake</h1>
-          <h2 className='card-secondary-header'>Video game series</h2>
+          <h1 className="card-primary-header">Quake</h1>
+          <h2 className="card-secondary-header">Video game series</h2>
           <p>
             Quake is a series of first-person shooter video games, developed by
             id Software and, as of 2010, published by Bethesda Softworks. The
