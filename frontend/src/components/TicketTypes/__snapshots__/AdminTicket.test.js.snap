@@ -2,10 +2,10 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="container"
+  className="admin_container"
 >
   <div
-    className="icon"
+    className="admin_icon"
   >
     <svg
       fill="currentColor"
@@ -27,12 +27,16 @@ exports[`renders correctly 1`] = `
     </svg>
   </div>
   <div
-    className="content"
+    className="admin_content"
   >
-    <h1>
+    <h1
+      className="admin_title"
+    >
       Hello
     </h1>
-    <p>
+    <p
+      className="admin_description"
+    >
       bla bla
     </p>
   </div>

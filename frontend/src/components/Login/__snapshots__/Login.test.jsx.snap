@@ -1,12 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`first snapshot of Login 1`] = `
-Array [
-  <h1>
-    Foxticket
-  </h1>,
+<div
+  className="login-body"
+>
   <div
-    className="container"
+    className="login_title"
+  >
+    Foxticket
+  </div>
+  <div
+    className="login_container"
   >
     <form
       onSubmit={[Function]}
@@ -63,19 +67,19 @@ Array [
         className="fas fa-exclamation-triangle"
       />
       <a
-        aria-current={null}
-        className="register"
+        className="login_register"
+        exact={true}
         href="/register"
         onClick={[Function]}
       >
         REGISTER
       </a>
       <button
-        className="login"
+        className="login_btn"
       >
         Login
       </button>
     </form>
-  </div>,
-]
+  </div>
+</div>
 `;

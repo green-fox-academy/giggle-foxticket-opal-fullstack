@@ -8,10 +8,10 @@ exports[`renders correctly 1`] = `
     Ticket Types
   </h1>
   <div
-    className="container"
+    className="admin_container"
   >
     <div
-      className="icon"
+      className="admin_icon"
     >
       <svg
         fill="currentColor"
@@ -33,12 +33,16 @@ exports[`renders correctly 1`] = `
       </svg>
     </div>
     <div
-      className="content"
+      className="admin_content"
     >
-      <h1>
+      <h1
+        className="admin_title"
+      >
         Ticket-Types A
       </h1>
-      <p>
+      <p
+        className="admin_description"
+      >
         Lorem Ipsum has been the industry s standard dummy
       </p>
     </div>
@@ -58,10 +62,10 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="container"
+    className="admin_container"
   >
     <div
-      className="icon"
+      className="admin_icon"
     >
       <svg
         fill="currentColor"
@@ -83,12 +87,16 @@ exports[`renders correctly 1`] = `
       </svg>
     </div>
     <div
-      className="content"
+      className="admin_content"
     >
-      <h1>
+      <h1
+        className="admin_title"
+      >
         Ticket-Types B
       </h1>
-      <p>
+      <p
+        className="admin_description"
+      >
         Since the 1500s,when an unknown printer took a galley
       </p>
     </div>
@@ -108,10 +116,10 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="container"
+    className="admin_container"
   >
     <div
-      className="icon"
+      className="admin_icon"
     >
       <svg
         fill="currentColor"
@@ -133,12 +141,16 @@ exports[`renders correctly 1`] = `
       </svg>
     </div>
     <div
-      className="content"
+      className="admin_content"
     >
-      <h1>
+      <h1
+        className="admin_title"
+      >
         Ticket-Types C
       </h1>
-      <p>
+      <p
+        className="admin_description"
+      >
         Remaining  essentially unchanged. It was popularised
       </p>
     </div>
@@ -158,10 +170,10 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="container"
+    className="admin_container"
   >
     <div
-      className="icon"
+      className="admin_icon"
     >
       <svg
         fill="currentColor"
@@ -183,12 +195,16 @@ exports[`renders correctly 1`] = `
       </svg>
     </div>
     <div
-      className="content"
+      className="admin_content"
     >
-      <h1>
+      <h1
+        className="admin_title"
+      >
         Ticket-Types D
       </h1>
-      <p>
+      <p
+        className="admin_description"
+      >
         Contrary to popular Lorem Ipsum is not  random text
       </p>
     </div>

@@ -12,13 +12,13 @@ const fakeData = [
   {
     id: 2,
     title: 'Ticket-Types B',
-    description:'Since the 1500s,when an unknown printer took a galley',
+    description: 'Since the 1500s,when an unknown printer took a galley',
     iconName: 'FaRegSmileWink',
   },
   {
     id: 3,
     title: 'Ticket-Types C',
-    description:'Remaining  essentially unchanged. It was popularised',
+    description: 'Remaining  essentially unchanged. It was popularised',
     iconName: 'FaRegGem',
   },
   {

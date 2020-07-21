@@ -5,13 +5,13 @@ import Button from '../Button/Button';
 
 function AdminTicket({ title, description, iconName }) {
   return (
-    <div className="container">
-      <div className="icon">
-        <GiveIcon icon={iconName} />
-      </div>
-      <div className="content">
-        <h1>{title}</h1>
-        <p>{description}</p>
+    <div className="admin_container">
+      <div className="admin_icon">
+      <GiveIcon icon={iconName} />
+    </div>
+      <div className="admin_content">
+        <h1 className="admin_title">{title}</h1>
+        <p className="admin_description">{description}</p>
       </div>
       <div className="btns">
         <Button buttonStyle="btn--danger--solid">Edit</Button>
