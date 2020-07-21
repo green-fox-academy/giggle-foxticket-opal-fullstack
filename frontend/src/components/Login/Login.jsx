@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, NavLink, Route } from 'react-router-dom';
 import './Login.css';
 
 import { FaExclamationTriangle } from 'react-icons/fa';

@@ -3,10 +3,9 @@ body {
   margin: 0;
   height: 100%;
 }
-*{
+* {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 1em;
-
 }
 
 body {
@@ -54,7 +53,6 @@ h1 {
 }
 .register:hover {
   color: lightgreen;
-
 }
 .register {
   color: green;
@@ -67,13 +65,13 @@ h1 {
   visibility: hidden;
 }
 
- .input-green {
+.input-green {
   border: none;
   cursor: pointer;
   border-bottom: 2px solid green;
   margin: 0.5em;
 }
- .input-green:focus {
+.input-green:focus {
   outline: none;
 }
 .input-red {
@@ -81,9 +79,7 @@ h1 {
   cursor: pointer;
   border-bottom: 2px solid red;
   margin: 0.5em;
-
 }
 .input-red:focus {
- outline: none;
+  outline: none;
 }
-

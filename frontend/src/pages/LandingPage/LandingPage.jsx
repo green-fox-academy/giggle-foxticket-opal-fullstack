@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 import MainFeatures from '../../components/MainFeatures/MainFeatures';
 import ImageComposition from '../../components/ImageComposition/ImageComposition';
 import Footer from '../../components/Footer/Footer';
@@ -8,20 +8,13 @@ import Button from '../../components/Button/Button';
 import './LandingPage.styles.sass';
 
 const LandingPage = () => {
-  const history = useHistory();
-
-  const routeChange = () => {
-    let path = '/shop';
-    history.push(path);
-  };
-
   return (
     <>
       <ImageComposition />
       <MainFeatures />
-      <Button buttonStyle="btn--danger--solid" onClick={routeChange}>
-        Buy Tickets
-      </Button>
+      <Link to="/shop">
+        <Button buttonStyle="btn--danger--solid">Buy Tickets</Button>
+      </Link>
       <VideoPlayer />
       <Footer />
     </>
