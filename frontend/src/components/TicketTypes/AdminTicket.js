@@ -7,8 +7,8 @@ function AdminTicket({ title, description, iconName }) {
   return (
     <div className="container">
       <div className="icon">
-      <GiveIcon icon={iconName} />
-    </div>
+        <GiveIcon icon={iconName} />
+      </div>
       <div className="content">
         <h1>{title}</h1>
         <p>{description}</p>
