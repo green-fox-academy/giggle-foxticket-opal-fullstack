@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter, NavLink, Route } from 'react-router-dom';
-import './Login.css';
+import { Link } from 'react-router-dom';
+import './Login.sass';
 
 import { FaExclamationTriangle } from 'react-icons/fa';
 
@@ -38,44 +38,42 @@ const Login = () => {
   };
 
   return (
-    <BrowserRouter>
-      <Route>
-        <h1>Foxticket</h1>
-        <div className="container">
-          <form onSubmit={postHandler}>
-            <input
-              className={'input-' + warningMsg.color}
-              type="text"
-              name="username"
-              id="username"
-              placeholder="Username"
-              required
-              onChange={handleNameChange}
-            />
-            <input
-              className={'input-' + warningMsg.color}
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              required
-              onChange={handlePasswordChange}
-            />
-            <p style={warningMsg} className={` ${isValid ? 'isValid' : ''}`}>
-              Username or Password is incorrect
-              <FaExclamationTriangle color="red" size="1.5em" />
-            </p>
+    <div className="login-body">
+      <div className="login_title">Foxticket</div>
+      <div className="login_container">
+        <form onSubmit={postHandler}>
+          <input
+            className={'input-' + warningMsg.color}
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+            required
+            onChange={handleNameChange}
+          />
+          <input
+            className={'input-' + warningMsg.color}
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            required
+            onChange={handlePasswordChange}
+          />
+          <p style={warningMsg} className={` ${isValid ? 'isValid' : 'notValid'}`}>
+            Username or Password is incorrect   
+            <FaExclamationTriangle color="red" size="1.5em" />
+          </p>
 
-            <i className="fas fa-exclamation-triangle"></i>
+          <i className="fas fa-exclamation-triangle"></i>
 
-            <NavLink className="register" to="/register" exact>
-              REGISTER
-            </NavLink>
-            <button className="login">Login</button>
-          </form>
-        </div>
-      </Route>
-    </BrowserRouter>
+          <Link className="login_register" to="/register" exact>
+            REGISTER
+          </Link>
+          <button className="login_btn">Login</button>
+        </form>
+      </div>
+    </div>
   );
 };
 
