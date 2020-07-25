@@ -19,4 +19,14 @@ export class UserRepository {
       [username, userEmail]
     );
   }
+
+  async getUser(username, userPassword) {
+    return await db.query(
+      `SELECT name, id
+         FROM foxticket.Users
+         WHERE name = ?
+            AND password = ?`,
+      [username, userPassword]
+    );
+  }
 }

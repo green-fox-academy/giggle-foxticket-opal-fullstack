@@ -15,7 +15,7 @@ exports.setup = function(options, seedLink) {
 };
 
 exports.up = function(db) {
-  return db.createTable('Ticket-Types', {
+  return db.createTable('TicketTypes', {
     id: { type: 'int', primaryKey: true, autoIncrement: true },
     name: { type: 'string', unique: 'true', length: 25 },
     price: { type: 'int', unique: 'true', length: 25 },
@@ -25,7 +25,7 @@ exports.up = function(db) {
 };
 
 exports.down = function(db) {
-  return db.dropTable('Ticket-Types');
+  return db.dropTable('TicketTypes');
 };
 
 exports._meta = {

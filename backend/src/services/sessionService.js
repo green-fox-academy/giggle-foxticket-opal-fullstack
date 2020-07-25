@@ -1,8 +1,14 @@
 const jwt = require('jsonwebtoken');
+import { getUser } from '../repository/UserRepository';
 
 module.exports = {
-  createToken: data => {
-    return jwt.sign(data, process.env.ACCESS_TOKEN_SECRET || 'testing');
+  login: async data => {
+    if (!data.username || !data.password) {
+      return res.status(401).json({ Message: 'Username or Password is missing' });
+    } else {
+      const user = await getUser(data);
+      return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET || 'testing');
+    }
   },
 
   verifyToken: token => {
