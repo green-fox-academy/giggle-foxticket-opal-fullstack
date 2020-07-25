@@ -5,15 +5,15 @@ import './Login.sass';
 import { FaExclamationTriangle } from 'react-icons/fa';
 
 const Login = () => {
-  const [name, setname] = useState('');
-  const [password, setpassword] = useState('');
-  const [isValid, setisValid] = useState(true);
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+  const [isValid, setIsValid] = useState(true);
 
   const handleNameChange = e => {
-    setname(e.target.value);
+    setName(e.target.value);
   };
   const handlePasswordChange = e => {
-    setpassword(e.target.value);
+    setPassword(e.target.value);
   };
 
   const warningMsg = {
@@ -23,7 +23,7 @@ const Login = () => {
   const postHandler = e => {
     e.preventDefault();
     if (name.length <= 3 || password.length <= 3) {
-      setisValid(false);
+      setIsValid(false);
     }
     const user = { name, password };
 

@@ -7,16 +7,16 @@ import Login from './components/Login/Login'
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="App">
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/shop" component={TicketStore} />
           <Route exact path="/admin" component={AdminTicketTypes} />
           <Route exact path="/login" component={Login} />
         </Switch>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
