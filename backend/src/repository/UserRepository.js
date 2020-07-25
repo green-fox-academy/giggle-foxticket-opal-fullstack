@@ -9,7 +9,14 @@ export class UserRepository {
       [user.name, user.email, user.password]
     );
   }
-
+  async saveTicket(ticket) {
+    await db.query(
+      `INSERT INTO foxticket.TicketTypes (name, price, description, icon)
+         VALUES (?, ?, ?, ?)`,
+      [ticket.name, ticket.price, ticket.description, ticket.icon]
+    );
+  }
+  
   async getUserData(username, userEmail) {
     return await db.query(
       `SELECT name, email
@@ -20,7 +27,7 @@ export class UserRepository {
     );
   }
 
-  async getUser(username, userPassword) {
+  async get(username, userPassword) {
     return await db.query(
       `SELECT name, id
          FROM foxticket.Users
