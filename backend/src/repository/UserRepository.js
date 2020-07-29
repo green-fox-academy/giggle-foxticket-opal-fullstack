@@ -9,6 +9,13 @@ export class UserRepository {
       [user.name, user.email, user.password]
     );
   }
+  async saveAdmin(user) {
+    await db.query(
+      `INSERT INTO foxticket.Users (name, email, password, isAdmin )
+         VALUES (?, ?, ?, ?)`,
+      [user.name, user.email, user.password, user.isAdmin]
+    );
+  }
   
   async getUserData(username, userEmail) {
     return await db.query(
@@ -20,9 +27,9 @@ export class UserRepository {
     );
   }
 
-  async get(username, userPassword) {
+  async getUser(username, userPassword) {
     return await db.query(
-      `SELECT name, id
+      `SELECT *
          FROM foxticket.Users
          WHERE name = ?
             AND password = ?`,

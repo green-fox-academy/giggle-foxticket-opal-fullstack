@@ -15,7 +15,7 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db) {
-  return db.addColumn('Users', 'isAdmin' , { type : 'boolean', defaultValue: false})
+  return db.addColumn('Users', 'isAdmin' , { type : 'boolean', defaultValue: false })
 };
 
 exports.down = function (db) {

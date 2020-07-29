@@ -1,6 +1,5 @@
 import { UserRepository } from './repository/UserRepository';
 import { TicketRepository } from './repository/TicketTypesRepository';
-
 let userRepo = new UserRepository()
 let ticketRepo = new TicketRepository()
 
@@ -10,9 +9,9 @@ let userDummyData = {
   password: 'password123',
 };
 let adminDummyData = {
-  name: 'Lehel',
-  email: 'lehel@gmail.com',
-  password: 'password123',
+  name: 'Vivien',
+  email: 'vivi@gmail.com',
+  password: 'password1223',
   isAdmin: true
 };
 let TicketDummyData = {
@@ -23,5 +22,5 @@ let TicketDummyData = {
 };
 
 userRepo.save(userDummyData);
-userRepo.save(adminDummyData);
+userRepo.saveAdmin(adminDummyData);
 ticketRepo.saveTicket(TicketDummyData);
