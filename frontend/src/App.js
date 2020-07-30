@@ -4,7 +4,7 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import TicketStore from './pages/TicketStore/TicketStore';
 import AdminTicketTypes from './components/TicketTypes/AdminTicketTypes';
 import Login from './components/Login/Login';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
