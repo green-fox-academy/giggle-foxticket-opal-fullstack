@@ -60,20 +60,12 @@ exports[`renders correctly 1`] = `
           <button
             className="btn btn--danger--solid btn--medium"
           >
-<<<<<<< HEAD
-            Edit
-=======
             BUY
->>>>>>> GFO-148-dirty
           </button>
           <button
             className="btn btn--danger--solid--btn btn--medium"
           >
-<<<<<<< HEAD
-            Delete
-=======
             BUY
->>>>>>> GFO-148-dirty
           </button>
         </div>
       </div>
@@ -122,20 +114,12 @@ exports[`renders correctly 1`] = `
           <button
             className="btn btn--danger--solid btn--medium"
           >
-<<<<<<< HEAD
-            Edit
-=======
             BUY
->>>>>>> GFO-148-dirty
           </button>
           <button
             className="btn btn--danger--solid--btn btn--medium"
           >
-<<<<<<< HEAD
-            Delete
-=======
             BUY
->>>>>>> GFO-148-dirty
           </button>
         </div>
       </div>
@@ -184,20 +168,12 @@ exports[`renders correctly 1`] = `
           <button
             className="btn btn--danger--solid btn--medium"
           >
-<<<<<<< HEAD
-            Edit
-=======
             BUY
->>>>>>> GFO-148-dirty
           </button>
           <button
             className="btn btn--danger--solid--btn btn--medium"
           >
-<<<<<<< HEAD
-            Delete
-=======
             BUY
->>>>>>> GFO-148-dirty
           </button>
         </div>
       </div>
@@ -246,20 +222,12 @@ exports[`renders correctly 1`] = `
           <button
             className="btn btn--danger--solid btn--medium"
           >
-<<<<<<< HEAD
-            Edit
-=======
             BUY
->>>>>>> GFO-148-dirty
           </button>
           <button
             className="btn btn--danger--solid--btn btn--medium"
           >
-<<<<<<< HEAD
-            Delete
-=======
             BUY
->>>>>>> GFO-148-dirty
           </button>
         </div>
       </div>
