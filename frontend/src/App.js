@@ -5,10 +5,9 @@ import TicketStore from './pages/TicketStore/TicketStore';
 import AdminTicketTypes from './components/TicketTypes/AdminTicketTypes';
 import Login from './components/Login/Login';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 >>>>>>> GFO-148-dirty
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (

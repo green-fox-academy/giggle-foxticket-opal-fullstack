@@ -8,10 +8,7 @@ const ticketTypes = [
     title: 'Ticket-Types A',
     description: 'Lorem Ipsum has been the industry s standard dummy',
     iconName: 'FaBeer',
-<<<<<<< HEAD
-=======
     buttonText: 'BUY',
->>>>>>> GFO-148-dirty
   },
   {
     id: 2,
