@@ -14,7 +14,7 @@ function AdminTicket({ title, description, iconName }) {
         <p className="admin_description">{description}</p>
       </div>
       <div className="btns">
-        <Button buttonStyle="btn--danger--solid">Edit</Button>
+        <Button buttonStyle="btn--success--solid--btn">Edit</Button>
         <Button buttonStyle="btn--danger--solid--btn">Delete</Button>
       </div>
     </div>

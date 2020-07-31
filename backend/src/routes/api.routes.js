@@ -6,8 +6,8 @@ import { UserController } from '../controllers/UserController';
 import { sessionsController } from '../controllers/sessionsController';
 import { ticketTypesController } from '../controllers/ticketTypesController';
 import { validateUser } from '../middlewares/validators/userValidator';
-import { authenticate } from '../middlewares/authenticate'
-import { admin_auth } from '../middlewares/admin_auth'
+import { authenticate } from '../middlewares/authenticate';
+import { admin_auth } from '../middlewares/admin_auth';
 
 const router = express.Router();
 const userController = new UserController();
@@ -21,20 +21,11 @@ router.get('/ticket-types', ticketTypesController.get);
 router.post('/users', validateUser, (req, res) => {
   userController.register(req, res);
 });
+
+router.use(authenticate);
 router.post('/session', sessionsController.post);
 
-//Test token
-router.use(authenticate)
-
-router.post('/test',  (req , res) =>{
-  res.json({ mssg: "success" , token: req.body })
-});
-
-//test admin
-router.use(admin_auth)
-
-router.post('/testadmin', (req ,res) =>{
-  res.json({ mssg: " admin ok " , token: req.body })
-} );
+router.use(admin_auth);
+/* admin endpoints */
 
 export default router;

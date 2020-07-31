@@ -10,7 +10,8 @@ const styles = [
   'btn--warning--outline',
   'btn--danger--outline',
   'btn--success--outline',
-  'btn--danger--solid--btn'
+  'btn--danger--solid--btn',
+  'btn--success--solid--btn'
 ];
 
 const sizes = ['btn--medium', 'btn--large'];
