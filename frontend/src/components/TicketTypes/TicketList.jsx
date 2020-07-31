@@ -8,24 +8,40 @@ const ticketTypes = [
     title: 'Ticket-Types A',
     description: 'Lorem Ipsum has been the industry s standard dummy',
     iconName: 'FaBeer',
+<<<<<<< HEAD
+=======
+    buttonText: 'BUY',
+>>>>>>> GFO-148-dirty
   },
   {
     id: 2,
     title: 'Ticket-Types B',
     description: 'Since the 1500s,when an unknown printer took a galley',
     iconName: 'FaRegSmileWink',
+<<<<<<< HEAD
+=======
+    buttonText: 'BUY',
+>>>>>>> GFO-148-dirty
   },
   {
     id: 3,
     title: 'Ticket-Types C',
     description: 'Remaining  essentially unchanged. It was popularised',
     iconName: 'FaRegGem',
+<<<<<<< HEAD
+=======
+    buttonText: 'BUY',
+>>>>>>> GFO-148-dirty
   },
   {
     id: 4,
     title: 'Ticket-Types D',
     description: 'Contrary to popular Lorem Ipsum is not  random text',
     iconName: 'FaUmbrella',
+<<<<<<< HEAD
+=======
+    buttonText: 'BUY',
+>>>>>>> GFO-148-dirty
   },
 ];
 

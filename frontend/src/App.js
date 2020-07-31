@@ -5,6 +5,10 @@ import TicketStore from './pages/TicketStore/TicketStore';
 import AdminTicketTypes from './components/TicketTypes/AdminTicketTypes';
 import Login from './components/Login/Login';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+>>>>>>> GFO-148-dirty
 
 function App() {
   return (
@@ -12,7 +16,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/" component={LandingPage} />
-          <Route exact path="/shop" component={TicketStore} />
+          <PrivateRoute exact path="/shop" component={TicketStore} />
           <Route exact path="/admin" component={AdminTicketTypes} />
           <Route exact path="/login" component={Login} />
         </Switch>
