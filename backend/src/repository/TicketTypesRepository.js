@@ -9,4 +9,8 @@ export class TicketRepository {
       [ticket.name, ticket.price, ticket.description, ticket.icon]
     );
   }
+
+  async listAll() {
+    await db.query('SELECT * from foxticket.TicketTypes');
+  }
 }

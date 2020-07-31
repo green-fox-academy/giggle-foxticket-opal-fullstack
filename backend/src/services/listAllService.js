@@ -1,9 +1,9 @@
-import { db } from '../data/connection';
+import { listAll } from '../repository/TicketTypesRepository';
 
 export const ticketTypesService = {
-  getAll: async () => {
+  getAll: () => {
     try {
-      return await db.query('SELECT * from foxticket.TicketTypes');
+     return listAll();
     } catch {
       return false;
     }

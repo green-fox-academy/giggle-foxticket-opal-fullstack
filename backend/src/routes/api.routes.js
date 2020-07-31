@@ -16,16 +16,16 @@ router.use(cors());
 router.use(bodyParser.json());
 
 router.get('/hello', helloController.get);
-router.get('/ticket-types', ticketTypesController.get);
 
 router.post('/users', validateUser, (req, res) => {
   userController.register(req, res);
 });
 
-router.use(authenticate);
 router.post('/session', sessionsController.post);
 
+router.use(authenticate);
+
 router.use(admin_auth);
-/* admin endpoints */
+router.get('/ticket-types', ticketTypesController.get);
 
 export default router;

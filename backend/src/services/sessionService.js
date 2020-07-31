@@ -1,4 +1,6 @@
-import jwt from 'jsonwebtoken'
+/* import jwt from 'jsonwebtoken';
+ */
+const jwt = require('jsonwebtoken');
 import { getUser } from '../repository/UserRepository';
 
 module.exports = {
@@ -6,22 +8,19 @@ module.exports = {
     if (!data.username || !data.password) {
       throw new Error('Username or Password is missing');
     } else {
-      const user = await getUser(data);
+  const user = await getUser(data);
       if (!user || user[0].password !== data.password) {
         throw new Error('Username or Password is incorrect');
       } else {
-        const tokenData = {
-          user_id: user.id,
-          user_name: user.name,
-          user_isAdmin: user.isAdmin,
-        };
+      const tokenData = {
+        user_id: user.id,
+        user_name: user.name,
+        user_isAdmin: user.isAdmin,
+      };
 
-        return jwt.sign(
-          tokenData,
-          process.env.ACCESS_TOKEN_SECRET || 'testing'
-        );
-      }
+      return jwt.sign(tokenData, process.env.ACCESS_TOKEN_SECRET || 'testing');
     }
+  }
   },
 
   verifyToken: token => {
