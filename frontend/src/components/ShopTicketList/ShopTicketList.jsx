@@ -1,6 +1,6 @@
 import React from 'react';
 import './ShopTicketList.styles.sass';
-import AdminTicket from '../Ticket/Ticket';
+import Ticket from '../Ticket/Ticket';
 
 const ticketTypes = [
   {
@@ -35,7 +35,7 @@ const ShopTicketList = () => {
       <div className="ticket-list">
         <h1 className="main-title">Ticket Types</h1>
         {ticketTypes.map(ticket => (
-          <AdminTicket
+          <Ticket
             key={ticket.id}
             {...ticket}
             canEdit={false}
