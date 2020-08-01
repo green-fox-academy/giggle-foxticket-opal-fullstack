@@ -2,7 +2,7 @@ import React from 'react';
 import './ShopTicketList.styles.sass';
 import Ticket from '../Ticket/Ticket';
 
-const ticketTypes = [
+const shopTicketTypes = [
   {
     id: 1,
     title: 'Ticket-Types A',
@@ -34,10 +34,10 @@ const ShopTicketList = () => {
     <div className="ticket-list-container">
       <div className="ticket-list">
         <h1 className="main-title">Ticket Types</h1>
-        {ticketTypes.map(ticket => (
+        {shopTicketTypes.map(shopTicket => (
           <Ticket
-            key={ticket.id}
-            {...ticket}
+            key={shopTicket.id}
+            {...shopTicket}
             canEdit={false}
             buttonText="BUY"
           />
