@@ -8,28 +8,24 @@ const ticketTypes = [
     title: 'Ticket-Types A',
     description: 'Lorem Ipsum has been the industry s standard dummy',
     iconName: 'FaBeer',
-    buttonText: 'BUY',
   },
   {
     id: 2,
     title: 'Ticket-Types B',
     description: 'Since the 1500s,when an unknown printer took a galley',
     iconName: 'FaRegSmileWink',
-    buttonText: 'BUY',
   },
   {
     id: 3,
     title: 'Ticket-Types C',
     description: 'Remaining  essentially unchanged. It was popularised',
     iconName: 'FaRegGem',
-    buttonText: 'BUY',
   },
   {
     id: 4,
     title: 'Ticket-Types D',
     description: 'Contrary to popular Lorem Ipsum is not  random text',
     iconName: 'FaUmbrella',
-    buttonText: 'BUY',
   },
 ];
 
@@ -39,7 +35,12 @@ const TicketList = () => {
       <div className="ticket-list">
         <h1 className="main-title">Ticket Types</h1>
         {ticketTypes.map(ticket => (
-          <AdminTicket key={ticket.id} {...ticket} canEdit={false} />
+          <AdminTicket
+            key={ticket.id}
+            {...ticket}
+            canEdit={false}
+            buttonText="BUY"
+          />
         ))}
       </div>
     </div>
