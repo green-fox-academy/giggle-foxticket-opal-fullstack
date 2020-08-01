@@ -1,6 +1,6 @@
 import React from 'react';
 import './TicketList.styles.sass';
-import AdminTicket from './AdminTicket';
+import AdminTicket from '../Ticket/Ticket';
 
 const ticketTypes = [
   {
@@ -38,8 +38,8 @@ const TicketList = () => {
     <div className="ticket-list-container">
       <div className="ticket-list">
         <h1 className="main-title">Ticket Types</h1>
-        {ticketTypes.map(i => (
-          <AdminTicket key={i.id} {...i} />
+        {ticketTypes.map(ticket => (
+          <AdminTicket key={ticket.id} {...ticket} canEdit={false} />
         ))}
       </div>
     </div>

@@ -1,9 +1,9 @@
 import React from 'react';
-import './AdminTicket.style.sass';
+import './Ticket.style.sass';
 import GiveIcon from '../DynamicIcon/DynamicIcon';
 import Button from '../Button/Button';
 
-function AdminTicket({ title, description, iconName, buttonText }) {
+function Ticket({ title, description, iconName, buttonText, canEdit }) {
   return (
     <div className="admin_container">
       <div className="admin_icon">
@@ -15,9 +15,12 @@ function AdminTicket({ title, description, iconName, buttonText }) {
       </div>
       <div className="btns">
         <Button buttonStyle="btn--danger--solid">{buttonText}</Button>
-        <Button buttonStyle="btn--danger--solid--btn">{buttonText}</Button>
+        {canEdit ? (
+          <Button buttonStyle="btn--danger--solid--btn">{buttonText}</Button>
+        ) : null}
       </div>
     </div>
   );
 }
-export default AdminTicket;
+
+export default Ticket;

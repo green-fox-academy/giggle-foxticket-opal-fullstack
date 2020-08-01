@@ -1,6 +1,6 @@
 import React from 'react';
-import AdminTicket from './AdminTicket';
-import './AdminTicketTypes.style.sass';
+import AdminTicket from '../../components/Ticket/Ticket';
+import './AdminPage.style.sass';
 
 const fakeData = [
   {
@@ -29,15 +29,15 @@ const fakeData = [
   },
 ];
 
-function AdminTicketTypes() {
+function AdminPage() {
   return (
     <div>
       <h1 className="main-title">Ticket Types</h1>
-      {fakeData.map(i => (
-        <AdminTicket key={i.id} {...i} />
+      {fakeData.map(adminTicket => (
+        <AdminTicket key={adminTicket.id} {...adminTicket} canEdit={true} />
       ))}
     </div>
   );
 }
 
-export default AdminTicketTypes;
+export default AdminPage;

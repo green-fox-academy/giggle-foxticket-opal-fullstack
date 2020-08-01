@@ -1,5 +1,5 @@
 import React from 'react';
-import AdminTicket from './AdminTicket';
+import AdminTicket from './Ticket';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
