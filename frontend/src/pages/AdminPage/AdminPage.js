@@ -1,5 +1,5 @@
 import React from 'react';
-import AdminTicket from '../../components/Ticket/Ticket';
+import Ticket from '../../components/Ticket/Ticket';
 import './AdminPage.style.sass';
 
 const fakeData = [
@@ -34,7 +34,7 @@ function AdminPage() {
     <div>
       <h1 className="main-title">Ticket Types</h1>
       {fakeData.map(adminTicket => (
-        <AdminTicket key={adminTicket.id} {...adminTicket} canEdit={true} />
+        <Ticket key={adminTicket.id} {...adminTicket} canEdit={true} />
       ))}
     </div>
   );
