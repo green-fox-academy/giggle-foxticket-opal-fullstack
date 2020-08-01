@@ -1,10 +1,10 @@
 import React from 'react';
-import TicketList from '../../components/TicketTypes/TicketList';
+import ShopTicketList from '../../components/ShopTicketList/ShopTicketList';
 
 const TicketStore = () => {
   return (
     <div className="ticket-store">
-      <TicketList />
+      <ShopTicketList />
     </div>
   );
 };

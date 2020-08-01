@@ -1,5 +1,5 @@
 import React from 'react';
-import './TicketList.styles.sass';
+import './ShopTicketList.styles.sass';
 import AdminTicket from '../Ticket/Ticket';
 
 const ticketTypes = [
@@ -29,7 +29,7 @@ const ticketTypes = [
   },
 ];
 
-const TicketList = () => {
+const ShopTicketList = () => {
   return (
     <div className="ticket-list-container">
       <div className="ticket-list">
@@ -47,4 +47,4 @@ const TicketList = () => {
   );
 };
 
-export default TicketList;
+export default ShopTicketList;
