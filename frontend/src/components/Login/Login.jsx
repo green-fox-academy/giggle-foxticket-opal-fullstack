@@ -27,7 +27,6 @@ const Login = () => {
     }
     const user = { name, password };
 
-    console.log(user);
     fetch('http://localhost:3000/api/session', {
       method: 'POST',
       headers: {
@@ -60,8 +59,11 @@ const Login = () => {
             required
             onChange={handlePasswordChange}
           />
-          <p style={warningMsg} className={` ${isValid ? 'isValid' : 'notValid'}`}>
-            Username or Password is incorrect   
+          <p
+            style={warningMsg}
+            className={` ${isValid ? 'isValid' : 'notValid'}`}
+          >
+            Username or Password is incorrect
             <FaExclamationTriangle color="red" size="1.5em" />
           </p>
 

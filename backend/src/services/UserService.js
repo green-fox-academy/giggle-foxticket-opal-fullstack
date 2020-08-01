@@ -7,6 +7,7 @@ export class UserService {
     this.userRepository = new UserRepository();
     console.log('UserService constructor');
   }
+
   async registerUser(user) {
     const hashedPassword = await bcrypt.hash(user.password, 10);
 
