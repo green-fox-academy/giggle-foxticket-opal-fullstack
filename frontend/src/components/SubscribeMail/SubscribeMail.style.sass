@@ -1,0 +1,65 @@
+.subscription-form
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: 5% 
+  text-align: center
+
+  label
+    font-size: 25px
+  
+  .msg
+    display: block
+    margin-top: 20px
+    font-size: 25px
+    margin-bottom: 0
+    &.success
+      color: #3cb878d9
+    &.error
+      color: red
+    
+  input
+    margin-top: 10px
+    min-width: 15em
+    height: 30px
+    padding: 0px 10px
+    font-size: 16px
+    background: #f1f1f1
+    border: 0
+    border-radius: 4px
+    transition: all 250ms ease-in-out
+    &:focus
+      outline: none
+      box-shadow: 0px 0px 12px 0.8px #3cb878d9
+
+  .btn
+    margin-top: 20px
+    font-size: 20px
+    padding: 7px 20px 9px 20px
+    border: 0
+    background: #3cb878d9
+    color: white
+    border-radius: 4px
+    transition: all 350ms ease-in-out
+    cursor: pointer
+    &:hover 
+      filter: brightness(115%)
+    &:focus 
+      outline: none
+
+  .emailImg
+    width: 150px
+    height: 150px
+    img
+      height: 100%
+      width: 100%
+
+  .isValid
+    display: none
+
+  .errorSpan::after
+    content: 'Valahol hiba lépett fel a feliratkozás során! :('
+
+  .successSpan::after
+    content: 'Köszönjük feliratkozását!'
+
