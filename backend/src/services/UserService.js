@@ -7,6 +7,14 @@ export class UserService {
     this.userRepository = new UserRepository();
     console.log('UserService constructor');
   }
+
+  async subscribeUser(subscriber) {
+    await this.subscriberRepository.subscribe(
+      new Subscriber(subscriber.name, subscriber.email)
+    );
+    return subscriber
+  }
+
   async registerUser(user) {
     const hashedPassword = await bcrypt.hash(user.password, 10);
 
