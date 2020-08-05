@@ -10,6 +10,7 @@ import { validateSubscriber } from '../middlewares/validators/subscribeValidator
 
 const router = express.Router();
 const userController = new UserController();
+const subscribeController = new SubscribeController()
 
 router.use(cors());
 router.use(bodyParser.json());
@@ -23,7 +24,7 @@ router.post('/session');
 router.post('/session', sessionsController.post);
 
 router.post('/subscription', validateSubscriber, (req, res) => {
-  SubscribeController.subscribe(req, res);
+  subscribeController.subscribe(req, res);
 });
 
 export default router;
