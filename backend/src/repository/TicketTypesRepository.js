@@ -11,6 +11,6 @@ export class TicketRepository {
   }
 
   async listAll() {
-    await db.query('SELECT * from foxticket.TicketTypes');
+   return await db.query('SELECT * from foxticket.TicketTypes');
   }
 }

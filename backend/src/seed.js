@@ -14,7 +14,7 @@ let adminDummyData = {
   password: 'password1223',
   isAdmin: true
 };
-let TicketDummyData = {
+let ticketDummyData = {
   name: 'Mav',
   price: 350 ,
   description: 'Good for nothing but buy it ',
@@ -23,4 +23,4 @@ let TicketDummyData = {
 
 userRepo.save(userDummyData);
 userRepo.saveAdmin(adminDummyData);
-ticketRepo.saveTicket(TicketDummyData);
+ticketRepo.saveTicket(ticketDummyData);

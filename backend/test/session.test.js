@@ -6,16 +6,15 @@ describe('sessions', () => {
     request(app)
       .post('/api/session')
       .set('Content-Type', 'application/json')
-      .send({ name: 'Lehel', password: 'asdf' })
+      .send({ username: 'Lehel', password: 'asdf' })
       .expect('Content-Type', /json/)
       .expect(200)
       .end((err, res) => {
         if (err) {
-          return done(err)
+          return done(err);
         }
-        expect(res.body).toHaveProperty('token')
-        return done()
-      })
-    })
+        expect(res.body).toHaveProperty('token');
+        return done();
+      });
+  });
 });
-

@@ -5,7 +5,7 @@ export const sessionsController = {
     const user = req.body;
     try {
       const token = await sessionService.login(user);
-      res.json({ token });
+      res.json({ token }); 
     } catch (err) {
       return res.status(401).json({ message: err.message });
     }

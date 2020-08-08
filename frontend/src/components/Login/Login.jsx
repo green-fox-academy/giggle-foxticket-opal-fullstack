@@ -60,8 +60,11 @@ const Login = () => {
             required
             onChange={handlePasswordChange}
           />
-          <p style={warningMsg} className={` ${isValid ? 'isValid' : 'notValid'}`}>
-            Username or Password is incorrect   
+          <p
+            style={warningMsg}
+            className={` ${isValid ? 'isValid' : 'notValid'}`}
+          >
+            Username or Password is incorrect
             <FaExclamationTriangle color="red" size="1.5em" />
           </p>
 

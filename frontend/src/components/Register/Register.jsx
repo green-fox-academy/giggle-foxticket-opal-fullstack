@@ -15,22 +15,25 @@ const Register = () => {
   const { values, handleChange, handleSubmit } = useCustomForm({
     initialValues,
     onSubmit: values => {
-      values.values.password === values.values.confirm
-        ? axios({
-            method: 'post',
-            baseURL: 'http://localhost:3000/',
-            url: '/api/users',
-            data: {
-              name: values.values.username,
-              email: values.values.email,
-              password: values.values.password,
-            },
-          })
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
-        : console.log(`Passwords don't match!`);
+      console.log(
+        values.values.password === values.values.confirm
+          ? axios({
+              method: 'post',
+              baseURL: 'http://localhost:3000/',
+              url: '/api/users',
+              data: {
+                name: values.values.username,
+                email: values.values.email,
+                password: values.values.password,
+              },
+            })
+              .then(res => console.log(res))
+              .catch(err => console.log(err))
+          : console.log(`Passwords don't match!`)
+      );
     },
   });
+
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit} className="register-form">

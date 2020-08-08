@@ -8,6 +8,7 @@ import { ticketTypesController } from '../controllers/ticketTypesController';
 import { validateUser } from '../middlewares/validators/userValidator';
 import { authenticate } from '../middlewares/authenticate';
 import { admin_auth } from '../middlewares/admin_auth';
+import { verifyToken } from '../services/sessionService'
 
 const router = express.Router();
 const userController = new UserController();
@@ -25,7 +26,7 @@ router.post('/session', sessionsController.post);
 
 router.use(authenticate);
 
-router.use(admin_auth);
+router.use(admin_auth);  
 router.get('/ticket-types', ticketTypesController.get);
 
 export default router;

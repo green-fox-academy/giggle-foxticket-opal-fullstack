@@ -1,11 +1,8 @@
-import { listAll } from '../repository/TicketTypesRepository';
+import { TicketRepository } from '../repository/TicketTypesRepository';
+const Ticket = new TicketRepository()
 
 export const ticketTypesService = {
   getAll: () => {
-    try {
-     return listAll();
-    } catch {
-      return false;
-    }
+    return Ticket.listAll();
   },
 };
