@@ -43,7 +43,7 @@ const ShopTicketList = () => {
       <div className="ticket-list">
         <h1 className="main-title">Ticket Types</h1>
         {shopTicketTypes.map(shopTicket => (
-          <Ticket key={shopTicket.id} {...shopTicket} />
+          <Ticket key={shopTicket.id} {...shopTicket} buttonText="BUY" />
         ))}
       </div>
     </div>
