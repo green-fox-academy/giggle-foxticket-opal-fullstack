@@ -227,19 +227,13 @@ Array [
       />
     </div>
     <p
-      className=" msg error"
+      className="msg error"
       style={
         Object {
           "display": "none",
         }
       }
-    >
-      <span
-        className=" errorSpan"
-      >
-          
-      </span>
-    </p>
+    />
     <button
       className="btn"
       type="submit"
