@@ -17,6 +17,10 @@
       color: #3cb878d9
     &.error
       color: red
+    &.success::after
+      content: 'Köszönjük feliratkozását!'
+    &.error::after
+      content: 'Valahol hiba lépett fel a feliratkozás során! :('
     
   input
     margin-top: 10px
@@ -57,9 +61,4 @@
   .isValid
     display: none
 
-  .errorSpan::after
-    content: 'Valahol hiba lépett fel a feliratkozás során! :('
-
-  .successSpan::after
-    content: 'Köszönjük feliratkozását!'
 

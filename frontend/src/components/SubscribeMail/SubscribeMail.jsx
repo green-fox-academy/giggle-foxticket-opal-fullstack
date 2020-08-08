@@ -12,6 +12,8 @@ export default function () {
  
   const handleSubmit = e => {
     e.preventDefault();
+    setSuccessMessage('')
+    setIsValid(true)
     if (name.length <= 3 || email.length <= 3) {
       setIsValid(false);
     }else {
@@ -24,7 +26,6 @@ export default function () {
         body: JSON.stringify(subscriber)
       })
       .then(response => response.status === 201 ? setSuccessMessage('success') : setSuccessMessage('error'))
-      .then(setIsValid(true))
     }
   }
   
@@ -34,6 +35,10 @@ export default function () {
 
   const handleEmailChange = (e) =>{
     setEmail(e.target.value)
+  }
+
+  const displayMessage = {
+    display: successMessage === '' ? 'none' : 'block'
   }
 
   return (
@@ -67,9 +72,7 @@ export default function () {
         </p>
         <i className="fas fa-exclamation-triangle"></i>
       </div>
-      <p style={successMessage === '' ? {display : 'none'} : {display : 'block'} } className={` ${successMessage === 'success' ? 'msg success' : 'msg error'}`}>
-        <span className={` ${successMessage === 'success' ? 'successSpan' : 'errorSpan'}`} >  </span>
-      </p>
+      <p style={displayMessage} className={successMessage === 'success' ? 'msg success' : 'msg error'} ></p>
       <button
         type="submit"
         className="btn">
