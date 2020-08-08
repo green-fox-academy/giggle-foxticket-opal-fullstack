@@ -304,7 +304,7 @@ exports[`renders correctly 1`] = `
           <h1
             className="admin_title"
           >
-            Single ticket
+            Double ticket
           </h1>
           <p
             className="admin_description"
@@ -353,7 +353,7 @@ exports[`renders correctly 1`] = `
           <h1
             className="admin_title"
           >
-            Single ticket
+            Triple Ticket
           </h1>
           <p
             className="admin_description"
