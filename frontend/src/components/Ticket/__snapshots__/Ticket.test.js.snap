@@ -42,10 +42,6 @@ exports[`renders correctly 1`] = `
   </div>
   <div
     className="btns"
-  >
-    <button
-      className="btn btn--danger--solid btn--medium"
-    />
-  </div>
+  />
 </div>
 `;

@@ -55,7 +55,7 @@ exports[`renders correctly 1`] = `
         className="btns"
       >
         <button
-          className="btn btn--danger--solid btn--medium"
+          className="btn btn--warning--solid btn--medium"
         >
           SHOW
         </button>
@@ -104,7 +104,7 @@ exports[`renders correctly 1`] = `
         className="btns"
       >
         <button
-          className="btn btn--danger--solid btn--medium"
+          className="btn btn--warning--solid btn--medium"
         >
           SHOW
         </button>
@@ -153,7 +153,7 @@ exports[`renders correctly 1`] = `
         className="btns"
       >
         <button
-          className="btn btn--danger--solid btn--medium"
+          className="btn btn--warning--solid btn--medium"
         >
           SHOW
         </button>

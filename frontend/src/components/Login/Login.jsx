@@ -68,7 +68,7 @@ const Login = () => {
             <FaExclamationTriangle color="red" size="1.5em" />
           </p>
 
-          <i className="fas fa-exclamation-triangle"></i>
+          <i className="fas fa-exclamation-triangle" />
 
           <Link className="login_register" to="/register" exact>
             REGISTER

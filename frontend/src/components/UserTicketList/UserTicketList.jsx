@@ -1,5 +1,6 @@
 import React from 'react';
 import Ticket from '../Ticket/Ticket';
+import Button from '../Button/Button';
 
 const userTickets = [
   {
@@ -28,7 +29,9 @@ const UserTicketList = () => {
       <div className="ticket-list">
         <h1 className="main-title">My tickets</h1>
         {userTickets.map(userTicket => (
-          <Ticket key={userTicket.id} {...userTicket} buttonText="SHOW" />
+          <Ticket key={userTicket.id} {...userTicket}>
+            <Button buttonStyle="btn--warning--solid">SHOW</Button>
+          </Ticket>
         ))}
       </div>
     </div>

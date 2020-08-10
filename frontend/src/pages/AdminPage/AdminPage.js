@@ -34,7 +34,7 @@ function AdminPage() {
     <div>
       <h1 className="main-title">Ticket Types</h1>
       {fakeData.map(adminTicket => (
-        <Ticket key={adminTicket.id} {...adminTicket} canEdit={true} />
+        <AdminTicket key={adminTicket.id} {...adminTicket} />
       ))}
     </div>
   );

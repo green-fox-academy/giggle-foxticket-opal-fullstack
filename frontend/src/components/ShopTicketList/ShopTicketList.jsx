@@ -1,6 +1,7 @@
 import React from 'react';
 import './ShopTicketList.styles.sass';
 import Ticket from '../Ticket/Ticket';
+import Button from '../Button/Button';
 
 const shopTicketTypes = [
   {
@@ -43,7 +44,9 @@ const ShopTicketList = () => {
       <div className="ticket-list">
         <h1 className="main-title">Ticket Types</h1>
         {shopTicketTypes.map(shopTicket => (
-          <Ticket key={shopTicket.id} {...shopTicket} buttonText="BUY" />
+          <Ticket key={shopTicket.id} {...shopTicket}>
+            <Button>BUY</Button>
+          </Ticket>
         ))}
       </div>
     </div>
