@@ -4,11 +4,14 @@ import { helloController, sessionsController } from '../controllers';
 import { UserController } from '../controllers/UserController';
 
 import { validateUser } from '../middlewares/validators/userValidator';
+import { SubscribeController } from '../controllers/SubscribeController';
+import { validateSubscriber } from '../middlewares/validators/subscribeValidator';
 
 const cors = require('cors');
 
 const router = express.Router();
 const userController = new UserController();
+const subscribeController = new SubscribeController()
 
 router.use(cors());
 router.use(bodyParser.json());
@@ -20,5 +23,9 @@ router.post('/users', validateUser, (req, res) => {
 });
 router.post('/session');
 router.post('/session', sessionsController.post);
+
+router.post('/subscription', validateSubscriber, (req, res) => {
+  subscribeController.subscribe(req, res);
+});
 
 export default router;
