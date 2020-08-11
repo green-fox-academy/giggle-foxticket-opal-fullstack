@@ -68,14 +68,6 @@ exports[`test SubscribeMail component renders correctly 1`] = `
       className="fas fa-exclamation-triangle"
     />
   </div>
-  <p
-    className="msg error"
-    style={
-      Object {
-        "display": "none",
-      }
-    }
-  />
   <button
     className="btn"
     type="submit"

@@ -226,14 +226,6 @@ Array [
         className="fas fa-exclamation-triangle"
       />
     </div>
-    <p
-      className="msg error"
-      style={
-        Object {
-          "display": "none",
-        }
-      }
-    />
     <button
       className="btn"
       type="submit"
