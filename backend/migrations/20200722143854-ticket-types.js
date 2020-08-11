@@ -18,7 +18,7 @@ exports.up = function(db) {
   return db.createTable('TicketTypes', {
     id: { type: 'int', primaryKey: true, autoIncrement: true },
     name: { type: 'string', unique: 'true', length: 25 },
-    price: { type: 'int', unique: 'true', length: 25 },
+    price: { type: 'int', length: 25 },
     description: { type: 'string' , length: 200  },
     icon: { type: 'string'}
   });

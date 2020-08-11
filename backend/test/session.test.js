@@ -6,7 +6,7 @@ describe('sessions', () => {
     request(app)
       .post('/api/session')
       .set('Content-Type', 'application/json')
-      .send({ username: 'Lehel', password: 'asdf' })
+      .send({ username: 'Vivien', password: 'password1223' })
       .expect('Content-Type', /json/)
       .expect(200)
       .end((err, res) => {

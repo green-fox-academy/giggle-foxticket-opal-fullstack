@@ -27,12 +27,10 @@ export class UserRepository {
     );
   }
 
-  async getUser(username, password) {
-    console.log(username)
-    console.log(password)
+  async getUser(username) {
     return await db.query(
-      "SELECT * FROM foxticket.Users WHERE name = ? AND password = ?",
-      [username, password]
+      "SELECT * FROM foxticket.Users WHERE name = ?",
+      [username]
     );
   }
 }
