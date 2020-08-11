@@ -37,10 +37,6 @@ export default function () {
     setEmail(e.target.value)
   }
 
-  const displayMessage = {
-    display: successMessage === '' ? 'none' : 'block'
-  }
-
   return (
     <form onSubmit={handleSubmit} className="subscription-form">
       <label>Subscribe to our newsletter!</label>
@@ -72,7 +68,7 @@ export default function () {
         </p>
         <i className="fas fa-exclamation-triangle"></i>
       </div>
-      <p style={displayMessage} className={successMessage === 'success' ? 'msg success' : 'msg error'} ></p>
+      { successMessage !== '' && <p className={successMessage === 'success' ? 'msg success' : 'msg error'} ></p> }
       <button
         type="submit"
         className="btn">
