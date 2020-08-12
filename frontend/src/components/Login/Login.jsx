@@ -15,8 +15,13 @@ const Login = props => {
   const { values, handleChange, handleSubmit } = useCustomForm({
     initialValues,
     onSubmit: values => {
-      const user = { name: values.name, password: values.password };
+      const user = {
+        name: values.values.name,
+        password: values.values.password,
+      };
+
       const { login } = props;
+
       login(user);
     },
   });
