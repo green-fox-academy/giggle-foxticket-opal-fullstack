@@ -48,18 +48,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="btns"
-    >
-      <button
-        className="btn btn--danger--solid btn--medium"
-      >
-        Edit
-      </button>
-      <button
-        className="btn btn--danger--solid--btn btn--medium"
-      >
-        Delete
-      </button>
-    </div>
+    />
   </div>
   <div
     className="admin_container"
@@ -102,18 +91,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="btns"
-    >
-      <button
-        className="btn btn--danger--solid btn--medium"
-      >
-        Edit
-      </button>
-      <button
-        className="btn btn--danger--solid--btn btn--medium"
-      >
-        Delete
-      </button>
-    </div>
+    />
   </div>
   <div
     className="admin_container"
@@ -156,18 +134,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="btns"
-    >
-      <button
-        className="btn btn--danger--solid btn--medium"
-      >
-        Edit
-      </button>
-      <button
-        className="btn btn--danger--solid--btn btn--medium"
-      >
-        Delete
-      </button>
-    </div>
+    />
   </div>
   <div
     className="admin_container"
@@ -210,18 +177,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="btns"
-    >
-      <button
-        className="btn btn--danger--solid btn--medium"
-      >
-        Edit
-      </button>
-      <button
-        className="btn btn--danger--solid--btn btn--medium"
-      >
-        Delete
-      </button>
-    </div>
+    />
   </div>
 </div>
 `;

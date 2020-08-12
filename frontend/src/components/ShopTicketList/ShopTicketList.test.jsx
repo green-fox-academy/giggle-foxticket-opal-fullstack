@@ -1,8 +1,8 @@
 import React from 'react';
-import TicketList from './TicketList';
+import ShopTicketList from './ShopTicketList';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
-  const tree = renderer.create(<TicketList />).toJSON();
+  const tree = renderer.create(<ShopTicketList />).toJSON();
   expect(tree).toMatchSnapshot();
 });
