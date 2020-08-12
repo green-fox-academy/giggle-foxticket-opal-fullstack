@@ -1,13 +1,16 @@
 {
   "root": true,
-  "extends": "eslint:recommended",
+  "extends": ["eslint:recommended", "prettier"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "env": {
+    "browser": true,
+    "node": true,
     "es6": true,
-    "node": true
+    "mocha": true,
+    "jest": true
   },
   "globals": {
     "Atomics": "readonly",
@@ -16,15 +19,22 @@
   },
   "overrides": [
     {
-      "files": [
-        "**/*.test.js"
-      ],
+      "files": ["**/*.test.js"],
       "env": {
         "jest": true
       },
-      "plugins": [
-        "jest"
-      ]
+      "plugins": ["jest"],
+      "rules": {
+        "no-unused-vars": [
+          "error",
+          {
+            "vars": "local",
+            "args": "none"
+          }
+        ],
+        "no-plusplus": "off",
+        "no-underscore-dangle": "off"
+      }
     }
   ]
 }

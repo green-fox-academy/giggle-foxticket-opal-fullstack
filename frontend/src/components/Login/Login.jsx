@@ -4,6 +4,7 @@ import { login } from '../../flux/actions/authActions';
 import { clearErrors } from '../../flux/actions/errorActions';
 import useCustomForm from '../../hooks/useCustomForm';
 import './Login.sass';
+import PropTypes from 'prop-types';
 
 const initialValues = {
   name: '',
@@ -14,7 +15,9 @@ const Login = props => {
   const { values, handleChange, handleSubmit } = useCustomForm({
     initialValues,
     onSubmit: values => {
-      props.login(values);
+      const user = { name: values.name, password: values.password };
+      const { login } = props;
+      login(user);
     },
   });
 
@@ -46,6 +49,10 @@ const Login = props => {
       </div>
     </div>
   );
+};
+
+Login.propTypes = {
+  login: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({

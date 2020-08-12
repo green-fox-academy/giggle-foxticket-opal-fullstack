@@ -11,11 +11,13 @@ import {
 } from './types';
 import { returnErrors } from './errorActions';
 
+const BACKEND_URL = 'http://localhost:3000';
+
 export const loadUser = () => (dispatch, getState) => {
   dispatch({ type: USER_LOADING });
 
   axios
-    .get('/api/users', tokenConfig(getState))
+    .get(`${BACKEND_URL}/api/users`, tokenConfig(getState))
     .then(res =>
       dispatch({
         type: USER_LOADED,
@@ -40,7 +42,7 @@ export const register = ({ name, email, password }) => dispatch => {
   const body = JSON.stringify({ name, email, password });
 
   axios
-    .post('/api/users', body, config)
+    .post(`${BACKEND_URL}/api/users`, body, config)
     .then(res =>
       dispatch({
         type: REGISTER_SUCCESS,
@@ -67,15 +69,12 @@ export const login = ({ name, password }) => dispatch => {
   const body = JSON.stringify({ name, password });
 
   axios
-    .post('http://localhost:3000/api/session', body, config)
+    .post(`${BACKEND_URL}/api/session`, body, config)
     .then(res =>
-      dispatch(
-        {
-          type: LOGIN_SUCCESS,
-          payload: res.data,
-        },
-        console.log(res.data)
-      )
+      dispatch({
+        type: LOGIN_SUCCESS,
+        payload: res.data,
+      })
     )
     .catch(err => {
       dispatch(

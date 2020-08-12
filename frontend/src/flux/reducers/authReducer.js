@@ -37,7 +37,7 @@ export default function (state = initialState, action) {
       localStorage.setItem('token', action.payload.token);
       return {
         ...state,
-        ...action.payload, // don't need to specify user and token because they are included in the payload TODO: delete this comment later
+        ...action.payload,
         isAuthenticated: true,
         isLoading: false,
       };
