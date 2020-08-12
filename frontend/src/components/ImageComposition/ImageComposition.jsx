@@ -15,10 +15,10 @@ const ImageComposition = () => {
               gastronomy sees him attempting to subsist uniquely on food from
               the McDonald's menu for an entire month. In the process his weight
               balloons, his energy level plummets and he experiences all sorts
-              of unexpected -- and terrifying -- side effects. He also examines
-              the corporate giant's growing role in the lives of American
-              consumers and explores its methods of indoctrinating young people
-              and its contribution to America's obesity epidemic.
+              of unexpected -- and terrifying -- sid e effects. H e also
+              examines the corporate giant's growing role in the lives of
+              American consumers and explores its methods of indoctrinating
+              young people and its contribution to America's obesity epidemic.
             </p>
           </article>
           <Button>Learn More</Button>

@@ -1,3 +1,4 @@
+import * as res from 'express';
 const jwt = require('jsonwebtoken');
 
 module.exports = {

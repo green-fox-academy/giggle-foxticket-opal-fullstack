@@ -15,7 +15,7 @@ export class UserService {
     await this.subscriberRepository.subscribe(
       new Subscriber(subscriber.name, subscriber.email)
     );
-    return subscriber
+    return subscriber;
   }
 
   async registerUser(user) {

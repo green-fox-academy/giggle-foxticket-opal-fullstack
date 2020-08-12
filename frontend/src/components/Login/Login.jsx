@@ -27,7 +27,6 @@ const Login = () => {
     }
     const user = { name, password };
 
-    console.log(user);
     fetch('http://localhost:3000/api/session', {
       method: 'POST',
       headers: {
