@@ -1,14 +1,14 @@
 import * as types from '../actions/types';
 import moxios from 'moxios';
 import thunk from 'redux-thunk';
-import { loadUser, login, logout, register } from './authActions';
+import { login, register } from './authActions';
 import configureMockStore from 'redux-mock-store';
 
 const middleWare = [thunk];
 const mockStore = configureMockStore(middleWare);
 const store = mockStore({});
 
-const user = { name: 'hello', email: 'hello@hello.com', password: 123123 };
+let user = { name: 'hello', email: 'hello@hello.com', password: 123123 };
 
 describe('auth Actions', () => {
   beforeEach(() => {
@@ -47,35 +47,10 @@ describe('auth Actions', () => {
       request.respondWith({ status: 200, response: expectedActions });
     });
 
-    return store.dispatch(login({})).then(() => {
+    store.dispatch(login({})).then(() => {
       const newState = store.getActions();
-      expect(newState[0].payload).toEqual(expectedActions);
-    });
-  });
+      console.debug(store);
 
-  it('should create LOGOUT_SUCCESS', () => {
-    const expectedActions = {
-      type: types.LOGOUT_SUCCESS,
-    };
-
-    store.dispatch(logout());
-    const newState = store.getActions();
-    expect(newState[0]).toEqual(expectedActions);
-  });
-
-  it('should create USER_LOADED', () => {
-    const expectedActions = {
-      type: types.USER_LOADED,
-      payload: { name: user.name, password: user.password },
-    };
-
-    moxios.wait(() => {
-      const request = moxios.requests.mostRecent();
-      request.respondWith({ status: 200, response: expectedActions });
-    });
-
-    return store.dispatch(loadUser({})).then(() => {
-      const newState = store.getActions();
       expect(newState[0].payload).toEqual(expectedActions);
     });
   });
@@ -90,25 +65,27 @@ describe('auth Actions', () => {
       request.respondWith({ status: 404, response: expectedActions });
     });
 
-    return store.dispatch(login({})).then(() => {
+    store.dispatch(login({})).then(() => {
       const newState = store.getActions();
-      expect(newState[0].payload.message).toEqual(expectedActions);
+      expect(newState).toEqual(expectedActions[0].type);
     });
   });
 
   it('should create REGISTER_FAIL', () => {
-    const expectedActions = {
-      type: types.REGISTER_FAIL,
-    };
+    const expectedActions = [
+      {
+        type: types.REGISTER_FAIL,
+      },
+    ];
 
     moxios.wait(() => {
       const request = moxios.requests.mostRecent();
       request.respondWith({ status: 404, response: expectedActions });
     });
 
-    return store.dispatch(register({})).then(() => {
+    store.dispatch(register({})).then(() => {
       const newState = store.getActions();
-      expect(newState[0].payload.message).toEqual(expectedActions);
+      expect(newState[2].payload.id).toEqual(expectedActions[0].type);
     });
   });
 });
