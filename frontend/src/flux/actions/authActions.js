@@ -16,7 +16,7 @@ const BACKEND_URL = 'http://localhost:3000';
 export const loadUser = () => (dispatch, getState) => {
   dispatch({ type: USER_LOADING });
 
-  axios
+  return axios
     .get(`${BACKEND_URL}/api/users`, tokenConfig(getState))
     .then(res =>
       dispatch({
@@ -41,7 +41,7 @@ export const register = ({ name, email, password }) => dispatch => {
 
   const body = JSON.stringify({ name, email, password });
 
-  axios
+  return axios
     .post(`${BACKEND_URL}/api/users`, body, config)
     .then(res =>
       dispatch({
@@ -68,7 +68,7 @@ export const login = ({ name, password }) => dispatch => {
 
   const body = JSON.stringify({ name, password });
 
-  axios
+  return axios
     .post(`${BACKEND_URL}/api/session`, body, config)
     .then(res =>
       dispatch({
