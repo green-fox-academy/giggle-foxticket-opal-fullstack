@@ -6,16 +6,17 @@ import './SubscribeMail.styles.sass'
 export default function () {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [isValid, setIsValid] = useState(true);
-  const [successMessage, setSuccessMessage] = useState('');
+  const [validInput, setvalidInput] = useState(true);
+  const [successMessage, setSuccessMessage] = useState({});
   
  
   const handleSubmit = e => {
     e.preventDefault();
     setSuccessMessage('')
-    setIsValid(true)
+    setvalidInput(true)
     if (name.length <= 3 || email.length <= 3) {
-      setIsValid(false);
+      setvalidInput(false);
+      setSuccessMessage({})
     }else {
       const subscriber = { name, email };
       fetch('http://localhost:3000/api/subscription', {
@@ -25,7 +26,7 @@ export default function () {
         },
         body: JSON.stringify(subscriber)
       })
-      .then(response => response.status === 201 ? setSuccessMessage('success') : setSuccessMessage('error'))
+      .then(response => setSuccessMessage({statusText: response.statusText , statusCode: response.status}))
     }
   }
   
@@ -62,13 +63,15 @@ export default function () {
           required
           onChange={handleEmailChange}
         />
-        <p className={` ${isValid ? 'isValid' : 'notValid'}`}>
-          Username or Email is incorrect   
+        { !validInput && 
+        <p>
+           Username and Email should be minimum 3 characters    
           <FaExclamationTriangle color="red" size="1.5em" />
+          <i className="fas fa-exclamation-triangle"></i>
         </p>
-        <i className="fas fa-exclamation-triangle"></i>
+        }
       </div>
-      { successMessage !== '' && <p className={successMessage === 'success' ? 'msg success' : 'msg error'} ></p> }
+      { successMessage.statusText &&  <p className={successMessage.statusCode === 201 ? 'msg success' : 'msg error'}>{successMessage.statusText}</p> }
       <button
         type="submit"
         className="btn">
