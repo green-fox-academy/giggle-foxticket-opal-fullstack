@@ -1,4 +1,6 @@
-import sessionService from '../services/sessionService';
+import { SessionService } from '../services/sessionService'
+
+ const sessionService = new SessionService()
 
 export const sessionsController = {
   async post(req, res) {
@@ -11,4 +13,3 @@ export const sessionsController = {
     }
   },
 };
- 

@@ -53,7 +53,7 @@ exports.up = function (db) {
     expiration_date: { type: 'datetime' },
   });
 };
-/* ('not active', 'active', 'revoked','expired') */
+
 exports.down = function (db) {
   return db.dropTable('Ticket');
 };

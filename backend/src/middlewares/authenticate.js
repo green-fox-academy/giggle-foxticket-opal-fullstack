@@ -1,7 +1,9 @@
-import { verifyToken } from '../services/sessionService';
+import { SessionService } from '../services/sessionService';
 
-export const authenticate = async (req, res, next) => {
-  const user = await verifyToken(req.body.token);
+const sessionService = new SessionService()
+
+export const authenticate =  (req, res, next) => {
+  const user = sessionService.verifyToken(req.body.token);
 
   if (!user) {
     res.status(401).json({ message: 'Access Denied' });
