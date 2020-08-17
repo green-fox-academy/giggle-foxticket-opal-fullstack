@@ -10,7 +10,9 @@ var seed;
  */
 exports.setup = function (options, seedLink) {
   dbm = options.dbmigrate;
+  // eslint-disable-next-line no-unused-vars
   type = dbm.dataType;
+  // eslint-disable-next-line no-unused-vars
   seed = seedLink;
 };
 

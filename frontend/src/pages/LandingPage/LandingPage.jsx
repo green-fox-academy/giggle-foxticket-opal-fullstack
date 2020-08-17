@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import Button from '../../components/Button/Button';
 import './LandingPage.styles.sass';
+import SubscribeMail from '../../components/SubscribeMail/SubscribeMail';
 
 const LandingPage = () => {
   return (
@@ -16,6 +17,7 @@ const LandingPage = () => {
         <Button buttonStyle="btn--danger--solid">Buy Tickets</Button>
       </Link>
       <VideoPlayer />
+      <SubscribeMail />
       <Footer />
     </>
   );

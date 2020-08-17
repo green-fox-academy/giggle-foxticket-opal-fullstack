@@ -1,9 +1,9 @@
 import React from 'react';
-import './AdminTicket.style.sass';
+import './Ticket.style.sass';
 import GiveIcon from '../DynamicIcon/DynamicIcon';
-import Button from '../Button/Button';
+import PropTypes from 'prop-types';
 
-function AdminTicket({ title, description, iconName }) {
+function Ticket({ title, description, iconName, ...props }) {
   return (
     <div className="admin_container">
       <div className="admin_icon">
@@ -13,11 +13,16 @@ function AdminTicket({ title, description, iconName }) {
         <h1 className="admin_title">{title}</h1>
         <p className="admin_description">{description}</p>
       </div>
-      <div className="btns">
-        <Button buttonStyle="btn--danger--solid">Edit</Button>
-        <Button buttonStyle="btn--danger--solid--btn">Delete</Button>
-      </div>
+      <div className="btns">{props.children}</div>
     </div>
   );
 }
-export default AdminTicket;
+
+Ticket.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  iconName: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
+export default Ticket;

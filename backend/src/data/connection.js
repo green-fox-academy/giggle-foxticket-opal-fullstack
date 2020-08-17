@@ -1,5 +1,6 @@
 import mysql from 'mysql';
 import config from '../config';
+
 const pool = mysql.createPool({
   connectionLimit: 2,
   host: config.mysql.host,

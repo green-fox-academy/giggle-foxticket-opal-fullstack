@@ -1,12 +1,13 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-const cors = require('cors');
-import { helloController } from '../controllers';
+import { helloController, sessionsController } from '../controllers';
 import { UserController } from '../controllers/UserController';
-import { sessionsController } from '../controllers';
+
 import { validateUser } from '../middlewares/validators/userValidator';
 import { SubscribeController } from '../controllers/SubscribeController';
 import { validateSubscriber } from '../middlewares/validators/subscribeValidator';
+
+const cors = require('cors');
 
 const router = express.Router();
 const userController = new UserController();
