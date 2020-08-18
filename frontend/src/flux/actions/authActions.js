@@ -13,26 +13,27 @@ import { returnErrors } from './errorActions';
 
 const BACKEND_URL = 'http://localhost:3000';
 
-export const loadUser = () => (dispatch, getState) => {
+export const loadUser = () => async (dispatch, getState) => {
   dispatch({ type: USER_LOADING });
 
-  return axios
-    .get(`${BACKEND_URL}/api/users`, tokenConfig(getState))
-    .then(res =>
-      dispatch({
-        type: USER_LOADED,
-        payload: res.data,
-      })
-    )
-    .catch(err => {
-      dispatch(returnErrors(err.response.data, err.response.status));
-      dispatch({
-        type: AUTH_ERROR,
-      });
+  try {
+    const res = await axios.get(
+      `${BACKEND_URL}/api/users`,
+      tokenConfig(getState)
+    );
+    return dispatch({
+      type: USER_LOADED,
+      payload: res.data,
     });
+  } catch (err) {
+    dispatch(returnErrors(err.response.data, err.response.status));
+    dispatch({
+      type: AUTH_ERROR,
+    });
+  }
 };
 
-export const register = ({ name, email, password }) => dispatch => {
+export const register = ({ name, email, password }) => async dispatch => {
   const config = {
     headers: {
       'Content-Type': 'application/json',
@@ -41,25 +42,23 @@ export const register = ({ name, email, password }) => dispatch => {
 
   const body = JSON.stringify({ name, email, password });
 
-  return axios
-    .post(`${BACKEND_URL}/api/users`, body, config)
-    .then(res =>
-      dispatch({
-        type: REGISTER_SUCCESS,
-        payload: res.data,
-      })
-    )
-    .catch(err => {
-      dispatch(
-        returnErrors(err.response.data, err.response.status, 'REGISTER_FAIL')
-      );
-      dispatch({
-        type: REGISTER_FAIL,
-      });
+  try {
+    const res = await axios.post(`${BACKEND_URL}/api/users`, body, config);
+    return dispatch({
+      type: REGISTER_SUCCESS,
+      payload: res.data,
     });
+  } catch (err) {
+    dispatch(
+      returnErrors(err.response.data, err.response.status, 'REGISTER_FAIL')
+    );
+    dispatch({
+      type: REGISTER_FAIL,
+    });
+  }
 };
 
-export const login = ({ name, password }) => dispatch => {
+export const login = ({ name, password }) => async dispatch => {
   const config = {
     headers: {
       'Content-Type': 'application/json',
@@ -68,22 +67,20 @@ export const login = ({ name, password }) => dispatch => {
 
   const body = JSON.stringify({ name, password });
 
-  return axios
-    .post(`${BACKEND_URL}/api/session`, body, config)
-    .then(res =>
-      dispatch({
-        type: LOGIN_SUCCESS,
-        payload: res.data,
-      })
-    )
-    .catch(err => {
-      dispatch(
-        returnErrors(err.response.data, err.response.status, 'LOGIN_FAIL')
-      );
-      dispatch({
-        type: LOGIN_FAIL,
-      });
+  try {
+    const res = await axios.post(`${BACKEND_URL}/api/session`, body, config);
+    return dispatch({
+      type: LOGIN_SUCCESS,
+      payload: res.data,
     });
+  } catch (err) {
+    dispatch(
+      returnErrors(err.response.data, err.response.status, 'LOGIN_FAIL')
+    );
+    dispatch({
+      type: LOGIN_FAIL,
+    });
+  }
 };
 
 export const logout = () => {

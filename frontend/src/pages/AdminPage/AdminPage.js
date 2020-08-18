@@ -1,6 +1,9 @@
 import React from 'react';
 import './AdminPage.style.sass';
 import Ticket from '../../components/Ticket/Ticket';
+import Button from '../../components/Button/Button';
+import useModal from '../../hooks/useModal';
+import Modal from '../../components/Modal/Modal';
 
 const fakeData = [
   {
@@ -30,12 +33,23 @@ const fakeData = [
 ];
 
 function AdminPage() {
+  const { isShowing, toggle } = useModal();
+
   return (
     <div>
       <h1 className="main-title">Ticket Types</h1>
       {fakeData.map(adminTicket => (
-        <Ticket key={adminTicket.id} {...adminTicket} />
+        <Ticket key={adminTicket.id} {...adminTicket}>
+          <Button onClick={toggle}>DELETE</Button>
+        </Ticket>
       ))}
+      <Modal hide={toggle} isShowing={isShowing}>
+        <Button onClick={toggle}>OK</Button>
+        <Button buttonStyle={'btn--danger--solid--btn'} onClick={toggle}>
+          Cancel
+        </Button>
+        Are you sure?
+      </Modal>
     </div>
   );
 }
