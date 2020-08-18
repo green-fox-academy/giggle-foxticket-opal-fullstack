@@ -48,7 +48,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="btns"
-    />
+    >
+      <button
+        className="btn btn--primary--solid btn--medium"
+        onClick={[Function]}
+      >
+        DELETE
+      </button>
+    </div>
   </div>
   <div
     className="admin_container"
@@ -91,7 +98,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="btns"
-    />
+    >
+      <button
+        className="btn btn--primary--solid btn--medium"
+        onClick={[Function]}
+      >
+        DELETE
+      </button>
+    </div>
   </div>
   <div
     className="admin_container"
@@ -134,7 +148,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="btns"
-    />
+    >
+      <button
+        className="btn btn--primary--solid btn--medium"
+        onClick={[Function]}
+      >
+        DELETE
+      </button>
+    </div>
   </div>
   <div
     className="admin_container"
@@ -177,7 +198,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="btns"
-    />
+    >
+      <button
+        className="btn btn--primary--solid btn--medium"
+        onClick={[Function]}
+      >
+        DELETE
+      </button>
+    </div>
   </div>
 </div>
 `;
