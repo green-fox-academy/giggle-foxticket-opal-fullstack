@@ -3,9 +3,9 @@ let DOMAIN = 'sandbox074c82faabd845298e075fbdf5cb2a43.mailgun.org';
 let mailgun = require('mailgun-js')({apiKey: API_KEY, domain: DOMAIN});
 
 export const EmailService = {
-  async sendMail(to, subject, body) {
+  async sendMail(from, to, subject, body) {
     const data = {
-      from: 'Excited User <me@samples.mailgun.org>',
+      from,
       to,
       subject,
       text: body
