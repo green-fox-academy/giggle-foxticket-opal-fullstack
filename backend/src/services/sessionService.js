@@ -1,15 +1,15 @@
 import jwt from 'jsonwebtoken';
 import { UserRepository } from '../repository/UserRepository';
 
+const userRepository = new UserRepository()
 export class SessionService {
   constructor() {
-    this.userRepository = new UserRepository()
   }
-  async login(data) {
+   async login(data) {
     if (!data.username || !data.password) {
       throw new Error('Username or Password is missing');
     } else {
-      const user = await this.userRepository.getUser(data.username);
+      const user = await userRepository.getUser(data.username);
       if (user.results.length <= 0) {
         throw new Error('Username is incorrect');
       } else if (user.results[0].password !== data.password) {
@@ -28,4 +28,3 @@ export class SessionService {
     return jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
   }
 }
-

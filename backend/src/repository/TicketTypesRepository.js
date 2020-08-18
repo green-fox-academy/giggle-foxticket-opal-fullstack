@@ -1,4 +1,4 @@
- import { db } from '../data/connection';
+import { db } from '../data/connection';
 
 export class TicketRepository {
   constructor() {}
@@ -11,6 +11,16 @@ export class TicketRepository {
   }
 
   async listAll() {
-   return await db.query('SELECT * from foxticket.TicketTypes');
+    return await db.query('SELECT * from foxticket.TicketTypes');
+  }
+  async update(id, data) {
+    return await db.query(
+      `UPDATE foxticket.TicketTypes SET name= ?,
+      price=? WHERE id=?`,
+      [data.name, data.price, id]
+    );
+  }
+  async delete(id) {
+    return await db.query(`DELETE FROM foxticket.TicketTypes WHERE id = ?`, [id]);
   }
 }

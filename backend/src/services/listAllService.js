@@ -9,4 +9,10 @@ export const ticketTypesService = {
   addNew: (newTicket) => {
     return Ticket.saveTicket(newTicket);
   },
+  updateTicket: (id , data) => {
+    return Ticket.update(id , data);
+  },
+  removeTicket: (id) => {
+    return Ticket.delete(id);
+  },
 };

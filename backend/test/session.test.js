@@ -1,36 +1,18 @@
 import request from 'supertest';
 import app from '../src/app';
-import SessionService from '../src/services/SessionService';
-/* import UserRepository from '../src/repository/UserRepository'
- */
-jest.mock('../src/services/SessionService');
+import { UserRepository } from '../src/repository/UserRepository'
+
+ 
 jest.mock('../src/repository/UserRepository');
  
 describe('Testing /api/session endpoint ', () => {
   it('It should pass with 200 ok ', async () => {
 
-    const ValideUser = { username: 'Lehel', password: 'password1223' };
-/*     const inValideUser = { username: 'CCVVV', password: 'SSDDFC' };
- */
+    const ValideUser = { username: 'Lehel', password: 'password123' };
+    const userResult = {id:1, name: "Lehel" , email: "test@test.com", password:"password123", isAdmin: 1 }
+    const response = {results:[userResult]}
 
-    const resp = {
-      results: [
-        {
-          id: 1,
-          name: 'Lehel',
-          email: 'lehel@gmail.com',
-          password: 'dummy2',
-          isAdmin: 0,
-        },
-      ],
-    }; 
-    
-   /*  SessionService.prototype.login.mockImplementation(() =>
-    Promise.reject({message: "Error"})
-    ); */
-    SessionService.prototype.login.mockImplementation(() =>
-    Promise.resolve(resp)
-    );
+    UserRepository.prototype.getUser.mockReturnValue(response)
 
     await request(app)
       .post('/api/session')

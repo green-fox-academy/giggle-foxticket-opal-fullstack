@@ -23,10 +23,12 @@ router.post('/users', validateUser, (req, res) => {
 
 router.post('/session', sessionsController.post);
 
-router.use(authenticate);
+ router.use(authenticate);
 
-router.use(admin_auth);
+router.use(admin_auth); 
 router.get('/ticket-types', ticketTypesController.get);
 router.post('/ticket-types', ticketTypesController.post);
+router.put('/ticket-types/:id', ticketTypesController.put);
+router.delete('/ticket-types/:id', ticketTypesController.delete);
 
 export default router;
