@@ -1,7 +1,7 @@
 import mailgunDefault from 'mailgun-js';
 
 const mailgun = mailgunDefault({
-  apiKey: '36253fa6d7e404426e6143fab58a77da-203ef6d0-32d562ff',
+  apiKey: process.env.API_KEY,
   domain: 'sandbox074c82faabd845298e075fbdf5cb2a43.mailgun.org'
 });
 
