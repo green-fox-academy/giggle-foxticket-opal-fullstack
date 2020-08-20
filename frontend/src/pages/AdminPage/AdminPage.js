@@ -4,6 +4,7 @@ import Ticket from '../../components/Ticket/Ticket';
 import Button from '../../components/Button/Button';
 import useModal from '../../hooks/useModal';
 import Modal from '../../components/Modal/Modal';
+import Header from '../../components/Header/Header';
 
 const fakeData = [
   {
@@ -37,6 +38,7 @@ function AdminPage() {
 
   return (
     <div>
+      <Header type="admin" />
       <h1 className="main-title">Ticket Types</h1>
       {fakeData.map(adminTicket => (
         <Ticket key={adminTicket.id} {...adminTicket}>
