@@ -17,19 +17,19 @@ exports.setup = function(options, seedLink) {
 exports.up = function(db) {
   return db.createTable('Orders', {
     id: { type: 'int', primaryKey: true, autoIncrement: true },
-    tickettype_id: {
+    ticket_type_id: {
       type: 'int',
       length: 10,
       notNull: true,
       foreignKey: {
-        name: 'tickettype_id',
-        table: 'tickettypes',
+        name: 'ticket_type_id',
+        table: 'Tickettypes',
         rules: {
           onDelete: 'CASCADE',
           onUpdate: 'RESTRICT'
         },
         mapping: {
-          tickettype_id: 'id'
+          ticket_type_id: 'id'
         }
       }
     },

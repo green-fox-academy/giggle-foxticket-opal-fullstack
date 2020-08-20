@@ -1,78 +1,54 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { connect } from 'react-redux';
+import { login } from '../../flux/actions/authActions';
+import { clearErrors } from '../../flux/actions/errorActions';
+import useCustomForm from '../../hooks/useCustomForm';
 import './Login.sass';
+import PropTypes from 'prop-types';
 
-import { FaExclamationTriangle } from 'react-icons/fa';
+const initialValues = {
+  name: '',
+  password: '',
+};
 
-const Login = () => {
-  const [name, setName] = useState('');
-  const [password, setPassword] = useState('');
-  const [isValid, setIsValid] = useState(true);
+const Login = props => {
+  const { values, handleChange, handleSubmit } = useCustomForm({
+    initialValues,
+    onSubmit: values => {
+      const user = {
+        name: values.values.name,
+        password: values.values.password,
+      };
 
-  const handleNameChange = e => {
-    setName(e.target.value);
-  };
-  const handlePasswordChange = e => {
-    setPassword(e.target.value);
-  };
+      const { login } = props;
 
-  const warningMsg = {
-    color: isValid ? 'green' : 'red',
-  };
-
-  const postHandler = e => {
-    e.preventDefault();
-    if (name.length <= 3 || password.length <= 3) {
-      setIsValid(false);
-    }
-    const user = { name, password };
-
-    console.log(user);
-    fetch('http://localhost:3000/api/session', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(user),
-    });
-  };
+      login(user);
+    },
+  });
 
   return (
     <div className="login-body">
       <div className="login_title">Foxticket</div>
       <div className="login_container">
-        <form onSubmit={postHandler}>
+        <form onSubmit={handleSubmit}>
           <input
-            className={'input-' + warningMsg.color}
             type="text"
-            name="username"
-            id="username"
+            name="name"
+            id="name"
             placeholder="Username"
             required
-            onChange={handleNameChange}
+            onChange={handleChange}
+            value={values.name}
           />
           <input
-            className={'input-' + warningMsg.color}
             type="password"
             name="password"
             id="password"
             placeholder="Password"
             required
-            onChange={handlePasswordChange}
+            onChange={handleChange}
+            value={values.password}
           />
-          <p
-            style={warningMsg}
-            className={` ${isValid ? 'isValid' : 'notValid'}`}
-          >
-            Username or Password is incorrect
-            <FaExclamationTriangle color="red" size="1.5em" />
-          </p>
-
-          <i className="fas fa-exclamation-triangle"></i>
-
-          <Link className="login_register" to="/register" exact>
-            REGISTER
-          </Link>
           <button className="login_btn">Login</button>
         </form>
       </div>
@@ -80,4 +56,16 @@ const Login = () => {
   );
 };
 
-export default Login;
+Login.propTypes = {
+  login: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  error: state.error,
+});
+
+export default connect(mapStateToProps, {
+  login,
+  clearErrors,
+})(Login);

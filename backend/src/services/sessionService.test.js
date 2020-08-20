@@ -1,46 +1,73 @@
 import jwt from 'jsonwebtoken';
 import { SessionService } from './sessionService';
-import { UserRepository }  from '../repository/UserRepository';
+import { UserRepository } from '../repository/UserRepository';
 
+jest.mock('../repository/UserRepository');
+jest.mock('jsonwebtoken');
 
-jest.mock('../repository/UserRepository')
-jest.mock('jsonwebtoken')
+describe('Testing api/session route , login function', () => {
+  it('should correctly login an existing user', async () => {
+    const user = { username: 'Lehel', password: 'password' };
+    const userResult = { id: 1, name: 'Lehel', email: 'test@test.com', password: 'password', isAdmin: 1 };
+    const response = { results: [userResult] };
 
-test('It should response with a mocked-token', async () => {
-  const sessionService = new SessionService()
-  const user = {username:"Lehel", password:"password"}
-  const userResult = {id:1, name: "Lehel" , email: "test@test.com", password:"password", isAdmin: 1 }
-  const response = {results:[userResult]}
-  
-  UserRepository.prototype.getUser.mockReturnValue(response)
-  jwt.sign = jest.fn()
-  jwt.sign.mockReturnValue("Im_a_mocked_tocken123") 
-  
-sessionService.login(user)
+    const sessionService = new SessionService();
 
-process.env.ACCESS_TOKEN = "asd"
-expect(jwt.sign).toHaveBeenCalledWith({ user_id:1 , user_isAdmin: 1, user_name:"Lehel"}, "asd")
+    UserRepository.prototype.getUser.mockImplementation(() =>
+      Promise.resolve(response)
+    );
 
-})
+    jwt.sign.mockImplementation((data, sec) => {
+      return data;
+    });
 
-test('It should response with an error message -> Username or Password is missing' , async()=>{
-  const sessionService = new SessionService();
-  const invalid_user = {username:"Lehel"}
-  const userResult = {id:1, name: "Lehel" , email: "test@test.com", password:"password", isAdmin: 1 }
-  const response = {results:[userResult]}
-  
-  UserRepository.prototype.getUser.mockReturnValue(response)
-  jwt.sign = jest.fn()
-  jwt.sign.mockReturnValue("Im_a_mocked_tocken123") 
-  
-sessionService.login(invalid_user)
+    let test_results = await sessionService.login(user);
 
-expect(sessionService.login()).toBe('Username or Password is missing')
-})
+    expect(jwt.sign).toHaveBeenCalled();
+    expect(test_results).toStrictEqual({ user_id: 1, user_name: 'Lehel', user_isAdmin: 1 });
+  });
 
-/* 
-  const invalid_user2 = {username:"XxOoXx", password:"WrongPasswordBoy"}
-  const invalid_user3 = {username:"Lehel", password:"WrongPasswordBoy"}
-expect(sessionService.login(user)).toBe("asdsadsada")
-expect(sessionService.login).toBe('Username is incorrect')
-expect(sessionService.login).toBe('Password is incorrect') */
+  it('It should throw an error of missing inputs', async () => {
+    const sessionService = new SessionService();
+    const invalid_user = { username: 'Lehel' };
+
+    try {
+      await sessionService.login(invalid_user);
+    } catch (e) {
+      expect(e.message).toMatch('Username or Password is missing');
+    }    
+  });
+
+  it('It should throw an error of invalid USER', async () => {
+    const sessionService = new SessionService();
+    const invalid_user2 = { username: 'XXXxxxXXX', password: 'password' };
+    const badResponse = { results: [] };
+
+    UserRepository.prototype.getUser.mockImplementation(() => 
+    Promise.resolve(badResponse));
+
+    try {
+      await sessionService.login(invalid_user2);
+    } catch (e) {
+      expect(e.message).toMatch('Username is incorrect');
+    }
+  });
+
+  test('It should throw an error of invalid PASSWORD ', async () => {
+    const sessionService = new SessionService();
+    const invalid_user3 = { username: 'Lehel', password: 'XXXxxxXXX' };
+    const userResult = { id: 1, name: 'Lehel', email: 'test@test.com', password: 'password', isAdmin: 1 };
+    const response = { results: [userResult] };
+
+    UserRepository.prototype.getUser.mockImplementation(() =>
+      Promise.resolve(response)
+    );
+
+    try {
+      await sessionService.login(invalid_user3);
+    } catch (e) {
+      expect(e.message).toMatch('Password is incorrect');
+    }
+  });
+});
+ 

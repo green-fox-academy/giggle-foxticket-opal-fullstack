@@ -2,6 +2,7 @@ import { db } from '../data/connection';
 
 export class UserRepository {
   constructor() {}
+
   async save(user) {
     await db.query(
       `INSERT INTO foxticket.Users (name, email, password)

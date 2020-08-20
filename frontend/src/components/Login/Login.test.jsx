@@ -1,14 +1,19 @@
 import React from 'react';
 import Login from './Login';
-import renderer from 'react-test-renderer';
-import { MemoryRouter } from 'react-router';
+import { shallow } from 'enzyme';
+import { Provider } from 'react-redux';
+import configureMockStore from 'redux-mock-store';
 
-test('first snapshot of Login', () => {
-  const component = renderer.create(
-    <MemoryRouter>
-      <Login />
-    </MemoryRouter>
-  );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+const mockStore = configureMockStore();
+const store = mockStore({});
+
+describe('Login Component', () => {
+  it('should render without throwing an error', () => {
+    const wrapper = shallow(
+      <Provider store={store}>
+        <Login />
+      </Provider>
+    );
+    expect(wrapper.contains(<Login />)).toBe(true);
+  });
 });

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test SubscribeMail component renders correctly 1`] = `
+<form
+  className="subscription-form"
+  onSubmit={[Function]}
+>
+  <label>
+    Subscribe to our newsletter!
+  </label>
+  <div
+    className="emailImg"
+  >
+    <img
+      alt="subscribe email"
+      src="default-mail.svg"
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <input
+      name="name"
+      onChange={[Function]}
+      placeholder="Your name"
+      required={true}
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <input
+      name="email"
+      onChange={[Function]}
+      placeholder="Your email"
+      required={true}
+      type="email"
+      value=""
+    />
+  </div>
+  <button
+    className="btn"
+    type="submit"
+  >
+    Subscribe!
+  </button>
+</form>
+`;
