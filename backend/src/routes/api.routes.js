@@ -4,7 +4,7 @@ import { helloController, sessionsController } from '../controllers';
 import { UserController } from '../controllers/UserController';
 import { ticketTypesController } from '../controllers/ticketTypesController';
 import { validateUser } from '../middlewares/validators/userValidator';
-import { authenticate } from '../middlewares/authenticate';
+import { AuthenticateMiddleware } from '../middlewares/authenticate';
 import { admin_auth } from '../middlewares/admin_auth';
 import { SubscribeController } from '../controllers/SubscribeController';
 import { validateSubscriber } from '../middlewares/validators/subscribeValidator';
@@ -14,6 +14,7 @@ const cors = require('cors');
 const router = express.Router();
 const userController = new UserController();
 const subscribeController = new SubscribeController()
+const authenticateMiddleware = new AuthenticateMiddleware()
 
 router.use(cors());
 router.use(bodyParser.json());
@@ -29,7 +30,7 @@ router.post('/subscription', validateSubscriber, (req, res) => {
 });
 router.post('/session', sessionsController.post);
 
-router.use(authenticate);
+router.use(authenticateMiddleware.authenticate);
 
 router.use(admin_auth); 
 router.get('/ticket-types', ticketTypesController.get);

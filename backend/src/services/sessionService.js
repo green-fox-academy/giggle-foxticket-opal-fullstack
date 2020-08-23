@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { UserRepository } from '../repository/UserRepository';
-
+import bcrypt from 'bcrypt'
+ 
 const userRepository = new UserRepository()
 export class SessionService {
   constructor() {
@@ -12,8 +13,11 @@ export class SessionService {
         const user = await userRepository.getUser(data.username);
         if (user.results.length <= 0) {
           throw new Error('Username is incorrect');
-        } else if (user.results[0].password !== data.password) {
+        } 
+        else if (user.results[0].password !== data.password) {
           throw new Error('Password is incorrect');
+     /* else if (!(await bcrypt.compare(data.password, user.results[0].password))) {
+                throw new Error('Password is incorrect');} */
         } else {
           const tokenData = {
             user_id: user.results[0].id,
@@ -26,5 +30,8 @@ export class SessionService {
   }
   verifyToken(token) {
     return jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+  }
+  hashedPassword(pass){
+    return bcrypt.hash(pass, 10)
   }
 }
