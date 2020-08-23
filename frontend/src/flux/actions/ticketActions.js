@@ -29,7 +29,7 @@ export const addTicket = ticket => (dispatch, getState) => {
 export const deleteTicket = id => (dispatch, getState) => {
   axios
     .delete(`/api/tickets/${id}`, tokenConfig(getState))
-    .then(res =>
+    .then(() =>
       dispatch({
         type: DELETE_TICKET,
         payload: id,
