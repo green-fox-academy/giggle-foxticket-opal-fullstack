@@ -15,7 +15,7 @@ exports.setup = function(options, seedLink) {
 };
 
 exports.up = function(db) {
-  return db.createTable('Orders', {
+  return db.createTable('Order', {
     id: { type: 'int', primaryKey: true, autoIncrement: true },
     ticket_type_id: {
       type: 'int',
@@ -54,7 +54,7 @@ exports.up = function(db) {
   });
 };
 exports.down = function(db) {
-  return db.dropTable('Orders');
+  return db.dropTable('Order');
 };
 
 exports._meta = {

@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { helloController, sessionsController } from '../controllers';
 import { UserController } from '../controllers/UserController';
-import { ticketTypesController } from '../controllers/ticketTypesController';
+import { TicketTypesController } from '../controllers/ticketTypesController';
 import { validateUser } from '../middlewares/validators/userValidator';
 import { AuthenticateMiddleware } from '../middlewares/authenticate';
 import { admin_auth } from '../middlewares/admin_auth';
@@ -15,6 +15,7 @@ const router = express.Router();
 const userController = new UserController();
 const subscribeController = new SubscribeController()
 const authenticateMiddleware = new AuthenticateMiddleware()
+const ticketTypesController = new TicketTypesController()
 
 router.use(cors());
 router.use(bodyParser.json());

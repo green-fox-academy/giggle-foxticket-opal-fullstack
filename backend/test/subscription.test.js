@@ -1,13 +1,11 @@
 import request from 'supertest';
 import app from '../src/app';
-
 import Subscriber from '../src/models/Subscriber';
 import { UserService } from '../src/services/UserService';
 
 
 jest.mock('../src/repository/SubscriberRepository');
 jest.mock('../src/services/UserService'); 
-
 
 describe('testing /api/subscription endpoint', () => {
   it('fails with 400 if invalid subscriber credentials are passed', async () => {
@@ -42,4 +40,3 @@ describe('testing /api/subscription endpoint', () => {
     expect(mockRegister.body).toEqual(validSubscriber);
   });
 });
-  

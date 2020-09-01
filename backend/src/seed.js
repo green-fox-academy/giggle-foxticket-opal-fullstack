@@ -1,26 +1,30 @@
 import { UserRepository } from './repository/UserRepository';
-import { TicketRepository } from './repository/TicketTypesRepository';
-let userRepo = new UserRepository()
-let ticketRepo = new TicketRepository()
+import { TicketTypeRepository } from './repository/TicketTypesRepository';
+let userRepo = new UserRepository();
+let ticketTypeRepo = new TicketTypeRepository();
 
-let userDummyData = {
+userRepo.save({
   name: 'Lehel',
   email: 'lehel@gmail.com',
-  password: 'password123',
-};
-let adminDummyData = {
+  password: '$2b$10$H7mQGKBAO66DkB2CY49LzujvzHeO9mB3OheHwzDvKfG7RlgTOq4Vm',
+});
+userRepo.saveAdmin({
   name: 'Vivien',
   email: 'vivi@gmail.com',
-  password: 'password1223',
-  isAdmin: true
-};
-let ticketDummyData = {
-  name: 'Mav',
-  price: 350 ,
-  description: 'Good for nothing but buy it ',
-  icon: 'FaBeer'
-};
+  password: '$2b$10$9K8uV6EmwFnSU0gNZsiTv.wtsTFAr6SEzH4OcaADRZVOpTyczEIA6',
+  isAdmin: true,
+});
 
-userRepo.save(userDummyData);
-userRepo.saveAdmin(adminDummyData);
-ticketRepo.saveTicket(ticketDummyData);
+ticketTypeRepo.saveTicketType({
+  name: 'Mav',
+  price: 350,
+  description: 'Good for nothing but buy it ',
+  icon: 'FaBeer',
+});
+
+ticketTypeRepo.saveTicketType({
+  name: 'Volan',
+  price: 500,
+  description: 'Tick form Pest to Vac ',
+  icon: 'FaBeer',
+});

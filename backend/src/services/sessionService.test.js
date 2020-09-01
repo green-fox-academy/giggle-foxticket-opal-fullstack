@@ -1,27 +1,30 @@
 import jwt from 'jsonwebtoken';
 import { SessionService } from './sessionService';
 import { UserRepository } from '../repository/UserRepository';
+import { PasswordValidation } from '../services/pass_validatorService'
 
 jest.mock('../repository/UserRepository');
+jest.mock('../services/pass_validatorService')
 jest.mock('jsonwebtoken');
 
 describe('Testing api/session route , login function', () => {
   it('should correctly login an existing user', async () => {
-    const user = { username: 'Lehel', password: 'password' };
-    const userResult = { id: 1, name: 'Lehel', email: 'test@test.com', password: 'password', isAdmin: 1 };
-    const response = { results: [userResult] };
-
     const sessionService = new SessionService();
 
     UserRepository.prototype.getUser.mockImplementation(() =>
-      Promise.resolve(response)
+      Promise.resolve({ results: [{ id: 1, name: 'Lehel', email: 'test@test.com', password: 'password', isAdmin: 1 }]
+    })
     );
+
+    PasswordValidation.prototype.passwordCheck.mockResolvedValue({
+      results: [{ id: 1, name: 'Lehel', email: 'test@test.com', password: 'password', isAdmin: 1 }]
+    })
 
     jwt.sign.mockImplementation((data, sec) => {
       return data;
     });
 
-    let test_results = await sessionService.login(user);
+    let test_results = await sessionService.login({ username: 'Lehel', password: 'password' });
 
     expect(jwt.sign).toHaveBeenCalled();
     expect(test_results).toStrictEqual({ user_id: 1, user_name: 'Lehel', user_isAdmin: 1 });
