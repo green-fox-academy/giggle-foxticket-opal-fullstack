@@ -5,7 +5,6 @@ export class TicketTypesService {
     this.ticketTypeRepository = new TicketTypeRepository();
 
   }
-
   getAll() {
     return this.ticketTypeRepository.listAllTicketType();
   }

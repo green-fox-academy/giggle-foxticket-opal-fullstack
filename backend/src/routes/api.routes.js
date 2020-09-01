@@ -13,9 +13,9 @@ const cors = require('cors');
 
 const router = express.Router();
 const userController = new UserController();
-const subscribeController = new SubscribeController()
-const authenticateMiddleware = new AuthenticateMiddleware()
-const ticketTypesController = new TicketTypesController()
+const subscribeController = new SubscribeController();
+const authenticateMiddleware = new AuthenticateMiddleware();
+const ticketTypesController = new TicketTypesController();
 
 router.use(cors());
 router.use(bodyParser.json());
@@ -33,11 +33,18 @@ router.post('/session', sessionsController.post);
 
 router.use(authenticateMiddleware.authenticate);
 
-router.use(admin_auth); 
-router.get('/ticket-types', ticketTypesController.get);
-router.post('/ticket-types', ticketTypesController.post);
-router.put('/ticket-types/:id', ticketTypesController.put);
-router.delete('/ticket-types/:id', ticketTypesController.delete);
-
+router.use(admin_auth);
+router.get('/ticket-types', (req, res) => {
+  ticketTypesController.get(req, res);
+});
+router.post('/ticket-types', (req, res) => {
+  ticketTypesController.post(req, res);
+});
+router.put('/ticket-types/:id', (req, res) => {
+  ticketTypesController.put(req, res);
+});
+router.delete('/ticket-types/:id', (req, res) => {
+  ticketTypesController.delete(req, res);
+});
 
 export default router;

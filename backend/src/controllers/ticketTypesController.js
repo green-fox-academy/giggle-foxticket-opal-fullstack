@@ -6,8 +6,13 @@ export class TicketTypesController {
   }
 
   async get(req, res) {
-    let data = await this.ticketTypesService.getAll();
-    res.status(200).json([data.results]);
+    try {
+      let data = await this.ticketTypesService.getAll();
+      res.status(200).json([data.results]);
+      
+    } catch (error) {
+      res.status(400).json(error.message);
+    }
   }
 
   async post(req, res) {
@@ -16,8 +21,12 @@ export class TicketTypesController {
     if ( !data.name || !data.price || typeof data.name !== 'string' || typeof data.price !== 'number') {
       res.status(400).json({ message: 'Missing OR incorrect field' });
     } else {
-      const response = await this.ticketTypesService.addNew(data);
-      res.status(201).json(response);
+      try {
+        const response = await this.ticketTypesService.addNew(data);
+        res.status(201).json(response);
+      } catch (error) {
+        res.status(400).json(error.message);
+      }
     }
   }
   async put(req, res) {
@@ -27,17 +36,24 @@ export class TicketTypesController {
     if (!data.name || !data.price || typeof data.name !== 'string' || typeof data.price !== 'number' || !id ) {
       res.status(400).json({ message: 'Missing or incorrect value(s)' });
     } else {
-      const result = await this.ticketTypesService.updateTicket(id, data);
-      !result.results.affectedRows ? null : 
-      res.status(200).json({message: "Update was successful"});
+      try {
+        const result = await this.ticketTypesService.updateTicket(id, data);
+        !result.results.affectedRows ? null : 
+        res.status(200).json({message: "Update was successful"});
+      } catch (error) {
+        res.status(400).json(error.message);
+      }
     }
   }
   async delete(req, res) {
     const id = req.params.id;
-    const result = await this.ticketTypesService.removeTicket(id);
-    console.log(result.results.affectedRows)
-    result.results.affectedRows <= 0 ?
-    res.status(404).json({message:"No content"}) :
-    res.status(200).json({message: "Ticket successfully removed" })
+    try {
+      const result = await this.ticketTypesService.removeTicket(id);
+      result.results.affectedRows <= 0 ?
+      res.status(404).json({message:"No content"}) :
+      res.status(200).json({message: "Ticket successfully removed" })
+    } catch (error) {
+      res.status(400).json(error.message);
+    }
   }
 };

@@ -8,11 +8,11 @@ userRepo.save({
   email: 'lehel@gmail.com',
   password: '$2b$10$H7mQGKBAO66DkB2CY49LzujvzHeO9mB3OheHwzDvKfG7RlgTOq4Vm',
 });
-userRepo.saveAdmin({
+userRepo.save({
   name: 'Vivien',
   email: 'vivi@gmail.com',
   password: '$2b$10$9K8uV6EmwFnSU0gNZsiTv.wtsTFAr6SEzH4OcaADRZVOpTyczEIA6',
-  isAdmin: true,
+  isAdmin: true
 });
 
 ticketTypeRepo.saveTicketType({

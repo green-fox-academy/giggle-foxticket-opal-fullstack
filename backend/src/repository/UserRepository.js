@@ -5,13 +5,6 @@ export class UserRepository {
 
   async save(user) {
     await db.query(
-      `INSERT INTO foxticket.Users (name, email, password)
-         VALUES (?, ?, ?)`,
-      [user.name, user.email, user.password]
-    );
-  }
-  async saveAdmin(user) {
-    await db.query(
       `INSERT INTO foxticket.Users (name, email, password, isAdmin )
          VALUES (?, ?, ?, ?)`,
       [user.name, user.email, user.password, user.isAdmin]
