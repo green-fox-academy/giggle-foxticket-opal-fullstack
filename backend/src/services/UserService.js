@@ -8,13 +8,10 @@ export class UserService {
   constructor() {
     this.userRepository = new UserRepository();
     this.subscriberRepository = new SubscriberRepository();
-    console.log('UserService constructor');
   }
 
   async subscribeUser(subscriber) {
-    await this.subscriberRepository.subscribe(
-      new Subscriber(subscriber.name, subscriber.email)
-    );
+    await this.subscriberRepository.subscribe(new Subscriber(subscriber.name, subscriber.email));
     return subscriber;
   }
 

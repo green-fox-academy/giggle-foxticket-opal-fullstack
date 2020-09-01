@@ -1,9 +1,15 @@
-import { createToken } from '../services/sessionService';
+import { SessionService } from '../services/sessionService'
+
+ const sessionService = new SessionService()
 
 export const sessionsController = {
-  post(req, res) {
+  async post(req, res) {
     const user = req.body;
-    const token = createToken(user);
-    res.json({ ...user, token });
+    try {
+      const token = await sessionService.login(user);
+      res.json({ token }); 
+    } catch (err) {
+      return res.status(401).json({ message: err.message });
+    }
   },
 };
