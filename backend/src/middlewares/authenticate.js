@@ -1,7 +1,20 @@
-import { verifyToken } from '../services/sessionService';
+import { SessionService } from '../services/sessionService';
 
-export const authenticate = (req, res, next) => {
-  const token = verifyToken(req.body.auth_token);
-  if (!token) return res.sendStatus(401).send('Access Denied');
-  next();
-};
+const sessionService = new SessionService();
+
+export class AuthenticateMiddleware {
+  constructor() {}
+
+  authenticate(req, res, next) {
+    try { 
+      if(req.headers.authorization  && req.headers.authorization.includes("Bearer")){
+        const token = req.headers.authorization.split(' ')[1];
+        const user = sessionService.verifyToken(token);
+        req.user = user;
+        next();
+      }
+    } catch (error) {
+      res.status(401).json({ message:` Access Denied due to ${error.message}` });
+    }
+  }
+}
