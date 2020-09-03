@@ -6,22 +6,19 @@ import { connect } from 'react-redux';
 import './Header.styles.sass'
 
 function Header(props) {
-
   return (
-    <>
     <nav className="NavbarItems" >
       <img src={FoxticketLogo} alt='navigation bar logo'></img>
       <h3 className="nav-text">Foxticket</h3>
-        <ul className="nav-menu">
-        { 
-          props.type ==='admin' &&
-            <Link to="/admin" className="nav-links" >Admin</Link>
-        }
+      <ul className="nav-menu">
+      { 
+        props.type ==='admin' &&
+         <Link to="/admin" className="nav-links" >Admin</Link>
+      }
         <li className="nav-links">{props.userName}</li>
-          <Logout />
-        </ul>
+        <Logout />
+      </ul>
     </nav>
-    </>
   )
 }
 
