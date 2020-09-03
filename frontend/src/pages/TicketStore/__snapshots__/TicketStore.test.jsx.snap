@@ -4,6 +4,33 @@ exports[`renders correctly 1`] = `
 <div
   className="ticket-store"
 >
+  <nav
+    className="NavbarItems"
+  >
+    <img
+      alt="navigation bar logo"
+      src="Foxticket.png"
+    />
+    <h3
+      className="nav-text"
+    >
+      Foxticket
+    </h3>
+    <ul
+      className="nav-menu"
+    >
+      <li
+        className="nav-links"
+      />
+      <a
+        className="nav-links"
+        href="/"
+        onClick={[Function]}
+      >
+        Logout
+      </a>
+    </ul>
+  </nav>
   <div
     className="ticket-list-container"
   >

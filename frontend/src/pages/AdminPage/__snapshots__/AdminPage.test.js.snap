@@ -2,6 +2,40 @@
 
 exports[`renders correctly 1`] = `
 <div>
+  <nav
+    className="NavbarItems"
+  >
+    <img
+      alt="navigation bar logo"
+      src="Foxticket.png"
+    />
+    <h3
+      className="nav-text"
+    >
+      Foxticket
+    </h3>
+    <ul
+      className="nav-menu"
+    >
+      <a
+        className="nav-links"
+        href="/admin"
+        onClick={[Function]}
+      >
+        Admin
+      </a>
+      <li
+        className="nav-links"
+      />
+      <a
+        className="nav-links"
+        href="/"
+        onClick={[Function]}
+      >
+        Logout
+      </a>
+    </ul>
+  </nav>
   <h1
     className="main-title"
   >
