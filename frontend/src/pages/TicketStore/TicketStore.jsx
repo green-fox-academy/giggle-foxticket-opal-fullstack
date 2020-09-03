@@ -1,8 +1,7 @@
 import React from 'react';
 import ShopTicketList from '../../components/ShopTicketList/ShopTicketList';
 import UserTicketList from '../../components/UserTicketList/UserTicketList';
-import Header from '../../components/Header/Header';
-
+import Header from '../../components/Header/Header'
 
 const TicketStore = () => {
   return (

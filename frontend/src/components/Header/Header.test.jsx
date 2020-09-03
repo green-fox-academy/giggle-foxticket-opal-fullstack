@@ -1,19 +1,22 @@
 import React from 'react';
 import Header from './Header';
 import renderer from 'react-test-renderer';
-import { Provider } from 'react-redux';
-import store from '../../flux/store';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '../../flux/store';
+import configureStore from 'redux-mock-store';
 
-it('renders correctly', () => {
+describe('Connect component to Redux store', () => {
+  const mockStore = configureStore([]);
+  const user = { name: 'Someone' }
+  const store = mockStore({ user });
+
+  it('should render with given state from Redux store', () => {
   const tree = renderer.create(
-    <Provider store={store}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Provider store={store}>
         <Header />
-      </BrowserRouter>
-    </Provider>
-    ).toJSON();
-  expect(tree).toMatchSnapshot();
+      </Provider>
+    </BrowserRouter>)
+    expect(tree.toJSON()).toMatchSnapshot();
+  });
 });

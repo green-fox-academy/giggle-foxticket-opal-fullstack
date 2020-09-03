@@ -27,7 +27,7 @@ function Header(props) {
 
 const mapStateToProps = (state) => {
   return {
-    userName: state.auth.user
+    userName: state.user.name
   }
 }
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Connect component to Redux store should render with given state from Redux store 1`] = `
 <div
   className="ticket-store"
 >
@@ -21,7 +21,9 @@ exports[`renders correctly 1`] = `
     >
       <li
         className="nav-links"
-      />
+      >
+        Someone
+      </li>
       <a
         className="nav-links"
         href="/"
