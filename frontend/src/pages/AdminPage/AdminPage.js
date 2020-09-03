@@ -5,6 +5,8 @@ import Button from '../../components/Button/Button';
 import useModal from '../../hooks/useModal';
 import Modal from '../../components/Modal/Modal';
 import Header from '../../components/Header/Header';
+import { Provider } from 'react-redux';
+import store from '../../flux/store';
 
 const fakeData = [
   {
@@ -37,22 +39,24 @@ function AdminPage() {
   const { isShowing, toggle } = useModal();
 
   return (
-    <div>
-      <Header type="admin" />
-      <h1 className="main-title">Ticket Types</h1>
-      {fakeData.map(adminTicket => (
-        <Ticket key={adminTicket.id} {...adminTicket}>
-          <Button onClick={toggle}>DELETE</Button>
-        </Ticket>
-      ))}
-      <Modal hide={toggle} isShowing={isShowing}>
-        <Button onClick={toggle}>OK</Button>
-        <Button buttonStyle={'btn--danger--solid--btn'} onClick={toggle}>
-          Cancel
-        </Button>
-        Are you sure?
-      </Modal>
-    </div>
+    <Provider store={store}>
+      <div>
+        <Header type="admin" />
+        <h1 className="main-title">Ticket Types</h1>
+        {fakeData.map(adminTicket => (
+          <Ticket key={adminTicket.id} {...adminTicket}>
+            <Button onClick={toggle}>DELETE</Button>
+          </Ticket>
+        ))}
+        <Modal hide={toggle} isShowing={isShowing}>
+          <Button onClick={toggle}>OK</Button>
+          <Button buttonStyle={'btn--danger--solid--btn'} onClick={toggle}>
+            Cancel
+          </Button>
+          Are you sure?
+        </Modal>
+      </div>
+    </Provider>
   );
 }
 
