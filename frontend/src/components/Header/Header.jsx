@@ -15,9 +15,7 @@ function Header(props) {
         <ul className="nav-menu">
         { 
           props.type ==='admin' &&
-          <BrowserRouter>
             <Link to="/admin" className="nav-links" >Admin</Link>
-          </BrowserRouter>
         }
         <li className="nav-links">{props.userName}</li>
           <Logout />

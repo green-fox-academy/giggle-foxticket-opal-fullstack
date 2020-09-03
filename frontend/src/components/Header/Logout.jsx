@@ -8,9 +8,7 @@ function Logout(props) {
   const {logout} = props
   return (
     <>
-      <BrowserRouter>
         <Link to="/" className="nav-links" onClick={logout}>Logout</Link>
-      </BrowserRouter>
     </>
   )
 }

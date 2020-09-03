@@ -5,8 +5,6 @@ import Button from '../../components/Button/Button';
 import useModal from '../../hooks/useModal';
 import Modal from '../../components/Modal/Modal';
 import Header from '../../components/Header/Header';
-import { Provider } from 'react-redux';
-import store from '../../flux/store';
 
 const fakeData = [
   {
@@ -39,7 +37,6 @@ function AdminPage() {
   const { isShowing, toggle } = useModal();
 
   return (
-    <Provider store={store}>
       <div>
         <Header type="admin" />
         <h1 className="main-title">Ticket Types</h1>
@@ -56,7 +53,6 @@ function AdminPage() {
           Are you sure?
         </Modal>
       </div>
-    </Provider>
   );
 }
 
