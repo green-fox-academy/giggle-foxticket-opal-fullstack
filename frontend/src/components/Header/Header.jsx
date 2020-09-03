@@ -1,7 +1,7 @@
 import React from 'react'
 import FoxticketLogo from '../../assets/images/logos/Foxticket.png'
 import Logout from './Logout';
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import './Header.styles.sass'
 
