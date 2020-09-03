@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<nav
+  className="NavbarItems"
+>
+  <img
+    alt="navigation bar logo"
+    src="Foxticket.png"
+  />
+  <h3
+    className="nav-text"
+  >
+    Foxticket
+  </h3>
+  <ul
+    className="nav-menu"
+  >
+    <li
+      className="nav-links"
+    />
+    <a
+      className="nav-links"
+      href="/"
+      onClick={[Function]}
+    >
+      Logout
+    </a>
+  </ul>
+</nav>
+`;
