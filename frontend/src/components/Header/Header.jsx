@@ -5,17 +5,17 @@ import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import './Header.styles.sass'
 
-function Header(props) {
+function Header({userName, isAdmin}) {
   return (
     <nav className="NavbarItems" >
       <img src={FoxticketLogo} alt='navigation bar logo'></img>
       <h3 className="nav-text">Foxticket</h3>
       <ul className="nav-menu">
       { 
-        props.type ==='admin' &&
+        isAdmin &&
          <Link to="/admin" className="nav-links" >Admin</Link>
       }
-        <li className="nav-links">{props.userName}</li>
+        <li className="nav-links">{userName}</li>
         <Logout />
       </ul>
     </nav>
@@ -24,7 +24,8 @@ function Header(props) {
 
 const mapStateToProps = (state) => {
   return {
-    userName: state.user.name
+    userName: state.user.name,
+    isAdmin: state.user.isAdmin
   }
 }
 
