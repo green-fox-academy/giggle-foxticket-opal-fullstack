@@ -7,7 +7,10 @@ import configureStore from 'redux-mock-store';
 
 describe('Connect component to Redux store', () => {
   const mockStore = configureStore([]);
-  const user = { name: 'Someone' }
+  const user = {
+    name: 'Someone',
+    isAdmin: true
+  }
   const store = mockStore({ user });
 
   it('should render with given state from Redux store', () => {

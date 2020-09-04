@@ -8,7 +8,7 @@ import './Header.styles.sass'
 function Header({userName, isAdmin}) {
   return (
     <>
-    { userName &&
+    { localStorage.getItem('token') &&
       <nav className="NavbarItems" >
         <img src={FoxticketLogo} alt='navigation bar logo'></img>
         <h3 className="nav-text">Foxticket</h3>
