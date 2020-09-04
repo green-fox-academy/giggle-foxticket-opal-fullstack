@@ -1,4 +1,4 @@
-import Subscriber from "../models/Subscriber";
+import Subscriber from '../models/Subscriber';
 import { UserService } from '../services/UserService';
 
 export class SubscribeController {

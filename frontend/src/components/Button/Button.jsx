@@ -1,5 +1,6 @@
 import React from 'react';
 import './Button.styles.sass';
+import PropTypes from 'prop-types';
 
 const styles = [
   'btn--primary--solid',
@@ -11,6 +12,7 @@ const styles = [
   'btn--danger--outline',
   'btn--success--outline',
   'btn--danger--solid--btn',
+  'btn--success--solid--btn',
 ];
 
 const sizes = ['btn--medium', 'btn--large'];
@@ -31,6 +33,14 @@ const Button = ({ children, type, onClick, buttonStyle, buttonSize }) => {
       {children}
     </button>
   );
+};
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  type: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  buttonStyle: PropTypes.string.isRequired,
+  buttonSize: PropTypes.string.isRequired,
 };
 
 export default Button;
