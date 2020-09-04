@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 
 describe('Connect component to Redux store', () => {
+  Storage.prototype.getItem = jest.fn(() => 'token');
   const mockStore = configureStore([]);
   const user = {
     name: 'Someone',
