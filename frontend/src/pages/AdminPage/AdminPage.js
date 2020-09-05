@@ -36,21 +36,21 @@ function AdminPage() {
   const { isShowing, toggle } = useModal();
 
   return (
-    <div>
-      <h1 className="main-title">Ticket Types</h1>
-      {fakeData.map(adminTicket => (
-        <Ticket key={adminTicket.id} {...adminTicket}>
-          <Button onClick={toggle}>DELETE</Button>
-        </Ticket>
-      ))}
-      <Modal hide={toggle} isShowing={isShowing}>
-        <Button onClick={toggle}>OK</Button>
-        <Button buttonStyle={'btn--danger--solid--btn'} onClick={toggle}>
-          Cancel
-        </Button>
-        Are you sure?
-      </Modal>
-    </div>
+      <div>
+        <h1 className="main-title">Ticket Types</h1>
+        {fakeData.map(adminTicket => (
+          <Ticket key={adminTicket.id} {...adminTicket}>
+            <Button onClick={toggle}>DELETE</Button>
+          </Ticket>
+        ))}
+        <Modal hide={toggle} isShowing={isShowing}>
+          <Button onClick={toggle}>OK</Button>
+          <Button buttonStyle={'btn--danger--solid--btn'} onClick={toggle}>
+            Cancel
+          </Button>
+          Are you sure?
+        </Modal>
+      </div>
   );
 }
 
