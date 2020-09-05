@@ -16,13 +16,6 @@ exports[`Connect component to Redux store should render with given state from Re
   <ul
     className="nav-menu"
   >
-    <a
-      className="nav-links"
-      href="/admin"
-      onClick={[Function]}
-    >
-      Admin
-    </a>
     <li
       className="nav-links"
     >
@@ -34,6 +27,13 @@ exports[`Connect component to Redux store should render with given state from Re
       onClick={[Function]}
     >
       Logout
+    </a>
+    <a
+      className="nav-links"
+      href="/admin"
+      onClick={[Function]}
+    >
+      Admin
     </a>
   </ul>
 </nav>

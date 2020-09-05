@@ -7,33 +7,34 @@ import './Header.styles.sass'
 
 function Header({userName, isAdmin}) {
   return (
-    <>
-    { localStorage.getItem('token') &&
       <nav className="NavbarItems" >
         <img src={FoxticketLogo} alt='navigation bar logo'></img>
         <h3 className="nav-text">Foxticket</h3>
         <ul className="nav-menu">
+        {
+          userName &&
+          <>
+          <li className="nav-links">{userName}</li>
+          <Logout />
+          </>
+        }
         { 
           isAdmin &&
           <Link to="/admin" className="nav-links" >Admin</Link>
         }
-          <li className="nav-links">{userName}</li>
-          <Logout />
         </ul>
       </nav>
-    }
-    </>
   )
 }
 
 const mapStateToProps = (state) => {
-    if(state.user){
-      return{
+   if(state.user) {
+      return {
         userName: state.user.name,
         isAdmin: state.user.isAdmin
       }
-    }else{
-      return{
+   } else {
+      return {
         userName: null,
         isAdmin: false
       }
