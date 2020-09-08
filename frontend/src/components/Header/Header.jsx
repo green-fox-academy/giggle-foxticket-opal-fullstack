@@ -28,10 +28,10 @@ function Header({userName, isAdmin}) {
 }
 
 const mapStateToProps = (state) => {
-   if(state.user) {
+   if(state.auth.user) {
       return {
-        userName: state.user.name,
-        isAdmin: state.user.isAdmin
+        userName: state.auth.user,
+        isAdmin: state.auth.isAdmin
       }
    } else {
       return {
