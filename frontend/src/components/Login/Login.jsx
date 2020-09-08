@@ -16,7 +16,7 @@ const Login = props => {
     initialValues,
     onSubmit: values => {
       const user = {
-        name: values.values.name,
+        username: values.values.name,
         password: values.values.password,
       };
 
