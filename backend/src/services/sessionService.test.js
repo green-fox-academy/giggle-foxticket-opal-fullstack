@@ -28,13 +28,9 @@ describe('Testing api/session route , login function', () => {
 
     expect(jwt.sign).toHaveBeenCalled();
     expect(test_results).toStrictEqual({ 
-      isAdmin: 1,
-      token: {
-        user_id: 1,
-        user_isAdmin: 1,
-        user_name: 'Lehel'
-      },
-      user: 'Lehel'
+      token: test_results.token,
+      isAdmin: test_results.isAdmin,
+      user: test_results.user
   });
   });
 
