@@ -14,6 +14,7 @@ const initialState = {
   isAuthenticated: null,
   isLoading: false,
   user: null,
+  isAdmin: false,
 };
 
 export default function (state = initialState, action) {
