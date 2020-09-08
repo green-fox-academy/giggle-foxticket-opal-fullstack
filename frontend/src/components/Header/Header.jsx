@@ -11,16 +11,16 @@ function Header({userName, isAdmin}) {
         <img src={FoxticketLogo} alt='navigation bar logo'></img>
         <h3 className="nav-text">Foxticket</h3>
         <ul className="nav-menu">
+        { 
+          isAdmin &&
+          <Link to="/admin" className="nav-links" >Admin</Link>
+        }
         {
           userName &&
           <>
           <li className="nav-links">{userName}</li>
           <Logout />
           </>
-        }
-        { 
-          isAdmin &&
-          <Link to="/admin" className="nav-links" >Admin</Link>
         }
         </ul>
       </nav>
