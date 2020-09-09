@@ -8,11 +8,12 @@ import configureStore from 'redux-mock-store';
 describe('Connect component to Redux store', () => {
   Storage.prototype.getItem = jest.fn(() => 'token');
   const mockStore = configureStore([]);
-  const user = {
-    name: 'Someone',
-    isAdmin: true
+  const auth = {
+      user: 'Someone',
+      isAdmin: true
   }
-  const store = mockStore({ user });
+    
+  const store = mockStore({ auth });
 
   it('should render with given state from Redux store', () => {
   const tree = renderer.create(
