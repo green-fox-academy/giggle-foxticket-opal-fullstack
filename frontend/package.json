@@ -36,7 +36,8 @@
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "pre-commit": "lint-staged",
-    "format": "prettier --write \"src/**/*.+(js|md|ts|css|sass|less|graphql|yml|yaml|scss|json|vue)\""
+    "format": "prettier --write \"src/**/*.+(js|md|ts|css|sass|less|graphql|yml|yaml|scss|json|vue)\"",
+    "yarn pm2": "pm2 start yarn --interpreter bash --name api -- start"
   },
   "eslintConfig": {
     "extends": "react-app"
