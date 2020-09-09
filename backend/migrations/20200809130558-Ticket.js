@@ -10,7 +10,9 @@ var seed;
  */
 exports.setup = function (options, seedLink) {
   dbm = options.dbmigrate;
+  // eslint-disable-next-line no-unused-vars
   type = dbm.dataType;
+  // eslint-disable-next-line no-unused-vars
   seed = seedLink;
 };
 
@@ -23,7 +25,7 @@ exports.up = function (db) {
       notNull: true,
       foreignKey: {
         name: 'order_id',
-        table: 'Orders',
+        table: 'Order',
         rules: {
           onDelete: 'CASCADE',
           onUpdate: 'RESTRICT',
@@ -49,7 +51,7 @@ exports.up = function (db) {
         },
       },
     },
-    ticket_status: {type : "string"},
+    ticket_status: { type: 'string' },
     expiration_date: { type: 'datetime' },
   });
 };

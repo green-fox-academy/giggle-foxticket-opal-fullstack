@@ -46,7 +46,11 @@ const ShopTicketList = () => {
         ))}
         <Modal hide={toggle} isShowing={isShowing}>
           <Button onClick={toggle}>OK</Button>
-          <Button buttonStyle={'btn--danger--solid--btn'} onClick={toggle}>
+          <Button
+            buttonStyle={'btn--danger--solid--btn'}
+            id="modal-btn"
+            onClick={toggle}
+          >
             Cancel
           </Button>
           Are you sure?
