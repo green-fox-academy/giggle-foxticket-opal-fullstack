@@ -14,6 +14,7 @@ const initialState = {
   isAuthenticated: null,
   isLoading: false,
   user: null,
+  isAdmin: false,
 };
 
 export default function (state = initialState, action) {
@@ -53,6 +54,7 @@ export default function (state = initialState, action) {
         user: null,
         isAuthenticated: false,
         isLoading: false,
+        isAdmin: false,
       };
 
     default:

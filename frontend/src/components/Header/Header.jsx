@@ -11,6 +11,10 @@ function Header({userName, isAdmin}) {
         <img src={FoxticketLogo} alt='navigation bar logo'></img>
         <h3 className="nav-text">Foxticket</h3>
         <ul className="nav-menu">
+        { 
+          isAdmin &&
+          <Link to="/admin" className="nav-links" >Admin</Link>
+        }
         {
           userName &&
           <>
@@ -18,20 +22,16 @@ function Header({userName, isAdmin}) {
           <Logout />
           </>
         }
-        { 
-          isAdmin &&
-          <Link to="/admin" className="nav-links" >Admin</Link>
-        }
         </ul>
       </nav>
   )
 }
 
 const mapStateToProps = (state) => {
-   if(state.user) {
+   if(state.auth.user) {
       return {
-        userName: state.user.name,
-        isAdmin: state.user.isAdmin
+        userName: state.auth.user,
+        isAdmin: state.auth.isAdmin
       }
    } else {
       return {

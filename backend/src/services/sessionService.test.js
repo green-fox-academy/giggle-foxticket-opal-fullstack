@@ -27,7 +27,11 @@ describe('Testing api/session route , login function', () => {
     let test_results = await sessionService.login({ username: 'Lehel', password: 'password' });
 
     expect(jwt.sign).toHaveBeenCalled();
-    expect(test_results).toStrictEqual({ user_id: 1, user_name: 'Lehel', user_isAdmin: 1 });
+    expect(test_results).toStrictEqual({ 
+      token: test_results.token,
+      isAdmin: test_results.isAdmin,
+      user: test_results.user
+  });
   });
 
   it('It should throw an error of missing inputs', async () => {

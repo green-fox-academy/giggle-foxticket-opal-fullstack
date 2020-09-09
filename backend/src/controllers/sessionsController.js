@@ -6,8 +6,8 @@ export const sessionsController = {
   async post(req, res) {
     const user = req.body;
     try {
-      const token = await sessionService.login(user);
-      res.json({ token }); 
+      const data = await sessionService.login(user);
+      res.json(data);
     } catch (err) {
       return res.status(401).json({ message: err.message });
     }

@@ -24,7 +24,11 @@ export class SessionService {
             user_name: user.results[0].name,
             user_isAdmin: user.results[0].isAdmin,
           };
-          return jwt.sign(tokenData, process.env.ACCESS_TOKEN_SECRET);
+          return {
+            token: jwt.sign(tokenData, process.env.ACCESS_TOKEN_SECRET),
+            user: tokenData.user_name,
+            isAdmin: tokenData.user_isAdmin
+          };
       }
     }
   }

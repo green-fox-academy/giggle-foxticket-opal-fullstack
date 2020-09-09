@@ -58,14 +58,14 @@ export const register = ({ name, email, password }) => async dispatch => {
   }
 };
 
-export const login = ({ name, password }) => async dispatch => {
+export const login = ({ username, password }) => async dispatch => {
   const config = {
     headers: {
       'Content-Type': 'application/json',
     },
   };
 
-  const body = JSON.stringify({ name, password });
+  const body = JSON.stringify({ username, password });
 
   try {
     const res = await axios.post(`${BACKEND_URL}/api/session`, body, config);
