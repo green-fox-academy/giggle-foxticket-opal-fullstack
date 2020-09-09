@@ -9,6 +9,7 @@
     "test:ci": "jest --ci --collectCoverage --reporters=default",
     "test:cover": "jest --collectCoverage",
     "start": "nodemon --exec babel-node -r ./node_modules/dotenv/config src/index.js",
+    "start pm2": "pm2 start yarn --interpreter bash --name api -- start",
     "build": "babel src -d dist",
     "serve": "node dist/index.js",
     "seed": "babel-node -r ./node_modules/dotenv/config src/seed.js",
