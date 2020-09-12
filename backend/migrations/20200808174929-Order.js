@@ -5,16 +5,18 @@ var type;
 var seed;
 
 /**
-  * We receive the dbmigrate dependency from dbmigrate initially.
-  * This enables us to not have to rely on NODE_PATH.
-  */
-exports.setup = function(options, seedLink) {
+ * We receive the dbmigrate dependency from dbmigrate initially.
+ * This enables us to not have to rely on NODE_PATH.
+ */
+exports.setup = function (options, seedLink) {
   dbm = options.dbmigrate;
+  // eslint-disable-next-line no-unused-vars
   type = dbm.dataType;
+  // eslint-disable-next-line no-unused-vars
   seed = seedLink;
 };
 
-exports.up = function(db) {
+exports.up = function (db) {
   return db.createTable('Order', {
     id: { type: 'int', primaryKey: true, autoIncrement: true },
     ticket_type_id: {
@@ -23,15 +25,15 @@ exports.up = function(db) {
       notNull: true,
       foreignKey: {
         name: 'ticket_type_id',
-        table: 'Tickettypes',
+        table: 'TicketTypes',
         rules: {
           onDelete: 'CASCADE',
-          onUpdate: 'RESTRICT'
+          onUpdate: 'RESTRICT',
         },
         mapping: {
-          ticket_type_id: 'id'
-        }
-      }
+          ticket_type_id: 'id',
+        },
+      },
     },
     user_id: {
       type: 'int',
@@ -42,21 +44,21 @@ exports.up = function(db) {
         table: 'Users',
         rules: {
           onDelete: 'CASCADE',
-          onUpdate: 'RESTRICT'
+          onUpdate: 'RESTRICT',
         },
         mapping: {
-          user_id: 'id'
-        }
-      }
+          user_id: 'id',
+        },
+      },
     },
-    status:{ type:'string' },
-    ordered_at:{type:'timestamp'},
+    status: { type: 'string' },
+    ordered_at: { type: 'timestamp' },
   });
 };
-exports.down = function(db) {
+exports.down = function (db) {
   return db.dropTable('Order');
 };
 
 exports._meta = {
-  "version": 1
+  version: 1,
 };

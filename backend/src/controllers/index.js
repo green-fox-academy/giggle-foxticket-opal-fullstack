@@ -1,2 +1,2 @@
 export * from './helloController';
-export * from './sessionsController';
+export * from './SessionController';

@@ -1,7 +1,9 @@
 import { db } from '../data/connection';
 
 export class TicketTypeRepository {
-  constructor() {}
+  constructor(db) {
+    this.db = db;
+  }
   async saveTicketType(ticket) {
     await db.query(
       `INSERT INTO TicketTypes (name, price, description, icon)
@@ -13,13 +15,15 @@ export class TicketTypeRepository {
   async listAllTicketType() {
     return await db.query(`SELECT * from TicketTypes`);
   }
+
   async updateTicketType(id, data) {
-    return await db.query(
+    return await this.db.query(
       `UPDATE TicketTypes SET name= ?,
       price=? WHERE id=?`,
       [data.name, data.price, id]
     );
   }
+
   async deleteTicketType(id) {
     return await db.query(`DELETE FROM TicketTypes WHERE id = ?`, [id]);
   }

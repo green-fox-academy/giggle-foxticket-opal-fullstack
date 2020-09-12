@@ -10,7 +10,7 @@ export class UserRepository {
       [user.name, user.email, user.password, user.isAdmin]
     );
   }
-  
+
   async getUserData(username, userEmail) {
     return await db.query(
       `SELECT name, email
@@ -22,9 +22,8 @@ export class UserRepository {
   }
 
   async getUser(username) {
-    return await db.query(
-      "SELECT * FROM foxticket.Users WHERE name = ?",
-      [username]
-    );
+    return await db.query('SELECT * FROM foxticket.Users WHERE name = ?', [
+      username,
+    ]);
   }
 }

@@ -1,15 +1,18 @@
 import request from 'supertest';
-import app from '../src/app';
-import { UserRepository } from '../src/repository/UserRepository';
-import { PasswordValidation } from '../src/services/pass_validatorService';
+import App from '../src/app';
 import jwt from 'jsonwebtoken';
+import router from '../src/routes/api.routes';
+import { PasswordValidationService } from '../src/services/PasswordValidationService';
+import { UserRepository } from '../src/repository/UserRepository';
 
-jest.mock('../src/services/pass_validatorService');
-jest.mock('../src/repository/UserRepository');
 jest.mock('jsonwebtoken');
+jest.mock('../src/services/PasswordValidationService');
+jest.mock('../src/repository/UserRepository');
 
 describe('Testing /api/session endpoint ', () => {
-  it('It should response with an error ', async () => {
+  const api = request(new App([router], 3000).app);
+
+  it('It should respond 401', async () => {
     const userResult = {
       id: 1,
       name: 'Lehel',
@@ -20,15 +23,19 @@ describe('Testing /api/session endpoint ', () => {
 
     const response = { results: [userResult] };
 
-    UserRepository.prototype.getUser.mockImplementation(() =>
-      Promise.resolve(response)
-    );
+    const userRepository = {
+      getUser: async () => {
+        return response;
+      },
+    };
+
+    await userRepository.getUser();
 
     jwt.sign.mockImplementation((data, sec) => {
       return data;
     });
 
-    await request(app)
+    api
       .post('/api/session')
       .set('Content-Type', 'application/json')
       .send({ username: 'Lehel' })
@@ -41,7 +48,7 @@ describe('Testing /api/session endpoint ', () => {
       Promise.resolve({ results: [{ id: 'dummy_id' }] })
     );
 
-    PasswordValidation.prototype.passwordCheck.mockImplementation(() =>
+    PasswordValidationService.prototype.passwordCheck.mockImplementation(() =>
       Promise.resolve({
         results: [
           {
@@ -56,12 +63,13 @@ describe('Testing /api/session endpoint ', () => {
       })
     );
 
-    const x = await request(app)
+    const data = await api
       .post('/api/session')
       .send({ username: 'Vivien', password: 'password1223' })
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200);
-    expect(x.body.token).toHaveProperty('user_id');
+
+    expect(data.body.token).toStrictEqual({ token: { user_id: 'dummy_id' } });
   });
 });
