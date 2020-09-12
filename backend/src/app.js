@@ -22,6 +22,10 @@ class App {
       logger.info(`App is listening on ${port}`);
     });
   }
+
+  stop(done) {
+    this.server.close(done);
+  }
 }
 
 export default App;

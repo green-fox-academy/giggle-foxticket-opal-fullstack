@@ -35,7 +35,7 @@ describe('Testing /api/session endpoint ', () => {
       return data;
     });
 
-    api
+    await api
       .post('/api/session')
       .set('Content-Type', 'application/json')
       .send({ username: 'Lehel' })
