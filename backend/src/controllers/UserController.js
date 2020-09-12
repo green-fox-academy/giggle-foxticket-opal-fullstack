@@ -1,8 +1,7 @@
 import User from '../models/User';
 
 export class UserController {
-  constructor({ user, userService }) {
-    this.user = user;
+  constructor({ userService }) {
     this.userService = userService;
 
     this.register = this.register.bind(this);
