@@ -24,11 +24,6 @@ import { UserRepository } from './src/repository/UserRepository';
 import { SubscriberRepository } from './src/repository/SubscriberRepository';
 import { PasswordValidationService } from './src/services/PasswordValidationService';
 
-import Ticket from './src/models/Ticket';
-import User from './src/models/User';
-import Order from './src/models/Order';
-import Subscriber from './src/models/Subscriber';
-
 export const container = awilix.createContainer({
   injectionMode: awilix.InjectionMode.PROXY,
 });
@@ -55,11 +50,6 @@ export const setup = () => {
     orderRepository: awilix.asClass(OrderRepository),
     userRepository: awilix.asClass(UserRepository),
     subscriberRepository: awilix.asClass(SubscriberRepository),
-    // models
-    user: awilix.asClass(User),
-    subscriber: awilix.asClass(Subscriber),
-    ticket: awilix.asClass(Ticket),
-    order: awilix.asClass(Order),
     // db
     db: awilix.asValue(db),
     authenticateMiddleware: awilix.asClass(AuthenticateMiddleware),

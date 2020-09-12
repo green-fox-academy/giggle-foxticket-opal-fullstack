@@ -1,9 +1,7 @@
 import { db } from '../data/connection';
 
 export class TicketTypeRepository {
-  constructor(db) {
-    this.db = db;
-  }
+  constructor() {}
   async saveTicketType(ticket) {
     await db.query(
       `INSERT INTO TicketTypes (name, price, description, icon)
@@ -17,7 +15,7 @@ export class TicketTypeRepository {
   }
 
   async updateTicketType(id, data) {
-    return await this.db.query(
+    return await db.query(
       `UPDATE TicketTypes SET name= ?,
       price=? WHERE id=?`,
       [data.name, data.price, id]

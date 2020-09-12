@@ -6,7 +6,7 @@ export class TicketRepository {
   async get(id) {
     const data = await db.query(
       `SELECT *
-         FROM foxticket.Ticket
+         FROM Ticket
          WHERE id = ?`,
       [id]
     );
@@ -16,7 +16,7 @@ export class TicketRepository {
 
   async save(ticket) {
     const data = await db.query(
-      `INSERT INTO foxticket.Ticket (order_id, user_id, ticket_status, expiration_date)
+      `INSERT INTO Ticket (order_id, user_id, ticket_status, expiration_date)
          VALUES (?, ?, ?, ?)`,
       [
         ticket.order_id,
@@ -31,7 +31,7 @@ export class TicketRepository {
 
   async update(ticket_status, ticketId) {
     await db.query(
-      `UPDATE foxticket.Ticket
+      `UPDATE Ticket
          SET ticket_status = ?
          WHERE id = ?`,
       [ticket_status, ticketId]
