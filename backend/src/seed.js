@@ -1,5 +1,6 @@
 import { UserRepository } from './repository/UserRepository';
 import { TicketTypeRepository } from './repository/TicketTypesRepository';
+
 let userRepo = new UserRepository();
 let ticketTypeRepo = new TicketTypeRepository();
 
@@ -12,7 +13,7 @@ userRepo.save({
   name: 'Vivien',
   email: 'vivi@gmail.com',
   password: '$2b$10$9K8uV6EmwFnSU0gNZsiTv.wtsTFAr6SEzH4OcaADRZVOpTyczEIA6',
-  isAdmin: true
+  isAdmin: true,
 });
 
 ticketTypeRepo.saveTicketType({

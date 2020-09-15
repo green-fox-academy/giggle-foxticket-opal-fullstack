@@ -5,16 +5,16 @@ export class UserRepository {
 
   async save(user) {
     await db.query(
-      `INSERT INTO foxticket.Users (name, email, password, isAdmin )
+      `INSERT INTO Users (name, email, password, isAdmin)
          VALUES (?, ?, ?, ?)`,
       [user.name, user.email, user.password, user.isAdmin]
     );
   }
-  
+
   async getUserData(username, userEmail) {
     return await db.query(
       `SELECT name, email
-         FROM foxticket.Users
+         FROM Users
          WHERE name = ?
             OR email = ?`,
       [username, userEmail]
@@ -22,9 +22,6 @@ export class UserRepository {
   }
 
   async getUser(username) {
-    return await db.query(
-      "SELECT * FROM foxticket.Users WHERE name = ?",
-      [username]
-    );
+    return await db.query('SELECT * FROM Users WHERE name = ?', [username]);
   }
 }

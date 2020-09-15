@@ -72,8 +72,7 @@
   "lint-staged": {
     "*.{js,jsx, sass, json, css}": [
       "prettier",
-      "eslint",
-      "git add"
+      "eslint"
     ]
   },
   "husky": {

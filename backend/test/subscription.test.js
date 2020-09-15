@@ -1,21 +1,24 @@
 import request from 'supertest';
-import app from '../src/app';
+
+import App from '../src/app';
 import Subscriber from '../src/models/Subscriber';
 import { UserService } from '../src/services/UserService';
+import router from '../src/routes/api.routes';
 
-
-jest.mock('../src/repository/SubscriberRepository');
-jest.mock('../src/services/UserService'); 
+jest.mock('../src/services/UserService');
 
 describe('testing /api/subscription endpoint', () => {
-  it('fails with 400 if invalid subscriber credentials are passed', async () => {
-    const invalidSubscriber = new Subscriber('{invalid_user*3@', 'not_an_email');
+  const invalidSubscriber = new Subscriber('{invalid_user*3@', 'not_an_email');
+  const validSubscriber = new Subscriber('Tomi', 'asd@qwer.com');
 
+  const api = request(new App([router], 3000).app);
+
+  it('fails with 400 if invalid subscriber credentials are passed', async () => {
     UserService.prototype.subscribeUser.mockImplementation(() =>
       Promise.reject(invalidSubscriber)
     );
 
-    await request(app)
+    await api
       .post('/api/subscription')
       .send(invalidSubscriber)
       .set('Accept', 'application/json')
@@ -24,19 +27,15 @@ describe('testing /api/subscription endpoint', () => {
   });
 
   it('passes with 201 if valid subscriber credentials are passed', async () => {
-    const validSubscriber = new Subscriber('Tomi', 'asd@qwer.com');
+    UserService.prototype.subscribeUser.mockImplementation(() => {
+      Promise.resolve(validSubscriber);
+    });
 
-    UserService.prototype.subscribeUser.mockImplementation(() =>
-      Promise.resolve(validSubscriber)
-    );
-
-    const mockRegister = await request(app)
+    await api
       .post('/api/subscription')
       .send(validSubscriber)
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(201);
-
-    expect(mockRegister.body).toEqual(validSubscriber);
   });
 });

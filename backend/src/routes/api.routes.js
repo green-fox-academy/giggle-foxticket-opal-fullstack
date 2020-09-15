@@ -1,21 +1,21 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { helloController, sessionsController } from '../controllers';
-import { UserController } from '../controllers/UserController';
-import { TicketTypesController } from '../controllers/ticketTypesController';
+import { helloController } from '../controllers';
 import { validateUser } from '../middlewares/validators/userValidator';
-import { AuthenticateMiddleware } from '../middlewares/authenticate';
 import { admin_auth } from '../middlewares/admin_auth';
-import { SubscribeController } from '../controllers/SubscribeController';
 import { validateSubscriber } from '../middlewares/validators/subscribeValidator';
+import { container, setup } from '../../di-setup';
 
 const cors = require('cors');
-
+setup();
 const router = express.Router();
-const userController = new UserController();
-const subscribeController = new SubscribeController();
-const authenticateMiddleware = new AuthenticateMiddleware();
-const ticketTypesController = new TicketTypesController();
+
+const orderController = container.resolve('orderController');
+const userController = container.resolve('userController');
+const subscribeController = container.resolve('subscribeController');
+const ticketTypesController = container.resolve('ticketTypesController');
+const authenticateMiddleware = container.resolve('authenticateMiddleware');
+const sessionController = container.resolve('sessionController');
 
 router.use(cors());
 router.use(bodyParser.json());
@@ -29,11 +29,25 @@ router.post('/users', validateUser, (req, res) => {
 router.post('/subscription', validateSubscriber, (req, res) => {
   subscribeController.subscribe(req, res);
 });
-router.post('/session', sessionsController.post);
 
-router.use(authenticateMiddleware.authenticate);
+router.post('/session', (req, res) => {
+  sessionController.post(req, res);
+});
+
+router.use((req, res, next) =>
+  authenticateMiddleware.authenticate(req, res, next)
+);
 
 router.use(admin_auth);
+
+router.post('/orders', (req, res) => {
+  orderController.createOrderWithTicket(req, res);
+});
+
+router.patch('/orders/:id', (req, res) => {
+  orderController.updateOrder(req, res);
+});
+
 router.get('/ticket-types', (req, res) => {
   ticketTypesController.get(req, res);
 });

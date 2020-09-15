@@ -1,5 +1,4 @@
 import { helloService } from '../services';
-import { validateUser } from '../middlewares/validators/userValidator';
 
 export const helloController = {
   async get(req, res) {

@@ -13,6 +13,7 @@ export class TicketTypeRepository {
   async listAllTicketType() {
     return await db.query(`SELECT * from TicketTypes`);
   }
+
   async updateTicketType(id, data) {
     return await db.query(
       `UPDATE TicketTypes SET name= ?,
@@ -20,6 +21,7 @@ export class TicketTypeRepository {
       [data.name, data.price, id]
     );
   }
+
   async deleteTicketType(id) {
     return await db.query(`DELETE FROM TicketTypes WHERE id = ?`, [id]);
   }

@@ -1,17 +1,31 @@
 import express from 'express';
 import morgan from 'morgan';
-
 import { api, system } from './routes';
 import logger from './logger';
 import errorHandler from './middlewares/error-handler';
 
-const app = express();
+class App {
+  constructor() {
+    this.app = express();
+    this.setup();
+  }
 
-app.use(morgan('combined', { stream: logger.stream }));
+  setup() {
+    this.app.use(morgan('combined', { stream: logger.stream }));
+    this.app.use('/api', api);
+    this.app.use('/system', system);
+    this.app.use(errorHandler);
+  }
 
-app.use('/api', api);
-app.use('/system', system);
+  run(port) {
+    this.server = this.app.listen(port, () => {
+      logger.info(`App is listening on ${port}`);
+    });
+  }
 
-app.use(errorHandler);
+  stop(done) {
+    this.server.close(done);
+  }
+}
 
-export default app;
+export default App;

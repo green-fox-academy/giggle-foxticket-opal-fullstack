@@ -1,9 +1,9 @@
-import { db } from '../data/connection';  
+import { db } from '../data/connection';
 
 export class SubscriberRepository {
   constructor() {}
-  
-  async subscribe(subscriber){
+
+  async subscribe(subscriber) {
     await db.query(
       `INSERT INTO foxticket.Subscribers (name, email)
          VALUES (?, ?)`,
