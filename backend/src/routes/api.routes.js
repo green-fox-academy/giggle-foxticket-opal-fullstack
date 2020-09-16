@@ -5,6 +5,8 @@ import { validateUser } from '../middlewares/validators/userValidator';
 import { admin_auth } from '../middlewares/admin_auth';
 import { validateSubscriber } from '../middlewares/validators/subscribeValidator';
 import { container, setup } from '../../di-setup';
+import { ticketController } from '../controllers';
+
 
 const cors = require('cors');
 setup();
@@ -21,6 +23,10 @@ router.use(cors());
 router.use(bodyParser.json());
 
 router.get('/hello', helloController.get);
+
+router.get('/tickets', (req, res) => {
+  ticketController.get(req, res);
+});
 
 router.post('/users', validateUser, (req, res) => {
   userController.register(req, res);
