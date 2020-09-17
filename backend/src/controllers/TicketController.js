@@ -4,8 +4,9 @@ export class TicketController {
   }
 
   async get(req, res) {
+    console.log('ticketcontroller')
 
-    const userID = req.params.id
+    const userID = req.body.id
 
     if(!userID){
       res.status(400).json({ message: 'Missing or incorrect userID' });

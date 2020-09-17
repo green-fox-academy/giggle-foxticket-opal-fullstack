@@ -5,7 +5,6 @@ import { validateUser } from '../middlewares/validators/userValidator';
 import { admin_auth } from '../middlewares/admin_auth';
 import { validateSubscriber } from '../middlewares/validators/subscribeValidator';
 import { container, setup } from '../../di-setup';
-import { ticketController } from '../controllers/TicketController';
 
 
 const cors = require('cors');
@@ -18,6 +17,7 @@ const subscribeController = container.resolve('subscribeController');
 const ticketTypesController = container.resolve('ticketTypesController');
 const authenticateMiddleware = container.resolve('authenticateMiddleware');
 const sessionController = container.resolve('sessionController');
+const ticketController = container.resolve('ticketController');
 
 router.use(cors());
 router.use(bodyParser.json());

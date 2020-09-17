@@ -6,16 +6,19 @@ import { AuthenticateMiddleware } from './src/middlewares/authenticate';
 import { OrderController } from './src/controllers/OrderController';
 import { SessionController } from './src/controllers';
 
+
 import { OrderService } from './src/services/OrderService';
 import { SessionService } from './src/services/SessionService';
 import { EmailService } from './src/services/EmailService';
 import { TicketTypeService } from './src/services/TicketTypeService';
 import { UserService } from './src/services/UserService';
+import { TicketService } from './src/services/TicketService';
 
 import { UserController } from './src/controllers/UserController';
 import { EmailServiceController } from './src/controllers/EmailServiceController';
 import { SubscribeController } from './src/controllers/SubscribeController';
 import { TicketTypesController } from './src/controllers/TicketTypesController';
+import { TicketController } from './src/controllers/TicketController';
 
 import { OrderRepository } from './src/repository/OrderRepository';
 import { TicketRepository } from './src/repository/TicketRepository';
@@ -37,6 +40,7 @@ export const setup = () => {
     ticketTypesController: awilix.asClass(TicketTypesController),
     subscribeController: awilix.asClass(SubscribeController),
     userController: awilix.asClass(UserController),
+    ticketController: awilix.asClass(TicketController),
     // services
     orderService: awilix.asClass(OrderService),
     sessionService: awilix.asClass(SessionService),
@@ -44,6 +48,7 @@ export const setup = () => {
     passwordValidationService: awilix.asClass(PasswordValidationService),
     ticketTypeService: awilix.asClass(TicketTypeService),
     userService: awilix.asClass(UserService),
+    ticketService: awilix.asClass(TicketService),
     // repos
     ticketTypeRepository: awilix.asClass(TicketTypeRepository),
     ticketRepository: awilix.asClass(TicketRepository),
