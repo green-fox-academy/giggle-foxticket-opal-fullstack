@@ -13,7 +13,7 @@ export class TicketController {
     }else{ 
       try {
         let data = await this.ticketService.getTickets(userID);
-        res.status(200).json([data.results]);
+        res.status(200).json(data);
       } catch (error) {
         res.status(400).json(error.message);
       }
