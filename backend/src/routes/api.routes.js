@@ -5,7 +5,7 @@ import { validateUser } from '../middlewares/validators/userValidator';
 import { admin_auth } from '../middlewares/admin_auth';
 import { validateSubscriber } from '../middlewares/validators/subscribeValidator';
 import { container, setup } from '../../di-setup';
-import { ticketController } from '../controllers';
+import { ticketController } from '../controllers/TicketController';
 
 
 const cors = require('cors');
