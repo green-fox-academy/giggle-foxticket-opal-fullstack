@@ -57,14 +57,7 @@ describe('Testing /api/session endpoint ', () => {
     );
 
     PasswordValidationService.prototype.passwordCheck.mockImplementation(() =>
-      Promise.resolve({
-        results: [
-          {
-            // user_password:
-            //   '$2b$10$9K8uV6EmwFnSU0gNZsiTv.wtsTFAr6SEzH4OcaADRZVOpTyczEIA6',
-          },
-        ],
-      })
+      Promise.resolve({})
     );
 
     const data = await api
@@ -73,6 +66,8 @@ describe('Testing /api/session endpoint ', () => {
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200);
+
+    console.log(data.body);
 
     expect(data.body).toStrictEqual({
       token: {
