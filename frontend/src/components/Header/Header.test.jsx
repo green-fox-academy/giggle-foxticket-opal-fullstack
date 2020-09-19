@@ -9,19 +9,20 @@ describe('Connect component to Redux store', () => {
   Storage.prototype.getItem = jest.fn(() => 'token');
   const mockStore = configureStore([]);
   const auth = {
-      user: 'Someone',
-      isAdmin: true
-  }
-    
+    user: 'Someone',
+    isAdmin: true,
+  };
+
   const store = mockStore({ auth });
 
   it('should render with given state from Redux store', () => {
-  const tree = renderer.create(
-    <BrowserRouter>
-      <Provider store={store}>
-        <Header />
-      </Provider>
-    </BrowserRouter>)
+    const tree = renderer.create(
+      <BrowserRouter>
+        <Provider store={store}>
+          <Header />
+        </Provider>
+      </BrowserRouter>
+    );
     expect(tree.toJSON()).toMatchSnapshot();
   });
 });

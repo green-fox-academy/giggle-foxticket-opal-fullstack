@@ -38,8 +38,8 @@ const Button = ({ children, type, onClick, buttonStyle, buttonSize }) => {
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   type: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  buttonStyle: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  buttonStyle: PropTypes.string,
   buttonSize: PropTypes.string.isRequired,
 };
 
