@@ -9,9 +9,7 @@ export class UserController {
 
   async register(req, res) {
     try {
-      const data = await this.userService.registerUser(
-        new User(req.body.name, req.body.email, req.body.password)
-      );
+      const data = await this.userService.registerUser(new User(req.body));
       res.status(201).json(data);
     } catch (err) {
       res.status(400).json(err.message);

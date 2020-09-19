@@ -3,34 +3,30 @@ import useCustomForm from '../../hooks/useCustomForm';
 import './Register.styles.sass';
 import Button from '../Button/Button';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { register } from '../../flux/actions/authActions';
+import { clearErrors } from '../../flux/actions/errorActions';
 
 const initialValues = {
   email: '',
-  username: '',
+  name: '',
   password: '',
   confirm: '',
 };
 
-const Register = () => {
+const Register = props => {
   const { values, handleChange, handleSubmit } = useCustomForm({
     initialValues,
     onSubmit: values => {
-      console.log(
-        values.values.password === values.values.confirm
-          ? axios({
-              method: 'post',
-              baseURL: 'http://localhost:3000/',
-              url: '/api/users',
-              data: {
-                name: values.values.username,
-                email: values.values.email,
-                password: values.values.password,
-              },
-            })
-              .then(res => console.log(res))
-              .catch(err => console.log(err))
-          : console.log(`Passwords don't match!`)
-      );
+      const user = {
+        username: values.values.name,
+        password: values.values.password,
+        email: values.values.email,
+      };
+
+      const { register } = props;
+
+      register(user);
     },
   });
 
@@ -51,9 +47,9 @@ const Register = () => {
 
           <input
             type="text"
-            name="username"
+            name="name"
             onChange={handleChange}
-            value={values.username}
+            value={values.name}
             placeholder="User Name..."
             autoComplete="off"
             required={true}
@@ -88,4 +84,12 @@ const Register = () => {
   );
 };
 
-export default Register;
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  error: state.error,
+});
+
+export default connect(mapStateToProps, {
+  register,
+  clearErrors,
+})(Register);
