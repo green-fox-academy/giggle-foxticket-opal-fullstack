@@ -57,7 +57,7 @@ describe('Testing /api/session endpoint ', () => {
     );
 
     PasswordValidationService.prototype.passwordCheck.mockImplementation(() =>
-      Promise.resolve({})
+      Promise.resolve(true)
     );
 
     const data = await api
