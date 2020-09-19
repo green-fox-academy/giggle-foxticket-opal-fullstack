@@ -39,6 +39,7 @@ Array [
   >
     <div
       className="card"
+      id="card"
     >
       <div
         className="card-image"
@@ -68,6 +69,7 @@ Array [
     </div>
     <div
       className="card"
+      id="card"
     >
       <div
         className="card-image"
@@ -97,6 +99,7 @@ Array [
     </div>
     <div
       className="card"
+      id="card"
     >
       <div
         className="card-image"

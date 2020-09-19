@@ -1,4 +1,6 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css';
 import LandingPage from './pages/LandingPage/LandingPage';
 import TicketStore from './pages/TicketStore/TicketStore';
@@ -9,6 +11,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import { Provider } from 'react-redux';
 import store from './flux/store';
 import Header from './components/Header/Header';
+import ErrorDisplay from './components/ErrorDisplay/ErrorDisplay';
 import Register from './components/Register/Register';
 
 function App() {
@@ -21,6 +24,7 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <Header />
+          <ErrorDisplay />
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <PrivateRoute exact path="/shop" component={TicketStore} />

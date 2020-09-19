@@ -1,14 +1,20 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { logout } from '../../flux/actions/authActions';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { LOGOUT_SUCCESS } from '../../flux/actions/types';
 
-function Logout(props) {
-  const { logout } = props;
+function Logout() {
+  const dispatch = useDispatch();
   return (
     <>
-      <Link to="/" className="nav-links" onClick={logout}>
+      <Link
+        to="/"
+        className="nav-links"
+        onClick={() => {
+          dispatch({ type: LOGOUT_SUCCESS });
+        }}
+      >
         Logout
       </Link>
     </>
@@ -19,4 +25,4 @@ Logout.propTypes = {
   logout: PropTypes.func.isRequired,
 };
 
-export default connect(null, { logout })(Logout);
+export default Logout;

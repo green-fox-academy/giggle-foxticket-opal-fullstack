@@ -1,10 +1,16 @@
 import React from 'react';
 import Register from './Register';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
+import { Provider } from 'react-redux';
+import store from '../../flux/store';
 
-describe('test register component', () => {
-  it('renders correctly', () => {
-    const tree = renderer.create(<Register />).toJSON();
-    expect(tree).toMatchSnapshot();
+describe('Register Component', () => {
+  it('render correctly', () => {
+    const wrapper = shallow(
+      <Provider store={store}>
+        <Register />
+      </Provider>
+    );
+    expect(wrapper.contains(<Register />)).toBe(true);
   });
 });
