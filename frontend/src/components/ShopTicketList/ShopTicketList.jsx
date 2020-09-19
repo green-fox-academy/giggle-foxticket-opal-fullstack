@@ -49,7 +49,7 @@ const ShopTicketList = () => {
           <Button buttonStyle={'btn--danger--solid--btn'} onClick={toggle}>
             Cancel
           </Button>
-          Are you sure?
+          <span>Are you sure?</span>
         </Modal>
       </div>
     </div>

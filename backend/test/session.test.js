@@ -45,31 +45,38 @@ describe('Testing /api/session endpoint ', () => {
 
   it('It should login the user ', async () => {
     UserRepository.prototype.getUser.mockImplementation(() =>
-      Promise.resolve({ results: [{ id: 'dummy_id' }] })
-    );
-
-    PasswordValidationService.prototype.passwordCheck.mockImplementation(() =>
       Promise.resolve({
         results: [
           {
-            user_id: 2,
-            user_name: 'Vivien',
-            user_email: 'test@test.com',
-            user_password:
-              '$2b$10$9K8uV6EmwFnSU0gNZsiTv.wtsTFAr6SEzH4OcaADRZVOpTyczEIA6',
-            user_isAdmin: 1,
+            id: 'dummy_id',
+            name: 'Hulk Hogan',
+            isAdmin: true,
           },
         ],
       })
     );
 
+    PasswordValidationService.prototype.passwordCheck.mockImplementation(() =>
+      Promise.resolve(true)
+    );
+
     const data = await api
       .post('/api/session')
-      .send({ username: 'Vivien', password: 'password1223' })
+      .send({ username: 'Hulk Hogan', password: 'password1223' })
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200);
 
-    expect(data.body.token).toStrictEqual({ token: { user_id: 'dummy_id' } });
+    console.log(data.body);
+
+    expect(data.body).toStrictEqual({
+      token: {
+        user_id: 'dummy_id',
+        user_name: 'Hulk Hogan',
+        user_isAdmin: true,
+      },
+      user: 'Hulk Hogan',
+      isAdmin: true,
+    });
   });
 });
