@@ -48,8 +48,8 @@ describe('Testing /api/session endpoint ', () => {
       Promise.resolve({
         results: [
           {
-            token: 'jwtToken',
             id: 'dummy_id',
+            name: 'Hulk Hogan',
             isAdmin: true,
           },
         ],
@@ -60,12 +60,8 @@ describe('Testing /api/session endpoint ', () => {
       Promise.resolve({
         results: [
           {
-            user_id: 2,
-            user_name: 'Vivien',
-            user_email: 'test@test.com',
-            user_password:
-              '$2b$10$9K8uV6EmwFnSU0gNZsiTv.wtsTFAr6SEzH4OcaADRZVOpTyczEIA6',
-            user_isAdmin: 1,
+            // user_password:
+            //   '$2b$10$9K8uV6EmwFnSU0gNZsiTv.wtsTFAr6SEzH4OcaADRZVOpTyczEIA6',
           },
         ],
       })
@@ -73,14 +69,19 @@ describe('Testing /api/session endpoint ', () => {
 
     const data = await api
       .post('/api/session')
-      .send({ username: 'Vivien', password: 'password1223' })
+      .send({ username: 'Hulk Hogan', password: 'password1223' })
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200);
 
     expect(data.body).toStrictEqual({
+      token: {
+        user_id: 'dummy_id',
+        user_name: 'Hulk Hogan',
+        user_isAdmin: true,
+      },
+      user: 'Hulk Hogan',
       isAdmin: true,
-      token: { user_id: 'dummy_id', user_isAdmin: true },
     });
   });
 });
