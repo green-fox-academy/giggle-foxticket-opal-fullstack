@@ -4,11 +4,10 @@ import { Alert } from 'reactstrap';
 import { CLEAR_ERRORS } from '../../flux/actions/types';
 
 const ErrorDisplay = () => {
-  const error = useSelector(state => state.error.id);
+  const error = useSelector(state => state.error.message.message);
   const dispatch = useDispatch();
 
-  if (!error) return null;
-  return (
+  return error ? (
     <Alert color="danger" className="m-5">
       <button
         className="close"
@@ -18,9 +17,9 @@ const ErrorDisplay = () => {
       >
         x
       </button>
-      <p className="m-0">Something went wrong</p>
+      <p className="m-0">{error}</p>
     </Alert>
-  );
+  ) : null;
 };
 
 export default ErrorDisplay;

@@ -45,7 +45,15 @@ describe('Testing /api/session endpoint ', () => {
 
   it('It should login the user ', async () => {
     UserRepository.prototype.getUser.mockImplementation(() =>
-      Promise.resolve({ results: [{ id: 'dummy_id' }] })
+      Promise.resolve({
+        results: [
+          {
+            token: 'jwtToken',
+            id: 'dummy_id',
+            isAdmin: true,
+          },
+        ],
+      })
     );
 
     PasswordValidationService.prototype.passwordCheck.mockImplementation(() =>
@@ -70,6 +78,9 @@ describe('Testing /api/session endpoint ', () => {
       .expect('Content-Type', /json/)
       .expect(200);
 
-    expect(data.body).toStrictEqual({ token: { user_id: 'dummy_id' } });
+    expect(data.body).toStrictEqual({
+      isAdmin: true,
+      token: { user_id: 'dummy_id', user_isAdmin: true },
+    });
   });
 });
