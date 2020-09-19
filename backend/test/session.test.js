@@ -70,6 +70,6 @@ describe('Testing /api/session endpoint ', () => {
       .expect('Content-Type', /json/)
       .expect(200);
 
-    expect(data.body.token).toStrictEqual({ token: { user_id: 'dummy_id' } });
+    expect(data.body).toStrictEqual({ token: { user_id: 'dummy_id' } });
   });
 });
