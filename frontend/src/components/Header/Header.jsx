@@ -17,6 +17,17 @@ function Header({ userName, isAdmin }) {
             Admin
           </Link>
         )}
+
+        {userName ? (
+          <Link to={'shop'} className="nav-links">
+            Shop
+          </Link>
+        ) : (
+          <Link to={'/login'} className="nav-links">
+            Login
+          </Link>
+        )}
+
         {userName && (
           <>
             <li className="nav-links">{userName}</li>
@@ -33,6 +44,7 @@ const mapStateToProps = state => {
     return {
       userName: state.auth.user,
       isAdmin: state.auth.isAdmin,
+      error: state.auth.error,
     };
   } else {
     return {
@@ -43,8 +55,8 @@ const mapStateToProps = state => {
 };
 
 Header.propTypes = {
-  userName: PropTypes.string.isRequired,
-  isAdmin: PropTypes.bool.isRequired,
+  userName: PropTypes.string,
+  isAdmin: PropTypes.any,
 };
 
 export default connect(mapStateToProps)(Header);

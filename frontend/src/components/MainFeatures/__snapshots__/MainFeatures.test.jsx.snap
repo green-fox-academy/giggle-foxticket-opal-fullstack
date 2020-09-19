@@ -6,6 +6,7 @@ exports[`renders correctly 1`] = `
 >
   <div
     className="card"
+    id="card"
   >
     <div
       className="card-image"
@@ -35,6 +36,7 @@ exports[`renders correctly 1`] = `
   </div>
   <div
     className="card"
+    id="card"
   >
     <div
       className="card-image"
@@ -64,6 +66,7 @@ exports[`renders correctly 1`] = `
   </div>
   <div
     className="card"
+    id="card"
   >
     <div
       className="card-image"

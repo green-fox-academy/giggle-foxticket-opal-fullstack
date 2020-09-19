@@ -15,7 +15,7 @@ describe('authenticate reducer', () => {
     isAuthenticated: null,
     isLoading: false,
     user: null,
-    isAdmin: false
+    isAdmin: null,
   };
 
   const loggedInFailState = {
@@ -23,7 +23,7 @@ describe('authenticate reducer', () => {
     user: null,
     isAuthenticated: false,
     isLoading: false,
-    isAdmin: false
+    isAdmin: false,
   };
 
   it('should return the initial state', () => {

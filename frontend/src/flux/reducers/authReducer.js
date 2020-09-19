@@ -13,8 +13,8 @@ const initialState = {
   token: localStorage.getItem('token'),
   isAuthenticated: null,
   isLoading: false,
-  user: null,
-  isAdmin: false,
+  user: localStorage.getItem('user'),
+  isAdmin: localStorage.getItem('isAdmin'),
 };
 
 export default function (state = initialState, action) {
@@ -36,6 +36,8 @@ export default function (state = initialState, action) {
     case LOGIN_SUCCESS:
     case REGISTER_SUCCESS:
       localStorage.setItem('token', action.payload.token);
+      localStorage.setItem('user', action.payload.user);
+      localStorage.setItem('isAdmin', action.payload.isAdmin);
       return {
         ...state,
         ...action.payload,
@@ -48,13 +50,15 @@ export default function (state = initialState, action) {
     case LOGOUT_SUCCESS:
     case REGISTER_FAIL:
       localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      localStorage.removeItem('admin');
       return {
         ...state,
         token: null,
-        user: null,
         isAuthenticated: false,
         isLoading: false,
         isAdmin: false,
+        user: null,
       };
 
     default:
