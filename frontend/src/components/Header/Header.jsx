@@ -23,9 +23,14 @@ function Header({ userName, isAdmin }) {
             Shop
           </Link>
         ) : (
-          <Link to={'/login'} className="nav-links">
-            Login
-          </Link>
+          <>
+            <Link to={'/login'} className="nav-links">
+              Login
+            </Link>
+            <Link to={'/register'} className="nav-links">
+              Register
+            </Link>
+          </>
         )}
 
         {userName && (
@@ -44,7 +49,7 @@ const mapStateToProps = state => {
     return {
       userName: state.auth.user,
       isAdmin: state.auth.isAdmin,
-      error: state.auth.error,
+      error: state.error,
     };
   } else {
     return {
