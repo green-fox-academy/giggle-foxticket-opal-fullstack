@@ -4,7 +4,7 @@ import { Alert } from 'reactstrap';
 import { CLEAR_ERRORS } from '../../flux/actions/types';
 
 const ErrorDisplay = () => {
-  const error = useSelector(state => state.error.message.message);
+  const error = useSelector(state => state.error.data.message);
   const dispatch = useDispatch();
 
   return error ? (
