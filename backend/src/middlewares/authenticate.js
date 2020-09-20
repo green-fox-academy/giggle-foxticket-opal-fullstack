@@ -4,24 +4,19 @@ export class AuthenticateMiddleware {
   }
 
   authenticate(req, res, next) {
-    try {
       if (
         req.headers.authorization &&
         req.headers.authorization.includes('Bearer')
-      ) {
+      ) 
+      {
         const token = req.headers.authorization.split(' ')[1];
         req.user = this.sessionService.verifyToken(token);
         next();
-      }
-      else{
+      } 
+      else {
         res
         .status(401)
-        .json({ message: ` Access Denied due to missing token` });
+        .json({ message: `Access Denied due to invalid token` });
       }
-    } catch (error) {
-      res
-        .status(401)
-        .json({ message: ` Access Denied due to ${error.message}` });
-    }
-  }
+   }
 }
