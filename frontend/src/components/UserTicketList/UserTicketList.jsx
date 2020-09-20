@@ -1,41 +1,62 @@
 import React from 'react';
 import Ticket from '../Ticket/Ticket';
 import Button from '../Button/Button';
+import { connect } from 'react-redux'
+import { getTickets } from '../../flux/actions/ticketActions';
+import PropTypes from 'prop-types';
 
-const userTickets = [
-  {
-    id: 1,
-    description: 'Not validated',
-    iconName: 'FaBeer',
-    title: 'Single ticket',
-  },
-  {
-    id: 2,
-    description: 'Valid until ...',
-    iconName: 'FaRegSmileWink',
-    title: 'Double ticket',
-  },
-  {
-    id: 3,
-    description: 'Expired',
-    iconName: 'FaRegGem',
-    title: 'Triple Ticket',
-  },
-];
 
-const UserTicketList = () => {
+const UserTicketList = (props) => {
+
+  const {tickets , downloadTickets} = props
+
+  useEffect(() => {
+    downloadTickets()
+  },[downloadTickets])
+
   return (
-    <div className="ticket-list-container">
-      <div className="ticket-list">
+    <>
+      {tickets[0] && 
+        <div className="ticket-list-container">
+        <div className="ticket-list">
         <h1 className="main-title">My tickets</h1>
-        {userTickets.map(userTicket => (
-          <Ticket key={userTicket.id} {...userTicket}>
+        {tickets.map(({id, ticket_status, expiration_date}) => (
+          <Ticket
+            key={id}
+            id = {id}
+            title={ticket_status}
+            description={expiration_date}
+            iconName={'FaBeer'}
+            userTicket={true} >
             <Button buttonStyle="btn--warning--solid">SHOW</Button>
-          </Ticket>
+          </Ticket> 
         ))}
-      </div>
-    </div>
+        </div></div>
+      }
+      {!tickets[0] &&
+        <div className="ticket-list-container">
+        <div className="ticket-list">
+        <h1 className="main-title">I don't have tickets2 yet : (</h1>
+        <Button buttonStyle="btn--warning--solid">Buy Tickets</Button>
+        </div></div>
+      }
+    </>
   );
 };
 
-export default UserTicketList;
+const mapStateToProps = state => ({
+  tickets: state.ticket.tickets,
+  error: state.error,
+});
+
+const mapDispatchToProps = dispatch => {
+  return {
+    downloadTickets: () => dispatch(getTickets),
+  }
+};
+
+UserTicketList.propTypes = {
+  getTickets: PropTypes.func.isRequired,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserTicketList);
