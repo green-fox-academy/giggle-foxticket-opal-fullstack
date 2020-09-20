@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect } from 'react';
 import Ticket from '../Ticket/Ticket';
 import Button from '../Button/Button';
 import { connect } from 'react-redux'

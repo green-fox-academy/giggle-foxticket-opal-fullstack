@@ -1,7 +1,6 @@
 import React from 'react'
 import QRCode from "react-qr-code";
 import PropTypes from 'prop-types';
-import './QR.styles.sass'
 
 
 export default function QR({id}) {
