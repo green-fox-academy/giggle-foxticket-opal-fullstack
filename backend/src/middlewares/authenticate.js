@@ -13,6 +13,11 @@ export class AuthenticateMiddleware {
         req.user = this.sessionService.verifyToken(token);
         next();
       }
+      else{
+        res
+        .status(401)
+        .json({ message: ` Access Denied due to missing token` });
+      }
     } catch (error) {
       res
         .status(401)
