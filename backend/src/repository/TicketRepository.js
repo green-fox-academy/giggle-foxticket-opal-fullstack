@@ -14,6 +14,17 @@ export class TicketRepository {
     return await data.results[0];
   }
 
+  async getUserTicket(user_id) {
+    const data = await db.query(
+      `SELECT *
+        FROM Ticket
+        WHERE user_id = ?`,
+      [user_id]
+    );
+
+    return await data.results;
+  }
+
   async save(ticket) {
     const data = await db.query(
       `INSERT INTO Ticket (order_id, user_id, ticket_status, expiration_date)

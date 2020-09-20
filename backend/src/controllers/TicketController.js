@@ -4,15 +4,14 @@ export class TicketController {
   }
 
   async get(req, res) {
-    console.log('ticketcontroller')
 
-    const userID = req.body.id
+    const user_id = req.body.id
 
-    if(!userID){
-      res.status(400).json({ message: 'Missing or incorrect userID' });
+    if(!user_id){
+      res.status(400).json({ message: 'Missing or incorrect user_id' });
     }else{ 
       try {
-        let data = await this.ticketService.getTickets(userID);
+        let data = await this.ticketService.getTickets(user_id);
         res.status(200).json(data);
       } catch (error) {
         res.status(400).json(error.message);
