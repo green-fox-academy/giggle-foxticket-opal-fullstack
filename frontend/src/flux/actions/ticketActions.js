@@ -1,15 +1,24 @@
-import { ADD_TICKET, DELETE_TICKET, GET_TICKETS } from './types';
+import { ADD_TICKET, DELETE_TICKET, GET_TICKETS, DOWNLOADING_TICKETS, } from './types';
 import axios from 'axios';
 import { returnErrors } from './errorActions';
 import { tokenConfig } from './authActions';
 
-export const getTickets = dispatch => {
+export const getTickets = (dispatch, getState) => {
+  dispatch({type: DOWNLOADING_TICKETS})
+
   axios
-    .get('/api/tickets')
+    .get('http://localhost:3000/api/tickets', {
+      headers : {
+        'Content-Type': 'application/json',
+        'authorization' : 'Bearer ' + getState().auth.token
+      },
+      params: {id: 2},
+      },
+    ) 
     .then(res => dispatch({ type: GET_TICKETS, payload: res.data }))
     .catch(err =>
       dispatch(returnErrors(err.response.data, err.response.status))
-    );
+  );
 };
 
 export const addTicket = ticket => (dispatch, getState) => {
