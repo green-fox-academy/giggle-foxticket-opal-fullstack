@@ -6,6 +6,7 @@ const mailgun = mailgunDefault({
 });
 
 export const EmailService = {
+ 
   async sendMail(from, to, subject, body) {
     const data = {
       from,
@@ -20,4 +21,3 @@ export const EmailService = {
     } 
   }
 };
-
