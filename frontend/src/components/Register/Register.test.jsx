@@ -12,5 +12,6 @@ describe('Register Component', () => {
       </Provider>
     );
     expect(wrapper.contains(<Register />)).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 });
