@@ -56,7 +56,6 @@ exports[`Connect component to Redux store should render with given state from Re
         </div>
         <div
           className="btns"
-          onClick={[Function]}
         >
           <button
             className="btn btn--primary--solid btn--medium"
@@ -107,7 +106,6 @@ exports[`Connect component to Redux store should render with given state from Re
         </div>
         <div
           className="btns"
-          onClick={[Function]}
         >
           <button
             className="btn btn--primary--solid btn--medium"
@@ -158,7 +156,6 @@ exports[`Connect component to Redux store should render with given state from Re
         </div>
         <div
           className="btns"
-          onClick={[Function]}
         >
           <button
             className="btn btn--primary--solid btn--medium"
@@ -209,7 +206,6 @@ exports[`Connect component to Redux store should render with given state from Re
         </div>
         <div
           className="btns"
-          onClick={[Function]}
         >
           <button
             className="btn btn--primary--solid btn--medium"
@@ -273,12 +269,12 @@ exports[`Connect component to Redux store should render with given state from Re
         </div>
         <div
           className="btns"
-          onClick={[Function]}
         >
           <button
             className="btn btn--warning--solid btn--medium"
+            onClick={[Function]}
           >
-            SHOW
+             SHOW 
           </button>
         </div>
       </div>
