@@ -1,20 +1,28 @@
 import { UserController } from './UserController';
-import User from '../models/User';
 import { UserService } from '../services/UserService';
-
-jest.mock('../services/UserService');
+import User from '../models/User';
 
 it('should correctly register new User', async () => {
-  const userController = new UserController();
-
   const user = new User(
     'Marci',
     'testemail@test.com',
     'correcthorsebatterystaple'
   );
-  UserService.prototype.registerUser.mockImplementation(() =>
-    Promise.resolve(user)
-  );
+
+  const userRepository = {
+    getUserData: async () => {
+      return { results: [] };
+    },
+
+    save: async () => {
+      return user;
+    },
+  };
+
+  const userService = new UserService({ userRepository });
+  const userController = new UserController({ userService });
+
+  await userService.registerUser(user);
 
   const mockResponse = () => {
     const res = {};

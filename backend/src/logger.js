@@ -1,4 +1,4 @@
-import { format, createLogger, transports } from 'winston';
+import { createLogger, format, transports } from 'winston';
 
 const options = {
   file: {

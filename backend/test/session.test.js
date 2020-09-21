@@ -1,15 +1,18 @@
 import request from 'supertest';
-import app from '../src/app';
-import { UserRepository } from '../src/repository/UserRepository';
-import { PasswordValidation } from '../src/services/pass_validatorService';
+import App from '../src/app';
 import jwt from 'jsonwebtoken';
+import router from '../src/routes/api.routes';
+import { PasswordValidationService } from '../src/services/PasswordValidationService';
+import { UserRepository } from '../src/repository/UserRepository';
 
-jest.mock('../src/services/pass_validatorService');
-jest.mock('../src/repository/UserRepository');
 jest.mock('jsonwebtoken');
+jest.mock('../src/services/PasswordValidationService');
+jest.mock('../src/repository/UserRepository');
 
 describe('Testing /api/session endpoint ', () => {
-  it('It should response with an error ', async () => {
+  const api = request(new App([router], 3000).app);
+
+  it('It should respond 401', async () => {
     const userResult = {
       id: 1,
       name: 'Lehel',
@@ -20,15 +23,19 @@ describe('Testing /api/session endpoint ', () => {
 
     const response = { results: [userResult] };
 
-    UserRepository.prototype.getUser.mockImplementation(() =>
-      Promise.resolve(response)
-    );
+    const userRepository = {
+      getUser: async () => {
+        return response;
+      },
+    };
+
+    await userRepository.getUser();
 
     jwt.sign.mockImplementation((data, sec) => {
       return data;
     });
 
-    await request(app)
+    await api
       .post('/api/session')
       .set('Content-Type', 'application/json')
       .send({ username: 'Lehel' })
@@ -38,30 +45,38 @@ describe('Testing /api/session endpoint ', () => {
 
   it('It should login the user ', async () => {
     UserRepository.prototype.getUser.mockImplementation(() =>
-      Promise.resolve({ results: [{ id: 'dummy_id' }] })
-    );
-
-    PasswordValidation.prototype.passwordCheck.mockImplementation(() =>
       Promise.resolve({
         results: [
           {
-            user_id: 2,
-            user_name: 'Vivien',
-            user_email: 'test@test.com',
-            user_password:
-              '$2b$10$9K8uV6EmwFnSU0gNZsiTv.wtsTFAr6SEzH4OcaADRZVOpTyczEIA6',
-            user_isAdmin: 1,
+            id: 'dummy_id',
+            name: 'Hulk Hogan',
+            isAdmin: true,
           },
         ],
       })
     );
 
-    const x = await request(app)
+    PasswordValidationService.prototype.passwordCheck.mockImplementation(() =>
+      Promise.resolve(true)
+    );
+
+    const data = await api
       .post('/api/session')
-      .send({ username: 'Vivien', password: 'password1223' })
+      .send({ username: 'Hulk Hogan', password: 'password1223' })
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200);
-    expect(x.body.token).toHaveProperty('user_id');
+
+    console.log(data.body);
+
+    expect(data.body).toStrictEqual({
+      token: {
+        user_id: 'dummy_id',
+        user_name: 'Hulk Hogan',
+        user_isAdmin: true,
+      },
+      user: 'Hulk Hogan',
+      isAdmin: true,
+    });
   });
 });

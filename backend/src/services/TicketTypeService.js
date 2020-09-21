@@ -1,9 +1,6 @@
-import { TicketTypeRepository } from '../repository/TicketTypesRepository';
-
-export class TicketTypesService {
-  constructor() {
-    this.ticketTypeRepository = new TicketTypeRepository();
-
+export class TicketTypeService {
+  constructor({ ticketTypeRepository }) {
+    this.ticketTypeRepository = ticketTypeRepository;
   }
   getAll() {
     return this.ticketTypeRepository.listAllTicketType();
@@ -12,9 +9,11 @@ export class TicketTypesService {
   addNew(newTicket) {
     return this.ticketTypeRepository.saveTicketType(newTicket);
   }
+
   updateTicket(id, data) {
     return this.ticketTypeRepository.updateTicketType(id, data);
   }
+
   removeTicket(id) {
     return this.ticketTypeRepository.deleteTicketType(id);
   }
