@@ -69,8 +69,14 @@ describe('ticket reducer', () => {
   });
 
   it('should handle getting the tickets', () => {
-    expect(ticketReducer(initialState, { type: GET_TICKETS })).toEqual({
+    expect(
+      ticketReducer(initialState, {
+        type: GET_TICKETS,
+        payload: mockTickets,
+      })
+    ).toEqual({
       ...initialState,
+      tickets: mockTickets,
     });
   });
 

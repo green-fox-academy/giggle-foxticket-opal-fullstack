@@ -48,6 +48,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="btns"
+      onClick={[Function]}
     >
       <button
         className="btn btn--primary--solid btn--medium"
@@ -98,6 +99,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="btns"
+      onClick={[Function]}
     >
       <button
         className="btn btn--primary--solid btn--medium"
@@ -148,6 +150,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="btns"
+      onClick={[Function]}
     >
       <button
         className="btn btn--primary--solid btn--medium"
@@ -198,6 +201,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="btns"
+      onClick={[Function]}
     >
       <button
         className="btn btn--primary--solid btn--medium"
