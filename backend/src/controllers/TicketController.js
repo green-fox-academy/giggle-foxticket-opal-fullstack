@@ -2,13 +2,11 @@ export class TicketController {
   constructor({ ticketService }) {
     this.ticketService = ticketService;
   }
-
+  
   async getIndex(req, res) {
-
-    const user_id = req.query.id
-
-    console.log('req user id: ', req.user.id)
-
+    
+    const { user_id } = req.user
+  
     if(!user_id) {
       res
         .status(400)

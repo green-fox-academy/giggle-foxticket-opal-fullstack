@@ -11,10 +11,8 @@ export const getTickets = (dispatch, getState) => {
       headers : {
         'Content-Type': 'application/json',
         'authorization' : 'Bearer ' + getState().auth.token
-      },
-      params: {id: 2},
-      },
-    ) 
+      }
+    }) 
     .then(res => dispatch({ type: GET_TICKETS, payload: res.data }))
     .catch(err =>
       dispatch(returnErrors(err.response.data, err.response.status))

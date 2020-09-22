@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 export default function QR({id}) {
   
-  const validateUrl = `http://localhost:3000/api/tickets/${id}`
+  const validateUrl = `${process.env.BACKEND_URL}/api/validate/tickets/${id}`
   
   return (
     <>
