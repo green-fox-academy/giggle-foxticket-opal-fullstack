@@ -14,7 +14,7 @@ export class TicketRepository {
     return await data.results[0];
   }
 
-  async getUserTicket(user_id) {
+  async getTicketsForUser(user_id) {
     const data = await db.query(
       `SELECT *
         FROM Ticket

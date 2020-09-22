@@ -3,18 +3,27 @@ export class TicketController {
     this.ticketService = ticketService;
   }
 
-  async get(req, res) {
+  async getIndex(req, res) {
 
     const user_id = req.query.id
 
-    if(!user_id){
-      res.status(400).json({ message: 'Missing or incorrect user_id' });
-    }else{ 
+    console.log('req user id: ', req.user.id)
+
+    if(!user_id) {
+      res
+        .status(400)
+        .json({ message: 'Missing or incorrect user_id' });
+    } 
+    else {  
       try {
         let data = await this.ticketService.getTickets(user_id);
-        res.status(200).json(data);
+        res
+          .status(200)
+          .json(data);
       } catch (error) {
-        res.status(400).json(error.message);
+        res
+          .status(400)
+          .json(error.message);
       }
     }
   }

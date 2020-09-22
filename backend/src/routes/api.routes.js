@@ -42,7 +42,7 @@ authenticateMiddleware.authenticate(req, res, next)
 );
 
 router.get('/tickets', (req, res) => {
-  ticketController.get(req, res);
+  ticketController.getIndex(req, res);
 });
 
 router.use(admin_auth);
