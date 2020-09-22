@@ -23,6 +23,13 @@ exports[`Connect component to Redux store should render with given state from Re
     >
       Admin
     </a>
+    <a
+      className="nav-links"
+      href="/shop"
+      onClick={[Function]}
+    >
+      Shop
+    </a>
     <li
       className="nav-links"
     >

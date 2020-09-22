@@ -1,60 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test register component renders correctly 1`] = `
+exports[`Register Component should match the snapshot 1`] = `
 <div
-  className="form-container"
+  className="register-body"
 >
-  <form
-    className="register-form"
-    onSubmit={[Function]}
+  <div
+    className="register_title"
   >
-    <fieldset>
-      <h1>
-        Foxticket
-      </h1>
+    Foxticket
+  </div>
+  <div
+    className="register_container"
+  >
+    <form
+      onSubmit={[Function]}
+    >
       <input
-        autoComplete="off"
+        id="email"
         name="email"
         onChange={[Function]}
-        placeholder="E-mail..."
+        placeholder="Email"
         required={true}
         type="email"
         value=""
       />
       <input
-        autoComplete="off"
-        name="username"
+        id="name"
+        name="name"
         onChange={[Function]}
-        placeholder="User Name..."
+        placeholder="Username"
         required={true}
         type="text"
         value=""
       />
       <input
-        autoComplete="off"
+        id="password"
         name="password"
         onChange={[Function]}
-        placeholder="Password..."
+        placeholder="Password"
         required={true}
         type="password"
         value=""
       />
       <input
-        autoComplete="off"
+        id="confirm"
         name="confirm"
         onChange={[Function]}
-        placeholder="Confirm password..."
+        placeholder="Confirm password"
         required={true}
         type="password"
         value=""
       />
       <button
-        className="btn btn--primary--solid btn--medium"
-        type="submit"
+        className="register_btn"
       >
-        Sign Up
+        Register
       </button>
-    </fieldset>
-  </form>
+    </form>
+  </div>
 </div>
 `;
