@@ -5,7 +5,7 @@ import cat from '../../assets/images/card-cat.jpeg';
 const MainFeatures = () => {
   return (
     <div className="main-features">
-      <div className="card">
+      <div className="card" id="card">
         <div className="card-image">
           <img src={cat} alt="" />
         </div>
@@ -22,7 +22,7 @@ const MainFeatures = () => {
         </div>
       </div>
 
-      <div className="card">
+      <div className="card" id="card">
         <div className="card-image">
           <img src={cat} alt="" />
         </div>
@@ -39,7 +39,7 @@ const MainFeatures = () => {
         </div>
       </div>
 
-      <div className="card">
+      <div className="card" id="card">
         <div className="card-image">
           <img src={cat} alt="" />
         </div>

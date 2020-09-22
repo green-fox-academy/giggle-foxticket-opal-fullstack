@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import store from './flux/store';
 import Header from './components/Header/Header';
 import ErrorDisplay from './components/ErrorDisplay/ErrorDisplay';
+import Register from './components/Register/Register';
 
 function App() {
   /* useEffect(() => {
@@ -28,7 +29,8 @@ function App() {
             <Route exact path="/" component={LandingPage} />
             <PrivateRoute exact path="/shop" component={TicketStore} />
             <Route exact path="/admin" component={AdminPage} />
-            <Route path="/login" component={Login} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
           </Switch>
         </div>
       </BrowserRouter>
