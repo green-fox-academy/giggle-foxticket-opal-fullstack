@@ -8,20 +8,17 @@ export class SubscribeController {
 
   async subscribe(req, res) {
 
-    const subscriberData ={
-      name: req.body.name,
-      email: req.body.email
-    }
+    const {name, email} = req.body
 
     try {
       const data = await this.userService.subscribeUser(
-        new Subscriber(subscriberData.name, subscriberData.email)
+        new Subscriber(name, email)
       );
       this.emailService.sendMail (
         'Foxticket-project <fox@ticketservice.org>',
-         subscriberData.email,
+         email,
         'Successful Subscription',
-        `Dear ${subscriberData.name}!
+        `Dear ${name}!
          You've succefully subscribe to our newsletter. Thank you!` )
       res.status(201).json(data);
     } catch (err) {
