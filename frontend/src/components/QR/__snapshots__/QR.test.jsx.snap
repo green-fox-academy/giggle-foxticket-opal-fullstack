@@ -1,0 +1,3146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <svg
+    height={250}
+    style={
+      Object {
+        "height": 250,
+        "width": 250,
+      }
+    }
+    width={250}
+  >
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,10,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,50,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,90,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,120,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,190,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,210,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,230,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,240,0)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,20,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,30,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,40,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,100,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,110,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,130,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,150,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,160,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,200,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,220,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,240,10)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,100,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,160,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,210,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,240,20)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,90,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,130,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,150,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,210,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,240,30)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,80,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,100,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,120,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,130,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,210,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,240,40)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,20,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,30,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,40,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,110,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,120,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,130,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,140,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,150,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,200,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,220,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,240,50)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,10,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,50,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,90,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,110,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,150,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,190,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,210,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,230,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,240,60)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,0,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,20,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,30,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,40,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,60,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,80,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,100,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,140,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,180,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,200,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,220,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,70)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,10,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,20,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,30,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,50,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,80,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,100,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,110,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,140,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,150,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,160,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,180,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,190,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,200,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,210,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,230,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,240,80)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,20,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,50,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,60,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,80,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,90,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,120,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,130,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,180,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,190,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,210,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,220,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,90)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,0,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,20,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,70,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,90,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,140,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,200,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,210,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,100)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,0,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,10,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,40,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,60,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,110,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,120,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,150,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,160,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,190,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,200,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,230,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,240,110)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,20,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,30,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,80,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,90,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,100,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,140,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,150,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,170,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,190,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,200,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,230,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,120)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,10,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,20,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,40,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,50,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,60,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,80,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,100,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,120,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,130,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,140,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,180,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,210,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,220,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,130)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,0,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,40,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,50,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,80,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,160,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,170,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,180,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,190,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,200,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,140)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,0,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,20,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,30,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,40,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,50,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,60,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,70,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,80,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,90,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,110,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,120,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,140,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,150,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,160,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,180,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,190,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,200,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,150)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,10,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,30,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,50,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,110,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,140,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,170,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,190,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,230,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,240,160)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,0,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,20,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,30,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,40,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,60,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,100,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,120,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,130,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,150,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,180,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,210,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,220,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,230,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,170)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,10,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,50,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,80,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,100,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,150,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,210,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,220,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,180)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,20,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,30,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,40,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,120,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,180,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,230,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,190)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,150,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,160,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,170,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,190,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,240,200)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,80,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,90,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,100,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,120,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,160,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,170,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,190,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,200,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,230,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,210)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,80,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,90,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,100,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,120,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,130,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,160,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,190,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,200,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,230,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,220)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,10,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,20,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,30,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,40,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,50,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,90,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,110,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,120,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,140,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,160,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,170,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,180,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,200,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,230,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,240,230)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,0,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,10,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,20,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,30,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,40,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,50,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,60,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,70,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,80,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,90,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,100,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,110,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,120,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,130,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,140,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,150,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,160,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,170,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,180,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,190,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,200,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#000"
+      transform="matrix(1,0,0,1,210,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,220,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,230,240)"
+    />
+    <path
+      d="M 0 0 L 10 0 L 10 10 L 0 10 Z"
+      fill="#fff"
+      transform="matrix(1,0,0,1,240,240)"
+    />
+  </svg>,
+  <h3>
+    Ticket id: 
+    2
+  </h3>,
+]
+`;

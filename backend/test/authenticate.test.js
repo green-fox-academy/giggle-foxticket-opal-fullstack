@@ -11,15 +11,16 @@ describe('Testing authenticate middleware', () => {
 
     const mockResponse = () => {
       const res = {};
-      res.status = jest.fn(() => 401);
-      res.json = () => `Access Denied due to cat attack`;
+      res.status = jest.fn().mockReturnValue(res);
+      res.json = jest.fn().mockReturnValue(res);
       return res;
     };
 
-    const response = mockResponse();
+    const res = mockResponse();
 
-    authenticateMiddleware.authenticate(invalid_input, response, null);
-    expect(response.status()).toBe(401);
+    authenticateMiddleware.authenticate(invalid_input, res, () => {
+      expect(res.status()).toEqual(401);
+    });
   });
 
   it('It should pass with 200 ok ', async () => {

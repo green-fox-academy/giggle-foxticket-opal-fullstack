@@ -99,7 +99,7 @@ export const tokenConfig = getState => {
   };
 
   if (token) {
-    config.headers['x-auth-token'] = token;
+    config.headers['authorization'] = `Bearer ${token}`;
   }
 
   return config;
