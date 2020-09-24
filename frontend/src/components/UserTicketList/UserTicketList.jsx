@@ -20,7 +20,7 @@ const UserTicketList = (props) => {
 
   return (
     <>
-      {tickets[0] && 
+      {tickets.length > 0 && 
         <div className="ticket-list-container">
         <div className="ticket-list">
         <h1 className="main-title">My tickets</h1>
@@ -41,10 +41,10 @@ const UserTicketList = (props) => {
         </div>
         </div>
       }
-      {!tickets[0] &&
+      {tickets.length === 0 &&
         <div className="ticket-list-container">
         <div className="ticket-list">
-        <h1 className="main-title">I don't have tickets2 yet : (</h1>
+        <h1 className="main-title">You don't have tickets yet : (</h1>
         <Button buttonStyle="btn--warning--solid">Buy Tickets</Button>
         </div></div>
       }
