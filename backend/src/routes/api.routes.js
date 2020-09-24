@@ -6,6 +6,7 @@ import { admin_auth } from '../middlewares/admin_auth';
 import { validateSubscriber } from '../middlewares/validators/subscribeValidator';
 import { container, setup } from '../../di-setup';
 
+
 const cors = require('cors');
 setup();
 const router = express.Router();
@@ -16,11 +17,13 @@ const subscribeController = container.resolve('subscribeController');
 const ticketTypesController = container.resolve('ticketTypesController');
 const authenticateMiddleware = container.resolve('authenticateMiddleware');
 const sessionController = container.resolve('sessionController');
+const ticketController = container.resolve('ticketController');
 
 router.use(cors());
 router.use(bodyParser.json());
 
 router.get('/hello', helloController.get);
+
 
 router.post('/users', validateUser, (req, res) => {
   userController.register(req, res);
@@ -35,8 +38,12 @@ router.post('/session', (req, res) => {
 });
 
 router.use((req, res, next) =>
-  authenticateMiddleware.authenticate(req, res, next)
+authenticateMiddleware.authenticate(req, res, next)
 );
+
+router.get('/tickets', (req, res) => {
+  ticketController.getIndex(req, res);
+});
 
 router.use(admin_auth);
 

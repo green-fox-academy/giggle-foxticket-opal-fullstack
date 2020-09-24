@@ -1,41 +1,70 @@
-import React from 'react';
+import React, {useEffect, useState } from 'react';
 import Ticket from '../Ticket/Ticket';
 import Button from '../Button/Button';
+import { connect } from 'react-redux'
+import { getTickets } from '../../flux/actions/ticketActions';
+import PropTypes from 'prop-types';
+import QR from '../QR/QR';
+import Modal from '../Modal/Modal';
+import useModal from '../../hooks/useModal';
 
-const userTickets = [
-  {
-    id: 1,
-    description: 'Not validated',
-    iconName: 'FaBeer',
-    title: 'Single ticket',
-  },
-  {
-    id: 2,
-    description: 'Valid until ...',
-    iconName: 'FaRegSmileWink',
-    title: 'Double ticket',
-  },
-  {
-    id: 3,
-    description: 'Expired',
-    iconName: 'FaRegGem',
-    title: 'Triple Ticket',
-  },
-];
+const UserTicketList = (props) => {
 
-const UserTicketList = () => {
+  const {tickets , downloadTickets} = props
+  const { isShowing, toggle } = useModal();
+  const [QR_id, setQR_id] = useState(0);
+
+  useEffect(() => {
+    downloadTickets()
+  },[downloadTickets])
+
   return (
-    <div className="ticket-list-container">
-      <div className="ticket-list">
+    <>
+      {tickets.length > 0 && 
+        <div className="ticket-list-container">
+        <div className="ticket-list">
         <h1 className="main-title">My tickets</h1>
-        {userTickets.map(userTicket => (
-          <Ticket key={userTicket.id} {...userTicket}>
-            <Button buttonStyle="btn--warning--solid">SHOW</Button>
-          </Ticket>
+        {tickets.map(({id, ticket_status, expiration_date}) => (
+          <Ticket
+            key={id}
+            title={ticket_status}
+            description={expiration_date}
+            iconName={'FaBeer'} >
+            <Button buttonStyle="btn--warning--solid" onClick={() => {setQR_id(id); toggle();}}> SHOW </Button>
+          </Ticket> 
         ))}
-      </div>
-    </div>
+        <Modal hide={toggle} isShowing={isShowing}>
+          <div onClick={toggle}>
+            <QR id={QR_id} />
+          </div>
+        </Modal>
+        </div>
+        </div>
+      }
+      {tickets.length === 0 &&
+        <div className="ticket-list-container">
+        <div className="ticket-list">
+        <h1 className="main-title">You don't have tickets yet : (</h1>
+        <Button buttonStyle="btn--warning--solid">Buy Tickets</Button>
+        </div></div>
+      }
+    </>
   );
 };
 
-export default UserTicketList;
+const mapStateToProps = state => ({
+  tickets: state.ticket.tickets,
+  error: state.error,
+});
+
+const mapDispatchToProps = dispatch => {
+  return {
+    downloadTickets: () => dispatch(getTickets),
+  }
+};
+
+UserTicketList.propTypes = {
+  getTickets: PropTypes.func.isRequired,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserTicketList);
