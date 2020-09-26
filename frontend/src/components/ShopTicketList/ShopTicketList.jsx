@@ -60,6 +60,7 @@ const ShopTicketList = () => {
           <Button
             onClick={() => {
               dispatch(addTicket(ticketId));
+              toggle();
             }}
           >
             OK
