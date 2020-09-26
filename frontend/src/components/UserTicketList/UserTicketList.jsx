@@ -24,7 +24,7 @@ const UserTicketList = props => {
         <div className="ticket-list-container">
           <div className="ticket-list">
             <h1 className="main-title">My tickets</h1>
-            {tickets.map(({ id, ticket_status, expiration_date }) => (
+            {tickets.map(({ id, ticket_status, expiration_date, order_id }) => (
               <Ticket
                 key={id}
                 title={ticket_status}
@@ -35,8 +35,9 @@ const UserTicketList = props => {
                   <Button
                     buttonStyle="btn--warning--solid"
                     onClick={() => {
-                      dispatch(updateTicket(id, 'active'));
+                      dispatch(updateTicket(order_id, 'active'));
                       setQR_id(id);
+                      // console.log(order_id);
                     }}
                   >
                     PAY

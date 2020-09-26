@@ -40,17 +40,13 @@ export const addTicket = ticket_type_id => (dispatch, getState) => {
     );
 };
 
-export const updateTicket = (id, status) => (dispatch, getState) => {
+export const updateTicket = (order_id, status) => (dispatch, getState) => {
   axios
-    .patch(
-      `${BACKEND_URL}api/orders/${id}`,
-      { status: status },
-      tokenConfig(getState)
-    )
+    .patch(`${BACKEND_URL}api/orders/${order_id}`, tokenConfig(getState))
     .then(res =>
       dispatch({
         type: UPDATE_TICKET,
-        payload: status,
+        payload: res.data.status,
       })
     )
     .catch(err =>
