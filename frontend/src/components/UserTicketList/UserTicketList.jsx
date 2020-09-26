@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Ticket from '../Ticket/Ticket';
 import Button from '../Button/Button';
-import { connect, useDispatch } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { getTickets, updateTicket } from '../../flux/actions/ticketActions';
 import PropTypes from 'prop-types';
 import QR from '../QR/QR';

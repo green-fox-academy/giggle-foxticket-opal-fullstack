@@ -38,7 +38,6 @@ const ShopTicketList = () => {
   const dispatch = useDispatch();
   const [ticketId, setTicketId] = useState(0);
   const { isShowing, toggle } = useModal();
-  const tickets = useSelector(state => state.ticket.tickets);
 
   return (
     <div className="ticket-list-container">

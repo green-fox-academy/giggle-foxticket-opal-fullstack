@@ -3,6 +3,7 @@ import {
   DELETE_TICKET,
   DOWNLOADING_TICKETS,
   GET_TICKETS,
+  UPDATE_TICKET,
 } from './types';
 import axios from 'axios';
 import { returnErrors } from './errorActions';
@@ -45,6 +46,12 @@ export const updateTicket = (id, status) => (dispatch, getState) => {
       `${BACKEND_URL}api/orders/${id}`,
       { status: status },
       tokenConfig(getState)
+    )
+    .then(res =>
+      dispatch({
+        type: UPDATE_TICKET,
+        payload: status,
+      })
     )
     .catch(err =>
       dispatch(returnErrors(err.response.data, err.response.status))

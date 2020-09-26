@@ -3,6 +3,7 @@ import {
   DELETE_TICKET,
   DOWNLOADING_TICKETS,
   GET_TICKETS,
+  UPDATE_TICKET,
 } from '../actions/types';
 
 const initialState = {
@@ -23,6 +24,12 @@ export default function (state = initialState, action) {
       };
 
     case ADD_TICKET:
+      return {
+        ...state,
+        tickets: [action.payload, ...state.tickets],
+      };
+
+    case UPDATE_TICKET:
       return {
         ...state,
         tickets: [action.payload, ...state.tickets],
