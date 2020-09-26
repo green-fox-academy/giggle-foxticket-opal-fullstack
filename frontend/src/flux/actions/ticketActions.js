@@ -1,8 +1,8 @@
 import {
   ADD_TICKET,
   DELETE_TICKET,
-  GET_TICKETS,
   DOWNLOADING_TICKETS,
+  GET_TICKETS,
 } from './types';
 import axios from 'axios';
 import { returnErrors } from './errorActions';
@@ -21,15 +21,31 @@ export const getTickets = (dispatch, getState) => {
     );
 };
 
-export const addTicket = ticket => (dispatch, getState) => {
+export const addTicket = ticket_type_id => (dispatch, getState) => {
   axios
-    .post(`${BACKEND_URL}api/orders`, ticket, tokenConfig(getState))
+    .post(
+      `${BACKEND_URL}api/orders`,
+      { ticket_type_id: ticket_type_id },
+      tokenConfig(getState)
+    )
     .then(res => {
       dispatch({
         type: ADD_TICKET,
-        payload: res.data,
+        payload: res.data.savedTicket,
       });
     })
+    .catch(err =>
+      dispatch(returnErrors(err.response.data, err.response.status))
+    );
+};
+
+export const updateTicket = (id, status) => (dispatch, getState) => {
+  axios
+    .patch(
+      `${BACKEND_URL}api/orders/${id}`,
+      { status: status },
+      tokenConfig(getState)
+    )
     .catch(err =>
       dispatch(returnErrors(err.response.data, err.response.status))
     );

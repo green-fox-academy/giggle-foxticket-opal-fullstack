@@ -4,7 +4,7 @@ import Ticket from '../Ticket/Ticket';
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
 import useModal from '../../hooks/useModal';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addTicket } from '../../flux/actions/ticketActions';
 
 const shopTicketTypes = [
@@ -38,6 +38,7 @@ const ShopTicketList = () => {
   const dispatch = useDispatch();
   const [ticketId, setTicketId] = useState(0);
   const { isShowing, toggle } = useModal();
+  const tickets = useSelector(state => state.ticket.tickets);
 
   return (
     <div className="ticket-list-container">
@@ -57,7 +58,9 @@ const ShopTicketList = () => {
         ))}
         <Modal hide={toggle} isShowing={isShowing}>
           <Button
-            onClick={() => dispatch(addTicket({ ticket_type_id: ticketId }))}
+            onClick={() => {
+              dispatch(addTicket(ticketId));
+            }}
           >
             OK
           </Button>

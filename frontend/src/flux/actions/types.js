@@ -1,6 +1,7 @@
 export const GET_TICKETS = 'GET_TICKETS';
 export const ADD_TICKET = 'ADD_TICKET';
 export const DELETE_TICKET = 'DELETE_TICKET';
+export const UPDATE_TICKET = 'UPDATE_TICKET';
 export const USER_LOADING = 'USER_LOADING';
 export const USER_LOADED = 'USER_LOADED';
 export const AUTH_ERROR = 'AUTH_ERROR';

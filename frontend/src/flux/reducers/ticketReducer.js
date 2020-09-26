@@ -1,4 +1,9 @@
-import { ADD_TICKET, DELETE_TICKET, GET_TICKETS, DOWNLOADING_TICKETS } from '../actions/types';
+import {
+  ADD_TICKET,
+  DELETE_TICKET,
+  DOWNLOADING_TICKETS,
+  GET_TICKETS,
+} from '../actions/types';
 
 const initialState = {
   tickets: [],

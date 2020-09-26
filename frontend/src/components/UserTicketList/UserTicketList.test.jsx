@@ -4,30 +4,28 @@ import UserTicketList from './UserTicketList';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 
-
 describe('Connect component to Redux store', () => {
   const mockStore = configureStore([]);
   const ticket = {
     tickets: [
       {
-        id: 1 ,
+        id: 1,
         order_id: 1,
         user_id: 2,
         ticket_status: 'Valid ticket',
-        expiration_date: '2020-06-06'
-      }
-    ] 
-      
-  }
+        expiration_date: '2020-06-06',
+      },
+    ],
+  };
 
-  const store = mockStore({ticket});
+  const store = mockStore({ ticket });
 
   it('should render with given state from Redux store', () => {
     const tree = renderer.create(
-        <Provider store={store}>
-          <UserTicketList />
-        </Provider>)
-      expect(tree.toJSON()).toMatchSnapshot();
-    });
-
+      <Provider store={store}>
+        <UserTicketList />
+      </Provider>
+    );
+    expect(tree.toJSON()).toMatchSnapshot();
+  });
 });
