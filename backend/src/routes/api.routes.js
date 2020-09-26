@@ -6,7 +6,6 @@ import { admin_auth } from '../middlewares/admin_auth';
 import { validateSubscriber } from '../middlewares/validators/subscribeValidator';
 import { container, setup } from '../../di-setup';
 
-
 const cors = require('cors');
 setup();
 const router = express.Router();
@@ -24,7 +23,6 @@ router.use(bodyParser.json());
 
 router.get('/hello', helloController.get);
 
-
 router.post('/users', validateUser, (req, res) => {
   userController.register(req, res);
 });
@@ -38,7 +36,7 @@ router.post('/session', (req, res) => {
 });
 
 router.use((req, res, next) =>
-authenticateMiddleware.authenticate(req, res, next)
+  authenticateMiddleware.authenticate(req, res, next)
 );
 
 router.get('/tickets', (req, res) => {
