@@ -6,7 +6,6 @@ import { AuthenticateMiddleware } from './src/middlewares/authenticate';
 import { OrderController } from './src/controllers/OrderController';
 import { SessionController } from './src/controllers';
 
-
 import { OrderService } from './src/services/OrderService';
 import { SessionService } from './src/services/SessionService';
 import { EmailService } from './src/services/EmailService';

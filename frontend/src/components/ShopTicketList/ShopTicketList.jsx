@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ShopTicketList.styles.sass';
 import Ticket from '../Ticket/Ticket';
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
 import useModal from '../../hooks/useModal';
+import { useDispatch, useSelector } from 'react-redux';
+import { addTicket } from '../../flux/actions/ticketActions';
 
 const shopTicketTypes = [
   {
@@ -33,6 +35,8 @@ const shopTicketTypes = [
 ];
 
 const ShopTicketList = () => {
+  const dispatch = useDispatch();
+  const [ticketId, setTicketId] = useState(0);
   const { isShowing, toggle } = useModal();
 
   return (
@@ -41,11 +45,25 @@ const ShopTicketList = () => {
         <h1 className="main-title">Ticket Types</h1>
         {shopTicketTypes.map(shopTicket => (
           <Ticket key={shopTicket.id} {...shopTicket}>
-            <Button onClick={toggle}>BUY</Button>
+            <Button
+              onClick={() => {
+                setTicketId(shopTicket.id);
+                toggle();
+              }}
+            >
+              BUY
+            </Button>
           </Ticket>
         ))}
         <Modal hide={toggle} isShowing={isShowing}>
-          <Button onClick={toggle}>OK</Button>
+          <Button
+            onClick={() => {
+              dispatch(addTicket(ticketId));
+              toggle();
+            }}
+          >
+            OK
+          </Button>
           <Button buttonStyle={'btn--danger--solid--btn'} onClick={toggle}>
             Cancel
           </Button>

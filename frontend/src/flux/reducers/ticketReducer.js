@@ -1,4 +1,10 @@
-import { ADD_TICKET, DELETE_TICKET, GET_TICKETS, DOWNLOADING_TICKETS } from '../actions/types';
+import {
+  ADD_TICKET,
+  DELETE_TICKET,
+  DOWNLOADING_TICKETS,
+  GET_TICKETS,
+  UPDATE_TICKET,
+} from '../actions/types';
 
 const initialState = {
   tickets: [],
@@ -18,6 +24,12 @@ export default function (state = initialState, action) {
       };
 
     case ADD_TICKET:
+      return {
+        ...state,
+        tickets: [action.payload, ...state.tickets],
+      };
+
+    case UPDATE_TICKET:
       return {
         ...state,
         tickets: [action.payload, ...state.tickets],

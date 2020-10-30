@@ -274,7 +274,7 @@ exports[`Connect component to Redux store should render with given state from Re
             className="btn btn--warning--solid btn--medium"
             onClick={[Function]}
           >
-             SHOW 
+            PAY
           </button>
         </div>
       </div>

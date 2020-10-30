@@ -20,7 +20,7 @@ function Ticket({ title, description, iconName, ...props }) {
 
 Ticket.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   iconName: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
