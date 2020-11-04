@@ -28,7 +28,6 @@ const UserTicketList = props => {
       {tickets.length > 0 && (
         <div className="ticket-list-container">
           <div className="ticket-list">
-            {console.log(tickets)}
             <h1 className="main-title">My tickets</h1>
             {tickets.map(({ id, ticket_status, expiration_date, order_id }) => (
               <Ticket
