@@ -1,44 +1,42 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../flux/actions/authActions';
-import { clearErrors } from '../../flux/actions/errorActions';
-import useCustomForm from '../../hooks/useCustomForm';
 import './Login.sass';
-import PropTypes from 'prop-types';
 
-const initialValues = {
-  name: '',
-  password: '',
-};
+const Login = ({ location, history }) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const userLogin = useSelector(state => state.auth);
+  const { user } = userLogin;
 
-const Login = props => {
-  const { values, handleChange, handleSubmit } = useCustomForm({
-    initialValues,
-    onSubmit: values => {
-      const user = {
-        username: values.values.name,
-        password: values.values.password,
-      };
+  const dispatch = useDispatch();
 
-      const { login } = props;
+  const redirect = location.search ? location.search.split('=')[1] : '/shop';
 
-      login(user);
-    },
-  });
+  useEffect(() => {
+    if (user) {
+      history.push('/shop');
+    }
+  }, [history, user, redirect, dispatch]);
+
+  const submitHandler = e => {
+    e.preventDefault();
+    dispatch(login({ username: username, password: password }));
+  };
 
   return (
     <div className="login-body">
       <div className="login_title">Foxticket</div>
       <div className="login_container">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={submitHandler}>
           <input
             type="text"
             name="name"
             id="name"
             placeholder="Username"
             required
-            onChange={handleChange}
-            value={values.name}
+            onChange={event => setUsername(event.target.value)}
+            value={username}
           />
           <input
             type="password"
@@ -46,8 +44,8 @@ const Login = props => {
             id="password"
             placeholder="Password"
             required
-            onChange={handleChange}
-            value={values.password}
+            onChange={event => setPassword(event.target.value)}
+            value={password}
           />
           <button className="login_btn">Login</button>
         </form>
@@ -56,16 +54,4 @@ const Login = props => {
   );
 };
 
-Login.propTypes = {
-  login: PropTypes.func.isRequired,
-};
-
-const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated,
-  error: state.error,
-});
-
-export default connect(mapStateToProps, {
-  login,
-  clearErrors,
-})(Login);
+export default Login;

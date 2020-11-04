@@ -32,7 +32,6 @@ export default function (state = initialState, action) {
     case UPDATE_TICKET:
       return {
         ...state,
-        tickets: [action.payload, ...state.tickets],
       };
 
     case DELETE_TICKET:

@@ -40,18 +40,24 @@ export const addTicket = ticket_type_id => (dispatch, getState) => {
     );
 };
 
-export const updateTicket = (order_id, status) => (dispatch, getState) => {
-  axios
-    .patch(`${BACKEND_URL}api/orders/${order_id}`, tokenConfig(getState))
-    .then(res =>
-      dispatch({
-        type: UPDATE_TICKET,
-        payload: res.data.status,
-      })
-    )
-    .catch(err =>
-      dispatch(returnErrors(err.response.data, err.response.status))
+export const updateTicket = (order_id, ticket_status) => async (
+  dispatch,
+  getState
+) => {
+  try {
+    const { data } = await axios.put(
+      `${BACKEND_URL}api/orders/${order_id}`,
+      { ticket_status: ticket_status },
+      tokenConfig(getState)
     );
+
+    dispatch({
+      type: UPDATE_TICKET,
+      payload: data,
+    });
+  } catch (err) {
+    dispatch(returnErrors(err.response.data, err.response.status));
+  }
 };
 
 export const deleteTicket = id => (dispatch, getState) => {

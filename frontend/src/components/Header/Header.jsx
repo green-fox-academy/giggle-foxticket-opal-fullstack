@@ -9,25 +9,30 @@ import PropTypes from 'prop-types';
 function Header({ userName, isAdmin }) {
   return (
     <nav className="NavbarItems">
-      <img src={FoxticketLogo} alt="navigation bar logo" />
-      <h3 className="nav-text">Foxticket</h3>
+      <Link to="/">
+        {' '}
+        <img src={FoxticketLogo} alt="navigation bar logo" />
+      </Link>
+      <h3 className="navbar-brand ml-3 mt-1 " id="fox-brand">
+        Foxticket
+      </h3>
       <ul className="nav-menu">
         {isAdmin && (
-          <Link to="/admin" className="nav-links">
+          <Link to="/admin" className="nav-links mt-1">
             Admin
           </Link>
         )}
 
         {userName ? (
-          <Link to={'shop'} className="nav-links">
+          <Link to={'shop'} className="nav-links mt-1">
             Shop
           </Link>
         ) : (
           <>
-            <Link to={'/login'} className="nav-links">
+            <Link to={'/login'} className="nav-links mt-1">
               Login
             </Link>
-            <Link to={'/register'} className="nav-links">
+            <Link to={'/register'} className="nav-links mt-1">
               Register
             </Link>
           </>
@@ -35,7 +40,7 @@ function Header({ userName, isAdmin }) {
 
         {userName && (
           <>
-            <li className="nav-links">{userName}</li>
+            <li className="nav-links mt-1">{userName}</li>
             <Logout />
           </>
         )}

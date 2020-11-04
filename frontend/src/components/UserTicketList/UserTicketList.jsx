@@ -18,11 +18,17 @@ const UserTicketList = props => {
     downloadTickets();
   }, [downloadTickets]);
 
+  const handleUpdate = (order_id, ticket_status) => {
+    dispatch(updateTicket(order_id, ticket_status));
+    downloadTickets();
+  };
+
   return (
     <>
       {tickets.length > 0 && (
         <div className="ticket-list-container">
           <div className="ticket-list">
+            {console.log(tickets)}
             <h1 className="main-title">My tickets</h1>
             {tickets.map(({ id, ticket_status, expiration_date, order_id }) => (
               <Ticket
@@ -35,9 +41,8 @@ const UserTicketList = props => {
                   <Button
                     buttonStyle="btn--warning--solid"
                     onClick={() => {
-                      dispatch(updateTicket(order_id, 'active'));
+                      handleUpdate(order_id, 'active');
                       setQR_id(id);
-                      // console.log(order_id);
                     }}
                   >
                     PAY
@@ -87,7 +92,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 UserTicketList.propTypes = {
-  getTickets: PropTypes.func.isRequired,
+  getTickets: PropTypes.func,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserTicketList);
