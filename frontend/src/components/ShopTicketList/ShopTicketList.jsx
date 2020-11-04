@@ -4,33 +4,33 @@ import Ticket from '../Ticket/Ticket';
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
 import useModal from '../../hooks/useModal';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addTicket } from '../../flux/actions/ticketActions';
 
 const shopTicketTypes = [
   {
     id: 1,
     title: 'Ticket-Types A',
-    description: 'Lorem Ipsum has been the industry s standard dummy',
-    iconName: 'FaBeer',
+    description: 'ezt majd ird at',
+    iconName: 'FaTicketAlt',
   },
   {
     id: 2,
     title: 'Ticket-Types B',
-    description: 'Since the 1500s,when an unknown printer took a galley',
-    iconName: 'FaRegSmileWink',
+    description: 'meg ezt is',
+    iconName: 'FaTicketAlt',
   },
   {
     id: 3,
     title: 'Ticket-Types C',
     description: 'Remaining  essentially unchanged. It was popularised',
-    iconName: 'FaRegGem',
+    iconName: 'FaTicketAlt',
   },
   {
     id: 4,
     title: 'Ticket-Types D',
     description: 'Contrary to popular Lorem Ipsum is not  random text',
-    iconName: 'FaUmbrella',
+    iconName: 'FaTicketAlt',
   },
 ];
 

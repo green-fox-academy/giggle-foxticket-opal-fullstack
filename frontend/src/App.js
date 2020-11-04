@@ -15,10 +15,6 @@ import ErrorDisplay from './components/ErrorDisplay/ErrorDisplay';
 import Register from './components/Register/Register';
 
 function App() {
-  /* useEffect(() => {
-    store.dispatch(loadUser()); --- for when we have an actual endpoint for it...
-  }, []); */
-
   return (
     <Provider store={store}>
       <BrowserRouter>

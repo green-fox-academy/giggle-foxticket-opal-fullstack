@@ -26,7 +26,6 @@ export class OrderController {
 
   async updateOrder(req, res) {
     try {
-      console.log(req.params.id);
       const data = await this.orderService.update(
         req.params.id,
         req.body.ticket_status

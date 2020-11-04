@@ -55,6 +55,7 @@ export const updateTicket = (order_id, ticket_status) => async (
       type: UPDATE_TICKET,
       payload: data,
     });
+    console.log(data);
   } catch (err) {
     dispatch(returnErrors(err.response.data, err.response.status));
   }
