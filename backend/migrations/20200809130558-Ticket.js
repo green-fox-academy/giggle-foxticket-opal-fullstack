@@ -40,7 +40,7 @@ exports.up = function (db) {
       length: 10,
       notNull: true,
       foreignKey: {
-        name: 'user_id',
+        name: 'user_id2',
         table: 'Users',
         rules: {
           onDelete: 'CASCADE',

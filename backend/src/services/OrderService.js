@@ -24,8 +24,11 @@ export class OrderService {
   }
 
   async update(ticketId, orderStatus) {
+    console.log('Ticket ID: ', ticketId, 'Order Status: ', orderStatus);
     await this.ticketRepository.update('active', ticketId);
-    const ticket = await this.ticketRepository.get(ticketId);
+
+    const ticket = await this.ticketRepository.getByOrderId(ticketId);
+    console.log(ticket);
 
     await this.orderRepository.update(orderStatus, ticket.order_id);
 
