@@ -49,7 +49,7 @@ router.post('/orders', (req, res) => {
   orderController.createOrderWithTicket(req, res);
 });
 
-router.patch('/orders/:id', (req, res) => {
+router.put('/orders/:id', (req, res) => {
   orderController.updateOrder(req, res);
 });
 

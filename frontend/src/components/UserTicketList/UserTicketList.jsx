@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Ticket from '../Ticket/Ticket';
 import Button from '../Button/Button';
-import { connect, useDispatch, useSelector } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { getTickets, updateTicket } from '../../flux/actions/ticketActions';
 import PropTypes from 'prop-types';
 import QR from '../QR/QR';
@@ -16,7 +16,12 @@ const UserTicketList = props => {
 
   useEffect(() => {
     downloadTickets();
-  }, [downloadTickets]);
+  }, [downloadTickets, dispatch]);
+
+  const handleUpdate = (order_id, ticket_status, ticketId) => {
+    dispatch(updateTicket(order_id, ticket_status));
+    setQR_id(ticketId);
+  };
 
   return (
     <>
@@ -29,15 +34,13 @@ const UserTicketList = props => {
                 key={id}
                 title={ticket_status}
                 description={expiration_date}
-                iconName={'FaBeer'}
+                iconName={'FaSubway'}
               >
                 {ticket_status !== 'active' ? (
                   <Button
                     buttonStyle="btn--warning--solid"
                     onClick={() => {
-                      dispatch(updateTicket(order_id, 'active'));
-                      setQR_id(id);
-                      // console.log(order_id);
+                      handleUpdate(order_id, 'active', id);
                     }}
                   >
                     PAY
@@ -87,7 +90,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 UserTicketList.propTypes = {
-  getTickets: PropTypes.func.isRequired,
+  getTickets: PropTypes.func,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserTicketList);

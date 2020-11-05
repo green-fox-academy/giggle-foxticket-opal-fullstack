@@ -14,11 +14,19 @@ export class TicketRepository {
     return await data.results[0];
   }
 
+  async getByOrderId(order_id) {
+    const data = await db.query(`SELECT * FROM Ticket WHERE order_id = ?`, [
+      order_id,
+    ]);
+
+    return await data.results[0];
+  }
+
   async getTicketsForUser(user_id) {
     const data = await db.query(
       `SELECT *
-        FROM Ticket
-        WHERE user_id = ?`,
+         FROM Ticket
+         WHERE user_id = ?`,
       [user_id]
     );
 
@@ -41,10 +49,8 @@ export class TicketRepository {
   }
 
   async update(ticket_status, ticketId) {
-    await db.query(
-      `UPDATE Ticket
-         SET ticket_status = ?
-         WHERE id = ?`,
+    return await db.query(
+      'UPDATE `Ticket` SET ticket_status = ? WHERE id = ?',
       [ticket_status, ticketId]
     );
   }

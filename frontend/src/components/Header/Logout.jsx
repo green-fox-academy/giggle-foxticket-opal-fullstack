@@ -10,7 +10,7 @@ function Logout() {
     <>
       <Link
         to="/"
-        className="nav-links"
+        className="nav-links mt-1"
         onClick={() => {
           dispatch({ type: LOGOUT_SUCCESS });
         }}
@@ -22,7 +22,7 @@ function Logout() {
 }
 
 Logout.propTypes = {
-  logout: PropTypes.func.isRequired,
+  logout: PropTypes.func,
 };
 
 export default Logout;
