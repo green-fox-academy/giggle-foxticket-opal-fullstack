@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import QR from '../QR/QR';
 import Modal from '../Modal/Modal';
 import useModal from '../../hooks/useModal';
+import './UserTicketList.styles.sass';
 
 const UserTicketList = props => {
   const { tickets, downloadTickets } = props;
@@ -14,33 +15,29 @@ const UserTicketList = props => {
   const [QR_id, setQR_id] = useState(0);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    downloadTickets();
-  }, [downloadTickets, dispatch]);
-
   const handleUpdate = (order_id, ticket_status, ticketId) => {
     dispatch(updateTicket(order_id, ticket_status));
     setQR_id(ticketId);
   };
+  console.log('tickets', tickets);
 
+  useEffect(() => {
+    downloadTickets();
+  }, dispatch);
+  console.log(tickets);
   return (
     <>
       {tickets.length > 0 && (
         <div className="ticket-list-container">
           <div className="ticket-list">
             <h1 className="main-title">My tickets</h1>
-            {tickets.map(({ id, ticket_status, expiration_date, order_id }) => (
-              <Ticket
-                key={id}
-                title={ticket_status}
-                description={expiration_date}
-                iconName={'FaSubway'}
-              >
-                {ticket_status !== 'active' ? (
+            {tickets.map(ticket => (
+              <Ticket key={ticket.id} {...ticket}>
+                {ticket.ticket_status !== 'active' ? (
                   <Button
                     buttonStyle="btn--warning--solid"
                     onClick={() => {
-                      handleUpdate(order_id, 'active', id);
+                      handleUpdate(ticket.order_id, 'active', ticket.id);
                     }}
                   >
                     PAY
@@ -49,11 +46,11 @@ const UserTicketList = props => {
                   <Button
                     buttonStyle="btn--warning--solid"
                     onClick={() => {
-                      setQR_id(id);
+                      setQR_id(ticket.id);
                       toggle();
                     }}
                   >
-                    SHOW
+                    SHOW QR
                   </Button>
                 )}
               </Ticket>
@@ -70,7 +67,6 @@ const UserTicketList = props => {
         <div className="ticket-list-container">
           <div className="ticket-list">
             <h1 className="main-title">You don't have tickets yet : (</h1>
-            <Button buttonStyle="btn--warning--solid">Buy Tickets</Button>
           </div>
         </div>
       )}

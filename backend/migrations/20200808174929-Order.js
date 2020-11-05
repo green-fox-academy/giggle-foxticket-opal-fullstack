@@ -18,7 +18,7 @@ exports.setup = function (options, seedLink) {
 
 exports.up = function (db) {
   return db.createTable('Order', {
-    id: { type: 'int', primaryKey: true, autoIncrement: true },
+    order_id: { type: 'int', primaryKey: true, autoIncrement: true },
     ticket_type_id: {
       type: 'int',
       length: 10,

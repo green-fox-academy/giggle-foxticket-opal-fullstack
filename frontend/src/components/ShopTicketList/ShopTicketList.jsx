@@ -1,43 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ShopTicketList.styles.sass';
 import Ticket from '../Ticket/Ticket';
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
 import useModal from '../../hooks/useModal';
-import { useDispatch } from 'react-redux';
 import { addTicket } from '../../flux/actions/ticketActions';
+import { connect, useDispatch } from 'react-redux';
+import { getTickets } from '../../flux/actions/ticketActions';
 
 const shopTicketTypes = [
   {
     id: 1,
-    title: 'Ticket-Types A',
+    name: 'Ticket-Types A',
+    price: 300,
     description: 'ezt majd ird at',
-    iconName: 'FaTicketAlt',
+    icon: 'FaTicketAlt',
   },
   {
     id: 2,
-    title: 'Ticket-Types B',
+    name: 'Ticket-Types B',
+    price: 300,
     description: 'meg ezt is',
-    iconName: 'FaTicketAlt',
+    icon: 'FaTicketAlt',
   },
   {
     id: 3,
-    title: 'Ticket-Types C',
-    description: 'Remaining  essentially unchanged. It was popularised',
-    iconName: 'FaTicketAlt',
+    name: 'Ticket-Types C',
+    price: 300,
+    description: 'atirtam',
+    icon: 'FaTicketAlt',
   },
   {
     id: 4,
-    title: 'Ticket-Types D',
-    description: 'Contrary to popular Lorem Ipsum is not  random text',
-    iconName: 'FaTicketAlt',
+    name: 'Ticket-Types D',
+    price: 300,
+    description: 'ezt is atirtam',
+    icon: 'FaTicketAlt',
   },
 ];
 
-const ShopTicketList = () => {
+const ShopTicketList = props => {
   const dispatch = useDispatch();
   const [ticketId, setTicketId] = useState(0);
   const { isShowing, toggle } = useModal();
+  const { downloadTickets } = props;
+
+  const handleUpdate = ticketId => {
+    dispatch(getTickets);
+    dispatch(addTicket(ticketId));
+  };
+
+  /* useEffect(() => {
+    downloadTickets();
+  }, dispatch); */
 
   return (
     <div className="ticket-list-container">
@@ -58,7 +73,7 @@ const ShopTicketList = () => {
         <Modal hide={toggle} isShowing={isShowing}>
           <Button
             onClick={() => {
-              dispatch(addTicket(ticketId));
+              handleUpdate(ticketId);
               toggle();
             }}
           >
@@ -74,4 +89,10 @@ const ShopTicketList = () => {
   );
 };
 
-export default ShopTicketList;
+const mapDispatchToProps = dispatch => {
+  return {
+    downloadTickets: () => dispatch(getTickets),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(ShopTicketList);

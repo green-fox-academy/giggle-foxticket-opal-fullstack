@@ -31,7 +31,7 @@ exports.up = function (db) {
           onUpdate: 'RESTRICT',
         },
         mapping: {
-          order_id: 'id',
+          order_id: 'order_id',
         },
       },
     },
@@ -48,6 +48,22 @@ exports.up = function (db) {
         },
         mapping: {
           user_id: 'id',
+        },
+      },
+    },
+    ticket_type_id: {
+      type: 'int',
+      length: 10,
+      notNull: true,
+      foreignKey: {
+        name: 'ticket_type_id2',
+        table: 'Order',
+        rules: {
+          onDelete: 'CASCADE',
+          onUpdate: 'RESTRICT',
+        },
+        mapping: {
+          ticket_type_id: 'ticket_type_id',
         },
       },
     },

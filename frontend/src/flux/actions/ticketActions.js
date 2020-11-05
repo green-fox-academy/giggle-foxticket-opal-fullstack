@@ -9,7 +9,7 @@ import axios from 'axios';
 import { returnErrors } from './errorActions';
 import { tokenConfig } from './authActions';
 
-const BACKEND_URL = 'http://localhost:3000/';
+const BACKEND_URL = 'http://localhost:3001/';
 
 export const getTickets = (dispatch, getState) => {
   dispatch({ type: DOWNLOADING_TICKETS });

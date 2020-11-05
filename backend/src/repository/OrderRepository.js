@@ -4,7 +4,9 @@ export class OrderRepository {
   constructor() {}
 
   async get(id) {
-    const data = await db.query('SELECT * FROM `Order` WHERE id = ?', [id]);
+    const data = await db.query('SELECT * FROM `Order` WHERE order_id = ?', [
+      id,
+    ]);
 
     return await data.results[0];
   }
@@ -19,7 +21,7 @@ export class OrderRepository {
   }
 
   async update(orderStatus, orderId) {
-    return await db.query('UPDATE `Order` SET status = ? WHERE id = ?', [
+    return await db.query('UPDATE `Order` SET status = ? WHERE order_id = ?', [
       orderStatus,
       orderId,
     ]);

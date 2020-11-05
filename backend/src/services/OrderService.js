@@ -11,7 +11,7 @@ export class OrderService {
     const orderToSave = new Order(ticket_type_id, user_id);
     const savedOrderId = await this.orderRepository.save(orderToSave);
 
-    const ticketToSave = new Ticket(user_id, savedOrderId);
+    const ticketToSave = new Ticket(user_id, savedOrderId, ticket_type_id);
     const savedTicketId = await this.ticketRepository.save(ticketToSave);
 
     const savedOrder = await this.orderRepository.get(savedOrderId);

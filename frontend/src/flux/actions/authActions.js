@@ -11,7 +11,7 @@ import {
 } from './types';
 import { returnErrors } from './errorActions';
 
-const BACKEND_URL = 'http://localhost:3000';
+const BACKEND_URL = 'http://localhost:3001';
 
 export const loadUser = () => async (dispatch, getState) => {
   dispatch({ type: USER_LOADING });

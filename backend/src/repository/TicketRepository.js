@@ -14,6 +14,13 @@ export class TicketRepository {
     return await data.results[0];
   }
 
+  /*
+SELECT user_id, status, name, price, ordered_at FROM foxticket.order 
+JOIN foxticket.tickettypes
+ON foxticket.order.ticket_type_id = foxticket.tickettypes.id
+WHERE user_id = 2;
+*/
+
   async getByOrderId(order_id) {
     const data = await db.query(`SELECT * FROM Ticket WHERE order_id = ?`, [
       order_id,
@@ -24,8 +31,9 @@ export class TicketRepository {
 
   async getTicketsForUser(user_id) {
     const data = await db.query(
-      `SELECT *
-         FROM Ticket
+      `SELECT ticket.id, order_id, user_id, ticket_status, name, price, description, icon FROM ticket 
+      JOIN tickettypes
+      ON ticket.ticket_type_id = tickettypes.id
          WHERE user_id = ?`,
       [user_id]
     );
@@ -35,11 +43,12 @@ export class TicketRepository {
 
   async save(ticket) {
     const data = await db.query(
-      `INSERT INTO Ticket (order_id, user_id, ticket_status, expiration_date)
-         VALUES (?, ?, ?, ?)`,
+      `INSERT INTO Ticket (order_id, user_id, ticket_type_id, ticket_status, expiration_date)
+         VALUES (?, ?, ?, ?, ?)`,
       [
         ticket.order_id,
         ticket.user_id,
+        ticket.ticket_type_id,
         ticket.ticket_status,
         ticket.expiration_date,
       ]

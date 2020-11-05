@@ -15,17 +15,30 @@ userRepo.save({
   password: '$2b$10$9K8uV6EmwFnSU0gNZsiTv.wtsTFAr6SEzH4OcaADRZVOpTyczEIA6',
   isAdmin: true,
 });
+userRepo.save({
+  name: 'demo',
+  email: 'demo@foxticket.com',
+  password: '$2b$10$VjVPag2XaXv.WBxfSR1sgOu9KzX05XczBwTmJUpe7L2NmWsRK8Px6',
+  isAdmin: true,
+});
 
 ticketTypeRepo.saveTicketType({
   name: 'Mav',
   price: 350,
   description: 'Good for nothing but buy it ',
-  icon: 'FaBeer',
+  icon: 'FaSubway',
 });
 
 ticketTypeRepo.saveTicketType({
   name: 'Volan',
   price: 500,
-  description: 'Tick form Pest to Vac ',
-  icon: 'FaBeer',
+  description: 'Tick from Pest to Vac ',
+  icon: 'FaBus',
+});
+
+ticketTypeRepo.saveTicketType({
+  name: 'BKK',
+  price: 300,
+  description: 'You will have a marvelous journey! ',
+  icon: 'MdTram',
 });
