@@ -4,37 +4,29 @@ import Ticket from '../Ticket/Ticket';
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
 import useModal from '../../hooks/useModal';
-import { addTicket } from '../../flux/actions/ticketActions';
-import { connect, useDispatch } from 'react-redux';
-import { getTickets } from '../../flux/actions/ticketActions';
+import { connect, useDispatch, useSelector } from 'react-redux';
+import { getTickets, addTicket } from '../../flux/actions/ticketActions';
 
 const shopTicketTypes = [
   {
     id: 1,
-    name: 'Ticket-Types A',
-    price: 300,
-    description: 'ezt majd ird at',
+    name: 'Mav',
+    price: 350,
+    description: 'Train Ticket',
     icon: 'FaTicketAlt',
   },
   {
     id: 2,
-    name: 'Ticket-Types B',
-    price: 300,
-    description: 'meg ezt is',
+    name: 'Volan',
+    price: 500,
+    description: 'Bus Ticket',
     icon: 'FaTicketAlt',
   },
   {
     id: 3,
-    name: 'Ticket-Types C',
+    name: 'BKK',
     price: 300,
-    description: 'atirtam',
-    icon: 'FaTicketAlt',
-  },
-  {
-    id: 4,
-    name: 'Ticket-Types D',
-    price: 300,
-    description: 'ezt is atirtam',
+    description: 'Public Transport Ticket',
     icon: 'FaTicketAlt',
   },
 ];
@@ -43,16 +35,21 @@ const ShopTicketList = props => {
   const dispatch = useDispatch();
   const [ticketId, setTicketId] = useState(0);
   const { isShowing, toggle } = useModal();
-  const { downloadTickets } = props;
-
-  const handleUpdate = ticketId => {
+  const tickets = useSelector(state => state.ticket.tickets);
+  console.log('shopticketlistben tickets useffect előtt', tickets);
+  useEffect(() => {
     dispatch(getTickets);
-    dispatch(addTicket(ticketId));
-  };
+  }, [getTickets]);
 
-  /* useEffect(() => {
-    downloadTickets();
-  }, dispatch); */
+  console.log('shopticketlistben tickets useffect után', tickets);
+
+  console.log(ticketId);
+  const handleUpdate = ticketId => {
+    dispatch(addTicket(ticketId));
+    setTimeout(function () {
+      dispatch(getTickets);
+    }, 100);
+  };
 
   return (
     <div className="ticket-list-container">
@@ -63,7 +60,7 @@ const ShopTicketList = props => {
             <Button
               onClick={() => {
                 setTicketId(shopTicket.id);
-                toggle();
+                handleUpdate(ticketId);
               }}
             >
               BUY
@@ -73,7 +70,6 @@ const ShopTicketList = props => {
         <Modal hide={toggle} isShowing={isShowing}>
           <Button
             onClick={() => {
-              handleUpdate(ticketId);
               toggle();
             }}
           >
@@ -89,10 +85,11 @@ const ShopTicketList = props => {
   );
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    downloadTickets: () => dispatch(getTickets),
-  };
-};
+const mapStateToProps = state => ({
+  error: state.error,
+});
 
-export default connect(null, mapDispatchToProps)(ShopTicketList);
+export default connect(mapStateToProps, {
+  getTickets,
+  addTicket,
+})(ShopTicketList);

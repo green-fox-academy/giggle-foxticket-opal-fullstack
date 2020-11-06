@@ -1,5 +1,5 @@
 import React from 'react';
-import cat from '../../assets/images/card-cat.jpeg';
+import transport from '../../assets/images/transport-bus.jpg';
 import './ImageComposition.styles.sass';
 import Button from '../Button/Button';
 
@@ -25,7 +25,7 @@ const ImageComposition = () => {
         </div>
         <div className="right-half">
           <article>
-            <img src={cat} alt="hello" className="cat" />
+            <img src={transport} alt="hello" className="cat" />
           </article>
         </div>
       </section>

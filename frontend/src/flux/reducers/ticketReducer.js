@@ -18,7 +18,7 @@ export default function (state = initialState, action) {
       };
 
     case GET_TICKETS:
-      localStorage.setItem('tickets', JSON.stringify(action.payload));
+      //localStorage.setItem('tickets', JSON.stringify(action.payload));
       return {
         ...state,
         tickets: action.payload,
@@ -31,7 +31,7 @@ export default function (state = initialState, action) {
       };
 
     case UPDATE_TICKET:
-      localStorage.getItem('tickets');
+      //localStorage.getItem('tickets');
       return {
         ...state,
       };

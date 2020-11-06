@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Ticket from '../Ticket/Ticket';
 import Button from '../Button/Button';
-import { connect, useDispatch } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { getTickets, updateTicket } from '../../flux/actions/ticketActions';
 import PropTypes from 'prop-types';
 import QR from '../QR/QR';
@@ -10,20 +10,25 @@ import useModal from '../../hooks/useModal';
 import './UserTicketList.styles.sass';
 
 const UserTicketList = props => {
-  const { tickets, downloadTickets } = props;
+  const tickets = useSelector(state => state.ticket.tickets);
   const { isShowing, toggle } = useModal();
   const [QR_id, setQR_id] = useState(0);
   const dispatch = useDispatch();
 
+  console.log('tickets', tickets);
+
   const handleUpdate = (order_id, ticket_status, ticketId) => {
     dispatch(updateTicket(order_id, ticket_status));
     setQR_id(ticketId);
+    setTimeout(function () {
+      dispatch(getTickets);
+    }, 100);
   };
-  console.log('tickets', tickets);
 
   useEffect(() => {
-    downloadTickets();
-  }, dispatch);
+    dispatch(getTickets);
+  }, [getTickets]);
+
   console.log(tickets);
   return (
     <>
@@ -37,7 +42,7 @@ const UserTicketList = props => {
                   <Button
                     buttonStyle="btn--warning--solid"
                     onClick={() => {
-                      handleUpdate(ticket.order_id, 'active', ticket.id);
+                      handleUpdate(ticket.order_id, 'active');
                     }}
                   >
                     PAY
@@ -75,18 +80,14 @@ const UserTicketList = props => {
 };
 
 const mapStateToProps = state => ({
-  tickets: state.ticket.tickets,
   error: state.error,
 });
-
-const mapDispatchToProps = dispatch => {
-  return {
-    downloadTickets: () => dispatch(getTickets),
-  };
-};
 
 UserTicketList.propTypes = {
   getTickets: PropTypes.func,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserTicketList);
+export default connect(mapStateToProps, {
+  getTickets,
+  updateTicket,
+})(UserTicketList);
